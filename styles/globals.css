@@ -14,3 +14,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+[data-aos=anim1] {
+  transform: translateY(40px) rotate(30deg);
+  opacity: 0;
+  transform-origin: top left;
+  transition-property: transform, opacity;
+}
+[data-aos=anim1].aos-animate {
+  transform: translateY(0px) rotate(0deg);
+  opacity: 1;
+}
