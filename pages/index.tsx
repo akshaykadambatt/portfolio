@@ -197,7 +197,7 @@ const Home: NextPage = () => {
               alt="Remy Sharp" 
               src="/akshay_k_nair.webp"
               className="avatar"
-              sx={{ width: "300px", height: "300px" }}
+              sx={{ width: "300px", height: "300px", filter:"grayscale(1)" }}
             />
           </Grid>
           <Grid item xs={12} md={8}>
