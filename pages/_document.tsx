@@ -8,11 +8,15 @@ class JssDocument extends Document {
     const originalRenderPage = ctx.renderPage
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: (App) => (props) => (
-          <JssProvider registry={registry} generateId={generateId}>
-            <App {...props} />
-          </JssProvider>
-        ),
+        enhanceApp: function one(App){
+          return function two(props){
+            return (
+              <JssProvider registry={registry} generateId={generateId}>
+                <App {...props} />
+              </JssProvider>
+            )
+          }
+        }
       })
 
     const initialProps = await Document.getInitialProps(ctx)
@@ -29,5 +33,4 @@ class JssDocument extends Document {
   }
 }
 
-(JssDocument as unknown as React.VFC).displayName = 'Child';
 export default JssDocument;
