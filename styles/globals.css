@@ -231,3 +231,10 @@ div:hover > .controls{
 .aos-animate .avatar img{
   transform: scale(1);
 }
+
+.inactive{
+  filter:blur(3px)
+}
+.keen-slider__slide{
+  transition: filter .4s, box-shadow 1.4s;
+}

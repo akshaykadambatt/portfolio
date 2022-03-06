@@ -74,7 +74,7 @@ class Layout extends Component {
               <Logo>AKSHY</Logo>
             </Box>
             <Box>
-              <Stack direction="row" spacing={4}>
+              <Stack direction="row" spacing={4} sx={{alignItems: 'center'}}>
                 <Typography>About</Typography>
                 <Typography>Works</Typography>
                 <Typography>
@@ -146,10 +146,10 @@ const FooterWrapper = styled(Container)({
 });
 
 const Logo = styled(Typography)({
-  border: '1px solid rgb(0 0 0 / 41%)',
+  border: '2px solid rgb(0 0 0 / 70%)',
   padding: '2px 8px',
   fontSize: '22px',
-  fontWeight: '100'
+  fontWeight: '300'
 })
 
 const Footer = styled("footer")({});

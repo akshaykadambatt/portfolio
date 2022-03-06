@@ -3,6 +3,8 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import React from "react";
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import { SiReact, SiPython, SiLaravel } from 'react-icons/si';
 
 export default function ItemsBlock() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -93,37 +95,40 @@ export default function ItemsBlock() {
       <Box data-aos="anim1" data-aos-delay="200">
       <div className="slider reveal" style={sliderWrap} ref={sliderRef} >
         <div
-          data-text="Personals"
+          data-text="Personal projects"
           style={slide}
           className={
             currentSlide === 0
               ? getClass(1) + " keen-slider__slide"
-              : "keen-slider__slide"
+              : "keen-slider__slide inactive"
           }
         >
-          1
+          <Typography variant="h3" color="common.white"><SiReact /></Typography>
+          <Typography variant="h3" color="common.white">A react-firebase application</Typography>
         </div>
         <div
-          data-text="Work projects"
+          data-text="Academic projects"
           style={slide}
           className={
             currentSlide === 1
               ? getClass(1) + " keen-slider__slide"
-              : "keen-slider__slide"
+              : "keen-slider__slide inactive"
           }
         >
-          2
+          <Typography variant="h3" color="common.white"><SiPython /></Typography>
+          <Typography variant="h3" color="common.white">YOLO v3 + DeepSORT</Typography>
         </div>
         <div
-          data-text="Others"
+          data-text="Work"
           style={slide}
           className={
             currentSlide === 2
               ? getClass(2) + " keen-slider__slide"
-              : "keen-slider__slide"
+              : "keen-slider__slide inactive"
           }
         >
-          3
+          <Typography variant="h3" color="common.white"><SiLaravel /></Typography>
+          <Typography variant="h3" color="common.white">Laravel app with auth, and REST APIs</Typography>
         </div>
         <div
           data-text="Others"
@@ -131,10 +136,11 @@ export default function ItemsBlock() {
           className={
             currentSlide === 3
               ? getClass(3) + " keen-slider__slide"
-              : "keen-slider__slide"
+              : "keen-slider__slide inactive"
           }
         >
-          4
+          <Typography variant="h3" color="common.white"><SiLaravel /></Typography>
+          <Typography variant="h3" color="common.white">TBA</Typography>
         </div>
       </div>
       </Box>
