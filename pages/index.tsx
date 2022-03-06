@@ -16,6 +16,7 @@ import IconButton from "@mui/material/IconButton";
 import ItemBlock from "../components/ItemBlock";
 import RecentBlock from "../components/RecentBlock";
 import DesignElem from "../components/DesignElem"
+import Head from 'next/head'
 
 const HeadBox = styled(Box)({
   display: "flex",
@@ -31,6 +32,13 @@ const HeadBox = styled(Box)({
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>AKSHAY K NAIR, Software Engineer</title>
+        <meta property="og:site_name" content="AKSHY"/>
+        <meta property="og:title" content="AKSHAY K NAIR, Software Engineer"/>
+        <meta property="og:url" content="https://akshaykn.vercel.app/" />
+        <meta property="og:image" content="akshay_k_nair.webp" />
+      </Head>
       <HeadBox>
         <Box>
           <Typography variant="h1" sx={{ mb: 0 }}>
@@ -271,7 +279,7 @@ export default Home;
 
 
 const Block = styled(Container)({
-  marginBottom:160,
+  marginBottom:60,
   marginTop:100,
   overflow:'hidden'
 })
