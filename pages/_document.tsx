@@ -2,7 +2,6 @@ import Document, { DocumentContext } from 'next/document'
 import { SheetsRegistry, JssProvider, createGenerateId } from 'react-jss'
 
 class JssDocument extends Document {
-  static displayName = "JssDocument";
   static async getInitialProps(ctx: DocumentContext) {
     const registry = new SheetsRegistry()
     const generateId = createGenerateId()
@@ -30,4 +29,5 @@ class JssDocument extends Document {
   }
 }
 
+(JssDocument as unknown as React.VFC).displayName = 'Child';
 export default JssDocument;
