@@ -104,7 +104,7 @@ export default function RecentBlock() {
     <>
     <div className={classes.center}>
         <div className={`reveal ${classes.wrap}`}>
-          <Box 
+          <Box data-aos="anim1" data-aos-delay="250"
             className={`reveal ${classes.box1} ${classes.box} ${classes.boxWithTag}`}
           >
             <Box className={classes.tag}><Typography>#work</Typography></Box>
@@ -116,7 +116,7 @@ export default function RecentBlock() {
               </Typography>
             </div>
           </Box>
-          <Box 
+          <Box data-aos="anim1" data-aos-delay="250"
             className={`reveal ${classes.box2} ${classes.box} ${classes.boxWithTag}`}
           >
             <div className={classes.tag}><Typography>#blog</Typography></div>
@@ -127,21 +127,21 @@ export default function RecentBlock() {
                 </Typography>
             </div>
           </Box>
-          <Box 
+          <Box data-aos="anim1" data-aos-delay="250"
             className={`reveal ${classes.box3} ${classes.box}`}
           >
             <div className={classes.boxInsideWrap}>
               <Typography>Links to the outside</Typography>
             </div>
           </Box>
-          <Box 
+          <Box data-aos="anim1" data-aos-delay="250"
             className={`reveal ${classes.box4} ${classes.box}`}
           >
             <div className={classes.boxInsideWrap}>
               <Typography>About.</Typography>
             </div>
           </Box>
-          <Box 
+          <Box data-aos="anim1" data-aos-delay="250"
             className={`reveal ${classes.box5} ${classes.box} ${classes.boxWithTag}`}
           >
             <div className={classes.tag}><Typography>#blog</Typography></div>
@@ -149,7 +149,7 @@ export default function RecentBlock() {
               <Typography>The blog has a log of all things I&apos;ve posted.</Typography>
             </div>
           </Box>
-          <Box 
+          <Box data-aos="anim1" data-aos-delay="250"
             className={`reveal ${classes.box6} ${classes.box} ${classes.boxWithTag}`}
           >
             <div className={classes.tag}><Typography>#blog</Typography></div>

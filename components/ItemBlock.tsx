@@ -2,6 +2,7 @@ import { useEffect, RefObject } from "react";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import React from "react";
+import Box from "@mui/material/Box";
 
 export default function ItemsBlock() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -89,7 +90,8 @@ export default function ItemsBlock() {
   };
   return (
     <>
-      <div className="slider reveal" style={sliderWrap} ref={sliderRef}>
+      <Box data-aos="anim1" data-aos-delay="200">
+      <div className="slider reveal" style={sliderWrap} ref={sliderRef} >
         <div
           data-text="Personals"
           style={slide}
@@ -135,6 +137,7 @@ export default function ItemsBlock() {
           4
         </div>
       </div>
+      </Box>
       <div
         style={designerText}
         data-speed="5"

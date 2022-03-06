@@ -85,20 +85,33 @@ class Layout extends Component {
           </NavigationInner>
         </Navigation>
         {children}
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{backgroundColor:'#eee'}}>
           <Grid item xs={6}>
-            <FooterWrapper maxWidth={false}>
-              <Typography
-                sx={{ fontSize: "100px", opacity: ".3", fontWeight: "100" }}
+            <FooterWrapper >
+              <Typography  data-aos="anim1"
+                sx={{ fontSize: "10vw !important", opacity: ".3", fontWeight: "100" }}
               >
                 AKSHY
               </Typography>
             </FooterWrapper>
           </Grid>
           <Grid item xs={6}>
-            <FooterWrapper maxWidth={false}></FooterWrapper>
+            <FooterWrapper maxWidth={false}>
+              <Stack>
+                <Typography data-aos="anim1" data-aos-delay="50">Home</Typography>
+                <Typography data-aos="anim1" data-aos-delay="100">Work</Typography>
+                <Typography data-aos="anim1" data-aos-delay="150">About</Typography>
+                <Typography data-aos="anim1" data-aos-delay="200">LinkedIn</Typography>
+                <Typography data-aos="anim1" data-aos-delay="250">Github</Typography>
+                <Typography data-aos="anim1" data-aos-delay="300">StackOverflow</Typography>
+                <Typography data-aos="anim1" data-aos-delay="350">WhatsApp</Typography>
+              </Stack>  
+            </FooterWrapper>
           </Grid>
         </Grid>
+            <hr></hr>
+            <hr></hr>
+            <hr></hr>
       </>
     );
   }
@@ -128,13 +141,8 @@ const NavigationInner = styled(Container)({
 });
 
 const FooterWrapper = styled(Container)({
-  backgroundcolor: "#eee",
-  height: "10vh",
-  display: "flex",
-  alignItems: "center",
-  flexDirection: "column",
-  position: "sticky",
-  top: 0,
+  paddingBlock: '50px',
+  overflow:'hidden'
 });
 
 const Logo = styled(Typography)({

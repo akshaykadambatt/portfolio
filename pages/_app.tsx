@@ -21,7 +21,6 @@ const themeOptions = {
     },
     h3: {
       fontWeight: 100,
-      "@media (max-width: 400px)": { fontSize: "20px" }
     },
     h4: {
       fontWeight: 100
@@ -33,11 +32,11 @@ const themeOptions = {
       fontWeight: 100
     },
     body1: {
-      fontWeight: 400,
+      fontWeight: 300,
       fontSize: 18
     },
     body2: {
-      fontWeight: 400
+      fontWeight: 300
     },
     button: {
       fontWeight: 300,
@@ -50,7 +49,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init({
       offset: 0,
-      duration: 600
+      duration: 600,
+      delay:80
     })
   }, [])
   return (

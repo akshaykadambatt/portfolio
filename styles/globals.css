@@ -27,7 +27,7 @@ a {
 }
 
 [data-aos=anim1] {
-  transform: translateY(40px) rotate(1.5deg);
+  transform: translateY(40px) scale(1.031) rotate(3deg);
   opacity: 0;
   transform-origin: top left;
   transition-property: transform, opacity;
@@ -221,4 +221,13 @@ a {
 }
 div:hover > .controls{
   opacity: 0;
+}
+
+.avatar img{
+  transform: scale(1.2) rotate(8deg);
+  transition: all 1.4s cubic-bezier(0, 0, 0.1, 1.07) .31s;
+}
+
+.aos-animate .avatar img{
+  transform: scale(1);
 }
