@@ -11,12 +11,16 @@
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
+    "@mui/lab": "^5.0.0-alpha.71",
     "@mui/material": "^5.4.4",
     "@types/aos": "^3.0.4",
     "aos": "^2.3.4",
+    "keen-slider": "^6.6.3",
     "next": "12.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "react-jss": "^10.9.0"
   },
   "devDependencies": {
     "@types/node": "17.0.21",
