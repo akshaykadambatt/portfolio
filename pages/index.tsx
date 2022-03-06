@@ -39,7 +39,7 @@ const Home: NextPage = () => {
           <Typography variant="h2" sx={{ mb: 2 }} data-aos="anim1">
             Software Engineer
           </Typography>
-          <Typography gutterBottom data-aos="anim1" sx={{ fontWeight: 300, maxWidth: "800px" }} data-aos-delay="150">
+          <Typography gutterBottom data-aos="anim1" sx={{ fontWeight: 300, maxWidth: "800px", pb:2 }} data-aos-delay="150">
             Hi there! My name is Akshay. I&apos;m a software engineer from India and I
             love the web. I&apos;m learning new things everyday and creating things I
             like along the way. This is my personal portfolio and an archive of
@@ -123,9 +123,10 @@ const Home: NextPage = () => {
             my works.
           </Typography>
           <Stack direction="row" spacing={2} my={3}>
-          <Button data-aos="anim1" data-aos-delay="100" size="large" variant="outlined">
+            <Box data-aos="anim1" data-aos-delay="100" >
+          <Button size="large" variant="outlined">
             <RiStackOverflowFill fontSize='24px' />
-          </Button>
+          </Button></Box>
           <Button data-aos="anim1" data-aos-delay="200" size="large" variant="outlined">
             <RiLinkedinLine fontSize='24px' />
           </Button>
