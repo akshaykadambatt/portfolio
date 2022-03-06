@@ -111,8 +111,8 @@ export default function RecentBlock() {
             <div className={classes.boxInsideWrap}>
               <Typography variant='h4'>Works</Typography>
               <Typography>
-                The timeline of all the projects I've done and the personal
-                projects I've created
+                The timeline of all the projects I&apos;ve done and the personal
+                projects I&apos;ve created
               </Typography>
             </div>
           </Box>
@@ -146,7 +146,7 @@ export default function RecentBlock() {
           >
             <div className={classes.tag}><Typography>#blog</Typography></div>
             <div className={classes.boxInsideWrap}>
-              <Typography>The blog has a log of all things I've posted.</Typography>
+              <Typography>The blog has a log of all things I&apos;ve posted.</Typography>
             </div>
           </Box>
           <Box 
@@ -155,7 +155,7 @@ export default function RecentBlock() {
             <div className={classes.tag}><Typography>#blog</Typography></div>
             <div className={classes.boxInsideWrap}>
             <Typography variant='h4'>Blog</Typography>
-              <Typography>The blog has a log of all things I've posted.</Typography>
+              <Typography>The blog has a log of all things I&apos;ve posted.</Typography>
             </div>
           </Box>
         </div>

@@ -1,7 +1,8 @@
 import Document, { DocumentContext } from 'next/document'
 import { SheetsRegistry, JssProvider, createGenerateId } from 'react-jss'
 
-export default class JssDocument extends Document {
+class JssDocument extends Document {
+  static displayName = "JssDocument";
   static async getInitialProps(ctx: DocumentContext) {
     const registry = new SheetsRegistry()
     const generateId = createGenerateId()
@@ -28,3 +29,5 @@ export default class JssDocument extends Document {
     }
   }
 }
+
+export default JssDocument;
