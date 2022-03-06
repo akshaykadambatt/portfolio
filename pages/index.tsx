@@ -37,7 +37,7 @@ const Home: NextPage = () => {
         <meta property="og:site_name" content="AKSHY"/>
         <meta property="og:title" content="AKSHAY K NAIR, Software Engineer"/>
         <meta property="og:url" content="https://akshaykn.vercel.app/" />
-        <meta property="og:image" content="akshay_k_nair.webp" />
+        <meta property="og:image" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
       </Head>
       <HeadBox>
         <Box>
@@ -53,8 +53,8 @@ const Home: NextPage = () => {
             sx={{ fontWeight: 300, maxWidth: "800px", pb: 2 }}
             data-aos-delay="150"
           >
-            Hi there! My name is Akshay. I&apos;m a software engineer from India
-            and I love the web. I&apos;m learning new things everyday and
+            Hi there! My name is Akshay. I&apos;m a software engineer with a strong
+            CS background. I&apos;m learning new things everyday and
             creating things I like along the way. This is my personal portfolio
             and an archive of my works.
           </Typography>
