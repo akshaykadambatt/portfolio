@@ -54,10 +54,9 @@ const Home: NextPage = () => {
             sx={{ fontWeight: 300, maxWidth: "800px", pb: 2 }}
             data-aos-delay="150"
           >
-            Hi there! My name is Akshay. I&apos;m a software engineer with a strong
-            CS background. I&apos;m learning new things everyday and
-            creating things I like along the way. This is my personal portfolio
-            and an archive of my works.
+            Hi there! I&apos;m Akshay. I&apos;m a software engineer with a strong CS background and a great interest in 
+            JavaScript, and the web. I&apos;m learning new things everyday and creating stuff I like along the way. 
+            This is my personal portfolio and an archive of a few of my works.
           </Typography>
           <Box data-aos="anim1" data-aos-delay="250">
             <Button endIcon={<VscArrowRight />} size="large" variant="outlined">
@@ -206,7 +205,7 @@ const Home: NextPage = () => {
               alt="Remy Sharp" 
               src="/akshay_k_nair.webp"
               className="avatar"
-              sx={{ width: "300px", height: "300px", filter:"grayscale(1)" }}
+              sx={{ width: "300px", height: "300px" }}
             />
           </Grid>
           <Grid item xs={12} md={8}>
@@ -227,9 +226,10 @@ const Home: NextPage = () => {
             </Typography>
             <Stack direction="row" spacing={2} my={3}>
               <Box data-aos="anim1" data-aos-delay="100">
-                <Button size="large" variant="outlined">
+                <a href="https://stackoverflow.com/users/7481663/akshay-k-nair" target="_blank" rel="noreferrer">
+                <Button size="large" variant="outlined" >
                   <RiStackOverflowFill fontSize="24px" />
-                </Button>
+                </Button></a>
               </Box>
               <Box data-aos="anim1" data-aos-delay="200">
                 <Button size="large" variant="outlined">

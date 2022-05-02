@@ -71,12 +71,14 @@ class Layout extends Component {
         <Navigation maxWidth={false}>
           <NavigationInner>
             <Box>
-              <Logo>AKSHY</Logo>
+              
+              <Logo>AKSHAY K NAIR</Logo>
             </Box>
             <Box>
               <Stack direction="row" spacing={4} sx={{alignItems: 'center'}}>
                 <Typography>About</Typography>
                 <Typography>Works</Typography>
+                <Typography>Contact</Typography>
                 <Typography>
                   <MaterialUISwitch />
                 </Typography>
@@ -146,10 +148,8 @@ const FooterWrapper = styled(Container)({
 });
 
 const Logo = styled(Typography)({
-  border: '2px solid rgb(0 0 0 / 70%)',
   padding: '2px 8px',
-  fontSize: '22px',
-  fontWeight: '300'
+  fontWeight: '500'
 })
 
 const Footer = styled("footer")({});

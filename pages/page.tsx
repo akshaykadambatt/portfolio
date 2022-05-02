@@ -8,7 +8,7 @@ import Container from '@mui/material/Container';
 const Home: NextPage = () => {
   return (
     <>
-      <Container maxWidth="sm">a
+      <Container maxWidth="sm">
         <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
       </Container>
       <Box sx={{ bgcolor: '#cfe8fc', height: 100 }}

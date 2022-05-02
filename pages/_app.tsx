@@ -8,7 +8,7 @@ import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/s
 
 const themeOptions = {
   typography: {
-    fontFamily: "Heebo, sans-serif",
+    fontFamily: "'Source Sans Pro', sans-serif",
     textTransform: "none",
     fontWeight:300,
     h1: {
@@ -36,10 +36,10 @@ const themeOptions = {
       fontSize: 18
     },
     body2: {
-      fontWeight: 300
+      fontWeight: 600
     },
     button: {
-      fontWeight: 300,
+      fontWeight: 600,
     }
     }
 };
