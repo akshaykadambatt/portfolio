@@ -8,6 +8,11 @@ import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
 import Switch from "@mui/material/Switch";
 import Link from 'next/link'
+import { Button } from "../components/elements";
+import { VscArrowRight, VscGithubAlt } from "react-icons/vsc";
+import { RiStackOverflowFill, RiLinkedinLine } from "react-icons/ri";
+import { AiOutlineWhatsApp } from "react-icons/ai";
+import { AboutText } from "./AboutBlock";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -99,17 +104,28 @@ class Layout extends Component<props> {
           </NavigationInner>
         </Navigation>
         <Box className="menu-wrapper" data-state={this.state.menu}>
-        <Box>
-              <Stack direction="column" spacing={4} sx={{alignItems: 'center'}}>
-                <Link href="/"><a><Typography onClick={openMenu}>Home</Typography></a></Link>
-                <Link href="/about"><a><Typography onClick={openMenu}>About</Typography></a></Link>
-                <Link href="/work"><a><Typography onClick={openMenu}>Works</Typography></a></Link>
-                <Link href="/contact"><a><Typography onClick={openMenu}>Contact</Typography></a></Link>
-                <Typography>
+        <Grid container maxWidth="lg">
+          <Grid
+            item data-aos="anim1" data-aos-delay="100"
+            xs={12}
+            md={5}
+            sx={{ display: "flex", justifyContent: "center", py:3, alignItems: 'flex-end' }}
+          >
+            <Stack direction="column" spacing={4} sx={{alignItems: 'flex-start','@media (max-width: 900px)':{alignItems: 'center', justifyContent:'center'}}}>
+                <Link href="/"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Home</Typography></a></Link>
+                <Link href="/about"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>About</Typography></a></Link>
+                <Link href="/work"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Works</Typography></a></Link>
+                <Link href="/contact"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Contact</Typography></a></Link>
+                <Typography className="menu-links">
                   <MaterialUISwitch onClick={toggleColorScheme}/>
                 </Typography>
               </Stack>
-            </Box>
+          </Grid>
+          <Grid item xs={12} md={6} sx={{'@media (max-width: 900px)':{display:'none'}}}>
+            <AboutText classText="menu-links"/>
+          </Grid>
+        </Grid>
+              
         </Box>
         {children}
         <Grid container spacing={2} sx={{backgroundColor:'#eee'}}>

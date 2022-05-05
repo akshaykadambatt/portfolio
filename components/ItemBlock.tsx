@@ -4,7 +4,7 @@ import { useKeenSlider } from "keen-slider/react";
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { SiReact, SiPython, SiLaravel } from 'react-icons/si';
+import { SiReact, SiPython, SiLaravel, SiNodedotjs } from 'react-icons/si';
 
 export default function ItemsBlock() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -19,16 +19,13 @@ export default function ItemsBlock() {
     },
     breakpoints: {
       "(min-width: 368px)": {
-        slides: {perView: 1.25, origin: "center",spacing: 35 },
-        mode: "free-snap"
+        slides: {perView: 1.25, origin: "center",spacing: 35 }
       },
       "(min-width: 768px)": {
-        slides: {perView: 1.5, origin: "center",spacing: 35 },
-        mode: "free-snap"
+        slides: {perView: 1.5, origin: "center",spacing: 35 }
       },
       "(min-width: 1200px)": {
-        slides: {perView: 3, origin: "center",spacing: 35 },
-        mode: "free-snap"
+        slides: {perView: 3, origin: "center",spacing: 35 }
       }
     }
   });
@@ -73,7 +70,7 @@ export default function ItemsBlock() {
   };
   const progressWrap: React.CSSProperties = {
     width: "100%",
-    margin: "45px 0px 25px 0",
+    margin: "15px 0px 25px 0",
     padding: "0 15px 0 16px",
     background: "rgba(0,0,0,0.071)",
     display: "flex",
@@ -139,8 +136,8 @@ export default function ItemsBlock() {
               : "keen-slider__slide inactive"
           }
         >
-          <Typography variant="h3" color="common.white"><SiLaravel /></Typography>
-          <Typography variant="h3" color="common.white">TBA</Typography>
+          <Typography variant="h3" color="common.white"><SiNodedotjs /></Typography>
+          <Typography variant="h3" color="common.white">NestJS Microservice Application</Typography>
         </div>
       </div>
       </Box>

@@ -32,7 +32,7 @@ export default Work
 
 const BlockFullWidth = styled(Box)({
   marginBottom:160,
-  marginTop:100,
+  marginTop:50,
   transform: 'translateZ(0)',
   overflow:'hidden'
 })

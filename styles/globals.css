@@ -339,3 +339,35 @@ Menu styles
   transition: all cubic-bezier(1, -0.07, 0.32, 0.88) .8s;
   z-index: 9;
 }
+
+.menu-wrapper .menu-links{
+  /* opacity: 0; */
+  transform: translateY(-160px);
+  transition: all cubic-bezier(0.32, 0.33, 0.07, 0.97) .9s;
+}
+
+.menu-wrapper[data-state="1"] .menu-links:nth-child(1){
+  transition-delay: .3s;
+}
+.menu-wrapper[data-state="1"] .menu-links:nth-child(2){
+  transition-delay: .35s;
+}
+.menu-wrapper[data-state="1"] .menu-links:nth-child(3){
+  transition-delay: .4s;
+}
+.menu-wrapper[data-state="1"] .menu-links:nth-child(4){
+  transition-delay: .46s;
+}
+.menu-wrapper[data-state="1"] .menu-links:nth-child(5){
+  transition-delay: .5s;
+}
+
+
+.menu-wrapper[data-state="1"] .menu-links{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.menu-wrapper[data-state="1"] .menu-links button{
+  backdrop-filter: none;
+}

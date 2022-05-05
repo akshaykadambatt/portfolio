@@ -17,6 +17,7 @@ import ItemBlock from "../components/ItemBlock";
 import RecentBlock from "../components/RecentBlock";
 import DesignElem, {BackDesign} from "../components/DesignElem"
 import Head from 'next/head'
+import AboutBlock from "../components/AboutBlock";
 
 const HeadBox = styled(Box)({
   display: "flex",
@@ -180,74 +181,7 @@ const Home: NextPage = () => {
         <Heading variant="h3" gutterBottom data-aos="anim1">
           About Me
         </Heading>
-        <Grid container>
-          <Grid
-            item data-aos="anim1" data-aos-delay="100"
-            xs={12}
-            md={4}
-            sx={{ display: "flex", justifyContent: "center", py:3 }}
-          >
-            <Avatar
-              alt="Remy Sharp" 
-              src="/akshay_k_nair.webp"
-              className="avatar"
-              sx={{ width: "300px", height: "300px" }}
-            />
-          </Grid>
-          <Grid item xs={12} md={8}>
-            <Box sx={{ py:3 }}>
-            <Typography variant="h4" gutterBottom data-aos="anim1" data-aos-delay="80">
-              Akshay K Nair
-            </Typography>
-            <Typography
-              gutterBottom
-              data-aos="anim1"
-              sx={{ fontWeight: 300, maxWidth: "800px" }}
-              data-aos-delay="150"
-            >
-              Hi there! My name is Akshay. I&apos;m a software engineer from
-              India and I love the web. I&apos;m learning new things everyday
-              and creating things I like along the way. This is my personal
-              portfolio and an archive of my works.
-            </Typography>
-            <Stack direction="row" spacing={2} my={3}>
-              <Box data-aos="anim1" data-aos-delay="100">
-                <a href="https://stackoverflow.com/users/7481663/akshay-k-nair" target="_blank" rel="noreferrer">
-                <Button size="large" variant="outlined" >
-                  <RiStackOverflowFill fontSize="24px" />
-                </Button></a>
-              </Box>
-              <Box data-aos="anim1" data-aos-delay="200">
-              <a href="https://www.linkedin.com/in/akshay-k-nair/" target="_blank" rel="noreferrer">
-                <Button size="large" variant="outlined">
-                  <RiLinkedinLine fontSize="24px" />
-                </Button></a>
-              </Box>
-              <Box data-aos="anim1" data-aos-delay="300">
-              <a href="https://github.com/akshayknz" target="_blank" rel="noreferrer">
-                <Button size="large" variant="outlined">
-                  <VscGithubAlt fontSize="24px" />
-                </Button></a>
-              </Box>
-              <Box data-aos="anim1" data-aos-delay="400">
-              <a href="https://api.whatsapp.com/send?phone=+918301044114&text=Hi,%20there!" target="_blank" rel="noreferrer">
-                <Button size="large" variant="outlined">
-                  <AiOutlineWhatsApp fontSize="24px" />
-                </Button></a>
-              </Box>
-            </Stack>
-            <Box data-aos="anim1" data-aos-delay="250">
-              <Button
-                endIcon={<VscArrowRight />}
-                size="large"
-                variant="outlined"
-              >
-                Works
-              </Button>
-            </Box>
-            </Box>
-          </Grid>
-        </Grid>
+        <AboutBlock />
       </Block>
       <BlockFullWidth>
       <Container >
