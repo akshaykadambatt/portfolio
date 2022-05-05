@@ -62,7 +62,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 type props = {
   // using `interface` is also ok
-  message: string;
+  // message: string;
 };
 type MyState = { menu: number };
 class Layout extends Component<props,MyState> {
