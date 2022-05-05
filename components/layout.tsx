@@ -152,9 +152,12 @@ class Layout extends Component<props> {
             </FooterWrapper>
           </Grid>
         </Grid>
-            <hr></hr>
-            <hr></hr>
-            <hr></hr>
+        <Typography align="center" data-aos="anim1" data-aos-delay="400">
+          &copy;&nbsp; Not at all copyrighted by Akshay K Nair.
+        </Typography>
+        <hr></hr>
+        <hr></hr>
+        <hr></hr>
       </>
     );
   }
@@ -172,7 +175,7 @@ const Navigation = styled(Container)({
   zIndex: 20,
   backdropFilter: 'blur(7px)',
   boxShadow: '0 0 20px 0 #0000001a',
-  background: 'linear-gradient(0deg, transparent, rgb(255 255 255 / 55%))'
+  background: 'linear-gradient(0deg, transparent, rgb(var(--background) / 85%))'
 });
 
 const NavigationInner = styled(Container)({

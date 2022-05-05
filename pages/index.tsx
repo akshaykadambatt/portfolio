@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         <meta property="og:image:secure_url" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
       </Head>
       <HeadBox>
-        <Box>
+        <Box sx={{position:'relative',zIndex:'1'}}>
           <Typography variant="h1" sx={{ mb: 0 }}>
             Akshay K Nair
           </Typography>

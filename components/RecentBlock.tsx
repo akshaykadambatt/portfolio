@@ -19,14 +19,8 @@ export default function RecentBlock() {
       borderRadius: "10px",
       backdropFilter: "blur(15px)",
       cursor: "pointer",
-      transition: "all 0.1s",
-      textDecoration: "none !important",
-      boxShadow:
-        "rgb(0 0 0 / 10%) 3px 3px 4px 2px,rgb(255 255 255 / 91%) -3px -3px 4px 2px,inset rgb(255 255 255 / 83%) 0 0 0 0, inset rgb(241 237 237 / 91%) 0 0 0 0",
-      "&:hover": {
-        boxShadow:
-          "rgb(0 0 0 / 10%) 0 0 0 0, rgb(255 255 255 / 91%) 0 0 0 0,inset rgb(255 255 255 / 83%) -3px -3px 4px 2px,inset rgb(241 237 237 / 91%) 3px 4px 4px 2px"
-      }
+      transition: "all 0.5s, box-shadow 0.2s 0s !important",
+      textDecoration: "none !important"
     },
     box1: {
       gridColumnStart: 1,
@@ -105,7 +99,7 @@ export default function RecentBlock() {
     <div className={classes.center}>
         <div className={`reveal ${classes.wrap}`}>
           <Box data-aos="anim1" data-aos-delay="250"
-            className={`reveal ${classes.box1} ${classes.box} ${classes.boxWithTag}`}
+            className={`reveal shadow-box ${classes.box1} ${classes.box} ${classes.boxWithTag}`}
           >
             <Box className={classes.tag}><Typography>#work</Typography></Box>
             <div className={classes.boxInsideWrap}>
@@ -117,7 +111,7 @@ export default function RecentBlock() {
             </div>
           </Box>
           <Box data-aos="anim1" data-aos-delay="250"
-            className={`reveal ${classes.box2} ${classes.box} ${classes.boxWithTag}`}
+            className={`reveal shadow-box ${classes.box2} ${classes.box} ${classes.boxWithTag}`}
           >
             <div className={classes.tag}><Typography>#blog</Typography></div>
             <div className={classes.boxInsideWrap}>
@@ -128,21 +122,21 @@ export default function RecentBlock() {
             </div>
           </Box>
           <Box data-aos="anim1" data-aos-delay="250"
-            className={`reveal ${classes.box3} ${classes.box}`}
+            className={`reveal shadow-box ${classes.box3} ${classes.box}`}
           >
             <div className={classes.boxInsideWrap}>
               <Typography>Links to the outside</Typography>
             </div>
           </Box>
           <Box data-aos="anim1" data-aos-delay="250"
-            className={`reveal ${classes.box4} ${classes.box}`}
+            className={`reveal shadow-box ${classes.box4} ${classes.box}`}
           >
             <div className={classes.boxInsideWrap}>
               <Typography>About.</Typography>
             </div>
           </Box>
           <Box data-aos="anim1" data-aos-delay="250"
-            className={`reveal ${classes.box5} ${classes.box} ${classes.boxWithTag}`}
+            className={`reveal shadow-box ${classes.box5} ${classes.box} ${classes.boxWithTag}`}
           >
             <div className={classes.tag}><Typography>#blog</Typography></div>
             <div className={classes.boxInsideWrap}>
@@ -150,7 +144,7 @@ export default function RecentBlock() {
             </div>
           </Box>
           <Box data-aos="anim1" data-aos-delay="250"
-            className={`reveal ${classes.box6} ${classes.box} ${classes.boxWithTag}`}
+            className={`reveal shadow-box ${classes.box6} ${classes.box} ${classes.boxWithTag}`}
           >
             <div className={classes.tag}><Typography>#blog</Typography></div>
             <div className={classes.boxInsideWrap}>

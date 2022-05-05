@@ -5,20 +5,26 @@
 
 /* Light Mode */
 :root {
-  --main-color: red;
-  --main-color-hex: 255,0,0;
-  --accent-color: #000;
-  --tertiary-color: #000;
+  --background:241 241 241;
+  --foreground:34 34 34;
+  --one:120 232 251;
+  --two:57 142 252;
+  --three:255 66 66;
+  --above-shadow:255 255 255;
+  --below-shadow:208 208 208;
   --background-color: rgba(235, 235, 235, 0.433);
   --text-color: #000;
   --color-one: rgb(255, 0, 0);
   --color-one-light: rgba(255, 0, 0, 0.205);
 }
 :root[color-mode="light"] {
-  --main-color: red;
-  --main-color-hex: 255,0,0;
-  --accent-color: #000;
-  --tertiary-color: #000;
+  --background:241 241 241;
+  --foreground:34 34 34;
+  --one:120 232 251;
+  --two:57 142 252;
+  --three:255 66 66;
+  --above-shadow:255 255 255;
+  --below-shadow:208 208 208;
   --background-color: rgba(235, 235, 235, 0.433);
   --text-color: #000;
   --color-one: rgb(255, 0, 0);
@@ -27,19 +33,23 @@
 
 /* Dark Mode */
 :root[color-mode="dark"] {
-  --main-color: red;
-  --main-color-hex: 255,0,0;
-  --accent-color: #000;
-  --tertiary-color: #000;
-  --background-color: rgba(5, 5, 5, 0.433);
-  --text-color: #000;
+  --background:34 34 34;
+  --foreground:241 241 241;
+  --one:17 17 17;
+  --two:0 68 159;
+  --three:255 66 66;
+  --above-shadow:60 60 60;
+  --below-shadow:22 22 22;
+  --background-color: rgba(5, 5, 5, 0.818);
+  --text-color: rgb(255, 255, 255);
   --color-one: rgb(255, 0, 0);
   --color-one-light: rgba(255, 0, 0, 0.205);
 }
 
 html,
 body {
-  background: var(--background-color);
+  background: rgb(var(--background));
+  color:rgb(var(--foreground));
   padding: 0;
   margin: 0;
   font-family: Heebo,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -92,60 +102,60 @@ a {
   align-content: center;
   justify-content: space-around;
   align-items: center;
-  z-index: -1;
+  z-index: 0;
   transform: scale(1);
 }
 #backWrap div {
   position: absolute;
-  border: 0px solid var(--color-one);
+  border: 0px solid rgb(var(--three));
   border-radius: 0px 0px;
   opacity: 0;
   transform: translate(0px, 0px) scale(3);
 }
 #backWrap div:nth-child(1) {
-  background-color: var(--color-one-light);
+  background-color: rgb(var(--three)/40%);
   height: 800px;
   width: 300px;
   animation: back 6s cubic-bezier(1, 0, 0.35, 1.08) 0.41s infinite
     alternate-reverse;
 }
 #backWrap div:nth-child(2) {
-  background-color: var(--color-one-light);
+  background-color: rgb(var(--three)/40%);
   height: 800px;
   width: 800px;
   animation: back 4s cubic-bezier(1, 0, 0.35, 1.08) 0.62s infinite
     alternate-reverse;
 }
 #backWrap div:nth-child(3) {
-  background-color: var(--color-one-light);
+  background-color: rgb(var(--three)/40%);
   height: 150px;
   width: 350px;
   animation: back 4s cubic-bezier(1, 0, 0.35, 1.08) 0.83s infinite
     alternate-reverse;
 }
 #backWrap div:nth-child(4) {
-  background-color: var(--color-one-light);
+  background-color: rgb(var(--three)/40%);
   height: 120px;
   width: 120px;
   animation: back 5s cubic-bezier(1, 0, 0.35, 1.08) 1.1s infinite
     alternate-reverse;
 }
 #backWrap div:nth-child(5) {
-  background-color: var(--color-one-light);
+  background-color: rgb(var(--three)/40%);
   height: 50px;
   width: 50px;
   animation: back 1s cubic-bezier(1, 0, 0.35, 1.08) 1.5s infinite
     alternate-reverse;
 }
 #backWrap div:nth-child(6) {
-  background-color: var(--color-one-light);
+  background-color: rgb(var(--three)/40%);
   height: 50px;
   width: 140px;
   animation: back 3s cubic-bezier(1, 0, 0.35, 1.08) 1.6s infinite
     alternate-reverse;
 }
 #backWrap div:nth-child(7) {
-  background-color: var(--color-one-light);
+  background-color: rgb(var(--three)/40%);
   height: 250px;
   width: 250px;
   animation: back 3s cubic-bezier(1, 0, 0.35, 1.08) 1.3s infinite
@@ -159,8 +169,8 @@ a {
   }
   30% {
     border-radius: 10px 10px;
-    border: 0px solid var(--color-one);
-    background-color: var(--color-one-light);
+    border: 0px solid rgb(var(--three));
+    background-color: rgb(var(--three)/40%);
     opacity: 0.21;
     transform: translate(33vw, -22vh) scale(0.92);
   }
@@ -168,15 +178,15 @@ a {
     border-radius: 10px 200px;
     opacity: 0.21;
     filter: hue-rotate(-68deg);
-    border: 1px solid var(--color-one);
+    border: 1px solid rgb(var(--three));
     background: transparent;
     transform: translate(30vw, -20vh) scale(1);
   }
   60% {
     border-radius: 10px 10px;
     transform: translate(29vw, -20vh) scale(1);
-    background-color: var(--color-one-light);
-    border: 0px solid var(--color-one);
+    background-color: rgb(var(--three)/40%);
+    border: 0px solid rgb(var(--three));
     opacity: 0.61;
   }
   70% {
@@ -233,9 +243,10 @@ a {
 }
 .keen-slider__slide.currentSlide {
   opacity: 1;
-  box-shadow: 4px 27px 50px 5px rgba(0, 0, 0, 0.31);
+  box-shadow: 4px 27px 50px 5px rgb(var(--below-shadow)/100%);
   top: -13px;
 }
+
 .keen-slider__slide {
   opacity: 0.61;
   top: 0;
@@ -268,12 +279,23 @@ div:hover > .controls{
   transition: filter .4s, box-shadow 1.4s;
 }
 
+.shadow-box{
+      transition: all 0.5s, box-shadow 0.2s 1s !important;
+      box-shadow: inset transparent 0 0 0 0, inset transparent 0 0 0 0, rgb(var(--below-shadow) / 80%) 3px 3px 4px 2px,
+  rgb(var(--above-shadow) / 91%) -3px -3px 4px 2px;
+
+}
+.shadow-box:hover{
+      box-shadow: inset rgb(var(--above-shadow) / 83%) -3px -3px 4px 2px,
+  inset rgb(var(--below-shadow) / 80%) 3px 4px 4px 2px,
+  transparent 0 0 0 0, transparent 0 0 0 0;
+}
 
 /*
 Menu styles
 */
 .hamburger-round{
-  border: 1px solid rgb(0 0 0 / 100%);
+  border: 1px solid rgb(var(--foreground) / 100%);
   width: 50px;
   height: 50px;
   border-radius: 50px;
@@ -293,7 +315,7 @@ Menu styles
 
 .hamburger::after,.hamburger::before{
   position: relative;
-  background-color: #000;
+  background-color: rgb(var(--foreground) / 100%);
 }
 
 .hamburger::before{
@@ -316,7 +338,7 @@ Menu styles
 
 .menu-wrapper{
   width:100vw;
-  background-color: rgba(255, 255, 255, 0.523);
+  background-color: rgb(var(--background) / 30%);
   backdrop-filter: blur(20px);
   position: fixed;
   top: 0;

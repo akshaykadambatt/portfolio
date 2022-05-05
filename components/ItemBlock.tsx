@@ -37,7 +37,7 @@ export default function ItemsBlock() {
     borderRadius: "10px",
     padding: "16px",
     boxSizing: "border-box",
-    background: "linear-gradient(45deg, #1e8dff, #77e9fb)",
+    background: "linear-gradient(45deg, rgb(var(--two)), rgb(var(--one)))",
     // border: "4px solid rgb(244 0 0 / 30%)",
     userSelect: "none"
   };
@@ -56,7 +56,7 @@ export default function ItemsBlock() {
   }, [currentSlide]);
   const designerText: React.CSSProperties = {
     fontSize: "60px",
-    WebkitTextStroke: "1px var(--main-color)",
+    WebkitTextStroke: "1px rgb(var(--three))",
     WebkitTextFillColor: "transparent",
     height: "0",
     textAlign: "left",
@@ -72,14 +72,14 @@ export default function ItemsBlock() {
     width: "100%",
     margin: "15px 0px 25px 0",
     padding: "0 15px 0 16px",
-    background: "rgba(0,0,0,0.071)",
+    background: "rgb(var(--foreground)/10%)",
     display: "flex",
     height: "2px",
     justifyContent: "flex-start",
     alignItems: "center"
   };
   let progress: React.CSSProperties = {
-    background: "var(--main-color)",
+    background: "rgb(var(--three))",
     height: "2px",
     width: "25%",
     opacity: ".6",

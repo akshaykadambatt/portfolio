@@ -13,7 +13,7 @@ const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
     <Container data-aos="anim1" sx={{ my: 10 }}>
       <Box
         sx={{
-          bgcolor: "#cfe8fc",
+          bgcolor: "rgb(var(--two)/30%)",
           my: 10,
           display: "flex",
           alignItems: "center",
