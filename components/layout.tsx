@@ -64,7 +64,8 @@ type props = {
   // using `interface` is also ok
   message: string;
 };
-class Layout extends Component<props> {
+type MyState = { menu: number };
+class Layout extends Component<props,MyState> {
   menuRef: React.RefObject<HTMLInputElement>;
   constructor(props: props) {
     super(props);
