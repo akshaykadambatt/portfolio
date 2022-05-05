@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
 import Switch from "@mui/material/Switch";
+import Link from 'next/link'
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -54,9 +55,25 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     borderRadius: 20 / 2,
   },
 }));
-
-class Layout extends Component {
+type props = {
+  // using `interface` is also ok
+  message: string;
+};
+class Layout extends Component<props> {
+  menuRef: React.RefObject<HTMLInputElement>;
+  constructor(props: props) {
+    super(props);
+    this.menuRef = React.createRef();
+    this.state = {
+      menu: 0
+    };
+  }
   render() {
+    const openMenu = () => {
+      this.setState({menu: 1-this.state.menu});
+      console.log(this.state.menu);
+      
+    }
     const { children } = this.props;
     return (
       <>
@@ -72,20 +89,28 @@ class Layout extends Component {
           <NavigationInner>
             <Box>
               
-              <Logo>AKSHAY K NAIR</Logo>
+            <Link href="/"><a><Logo>AKSHAY K NAIR</Logo></a></Link>
             </Box>
             <Box>
-              <Stack direction="row" spacing={4} sx={{alignItems: 'center'}}>
-                <Typography>About</Typography>
-                <Typography>Works</Typography>
-                <Typography>Contact</Typography>
-                <Typography>
-                  <MaterialUISwitch />
-                </Typography>
-              </Stack>
+              <Box className="hamburger-round" onClick={openMenu} ref={this.menuRef} data-state={this.state.menu} >
+                <Box className="hamburger"></Box>
+              </Box>
             </Box>
           </NavigationInner>
         </Navigation>
+        <Box className="menu-wrapper" data-state={this.state.menu}>
+        <Box>
+              <Stack direction="column" spacing={4} sx={{alignItems: 'center'}}>
+                <Link href="/"><a><Typography onClick={openMenu}>Home</Typography></a></Link>
+                <Link href="/about"><a><Typography onClick={openMenu}>About</Typography></a></Link>
+                <Link href="/work"><a><Typography onClick={openMenu}>Works</Typography></a></Link>
+                <Link href="/contact"><a><Typography onClick={openMenu}>Contact</Typography></a></Link>
+                <Typography>
+                  <MaterialUISwitch onClick={toggleColorScheme}/>
+                </Typography>
+              </Stack>
+            </Box>
+        </Box>
         {children}
         <Grid container spacing={2} sx={{backgroundColor:'#eee'}}>
           <Grid item xs={6}>
@@ -153,3 +178,9 @@ const Logo = styled(Typography)({
 })
 
 const Footer = styled("footer")({});
+
+
+
+const toggleColorScheme = () => {
+  document.documentElement.setAttribute("color-mode", "dark");
+}

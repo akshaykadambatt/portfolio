@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { styled } from "@mui/system";
 
 type AppProps = {
   text: string;
@@ -74,3 +75,24 @@ const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
 };
 
 export default DesignElem;
+
+const BackDesign: NextPage<AppProps> = ({ text }): JSX.Element => {
+  return (<>
+    <BackDesignBlock>{text}</BackDesignBlock>
+  </>);
+}
+export {BackDesign};
+const BackDesignBlock = styled(Box)(`
+  font-size: 100px;
+  position: fixed;
+  top: 45%;
+  text-align: center;
+  width: 98%;
+  font-size: 60px;
+  -webkit-text-stroke: 1px var(--main-color);
+  -webkit-text-fill-color: transparent;
+  z-index: -2;
+  opacity: 1;
+  user-select: none;
+  font-weight: 300;
+`);

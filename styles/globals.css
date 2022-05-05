@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 :root {
+
+}
+
+/* Light Mode */
+:root {
   --main-color: red;
   --main-color-hex: 255,0,0;
   --accent-color: #000;
@@ -9,6 +14,29 @@
   --color-one: rgb(255, 0, 0);
   --color-one-light: rgba(255, 0, 0, 0.205);
 }
+:root[color-mode="light"] {
+  --main-color: red;
+  --main-color-hex: 255,0,0;
+  --accent-color: #000;
+  --tertiary-color: #000;
+  --background-color: rgba(235, 235, 235, 0.433);
+  --text-color: #000;
+  --color-one: rgb(255, 0, 0);
+  --color-one-light: rgba(255, 0, 0, 0.205);
+}
+
+/* Dark Mode */
+:root[color-mode="dark"] {
+  --main-color: red;
+  --main-color-hex: 255,0,0;
+  --accent-color: #000;
+  --tertiary-color: #000;
+  --background-color: rgba(5, 5, 5, 0.433);
+  --text-color: #000;
+  --color-one: rgb(255, 0, 0);
+  --color-one-light: rgba(255, 0, 0, 0.205);
+}
+
 html,
 body {
   background: var(--background-color);
@@ -238,4 +266,76 @@ div:hover > .controls{
 }
 .keen-slider__slide{
   transition: filter .4s, box-shadow 1.4s;
+}
+
+
+/*
+Menu styles
+*/
+.hamburger-round{
+  border: 1px solid rgb(0 0 0 / 100%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hamburger,.hamburger::after,.hamburger::before{
+  height: 2px;
+  width: 29px;
+  content: '';
+  display: block;
+  transition: all cubic-bezier(1, -0.07, 0.32, 0.88) .47s;
+}
+
+.hamburger::after,.hamburger::before{
+  position: relative;
+  background-color: #000;
+}
+
+.hamburger::before{
+  top:-5px;
+}
+
+.hamburger::after{
+  top:4px;
+}
+
+.hamburger-round[data-state="1"] .hamburger::before{
+  top: 0px;
+  transform: rotate(44deg);
+}
+
+.hamburger-round[data-state="1"] .hamburger::after{
+  top: -2px;
+  transform: rotate( -44deg);
+}
+
+.menu-wrapper{
+  width:100vw;
+  background-color: rgba(255, 255, 255, 0.523);
+  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all cubic-bezier(1, -0.07, 0.32, 0.88) .4s;
+  z-index: 9;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu-wrapper[data-state="1"]{
+  height:100vh;
+  width:100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all cubic-bezier(1, -0.07, 0.32, 0.88) .8s;
+  z-index: 9;
 }

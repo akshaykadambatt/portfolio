@@ -15,7 +15,7 @@ import Stack from "@mui/material/Stack";
 import IconButton from "@mui/material/IconButton";
 import ItemBlock from "../components/ItemBlock";
 import RecentBlock from "../components/RecentBlock";
-import DesignElem from "../components/DesignElem"
+import DesignElem, {BackDesign} from "../components/DesignElem"
 import Head from 'next/head'
 
 const HeadBox = styled(Box)({
@@ -93,19 +93,13 @@ const Home: NextPage = () => {
                 Languages
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                JavaScript
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                TypeScript
+                JavaScript, TypeScript, NodeJS
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
                 PHP
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                HTML5
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                CSS3
+                HTML5, CSS3
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
                 SQL
@@ -128,10 +122,7 @@ const Home: NextPage = () => {
                 Frameworks
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                React
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Next JS
+                React, Next JS
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
                 Laravel
@@ -146,13 +137,10 @@ const Home: NextPage = () => {
                 Bootstrap
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Styled Components
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
                 Redux
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Tailwind CSS
+                Styled Components, Tailwind CSS
               </Typography>
             </Box>
           </Grid>
@@ -169,27 +157,25 @@ const Home: NextPage = () => {
                 Tools
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Git
+                Git, GitHub, BitBucket, GitLab
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                MySQL
+                MySQL, Eloquent ORM
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Firebase
+                Firebase, Vercel, Heroku
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
                 Apache
               </Typography>
               <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Composer
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                NPM
+                NPM, Composer, Yarn
               </Typography>
             </Box>
           </Grid>
         </Grid>
       </Block></Box>
+        <BackDesign text="Stuff I Know" />
       <Block>
         <Heading variant="h3" gutterBottom data-aos="anim1">
           About Me
@@ -232,19 +218,22 @@ const Home: NextPage = () => {
                 </Button></a>
               </Box>
               <Box data-aos="anim1" data-aos-delay="200">
+              <a href="https://www.linkedin.com/in/akshay-k-nair/" target="_blank" rel="noreferrer">
                 <Button size="large" variant="outlined">
                   <RiLinkedinLine fontSize="24px" />
-                </Button>
+                </Button></a>
               </Box>
               <Box data-aos="anim1" data-aos-delay="300">
+              <a href="https://github.com/akshayknz" target="_blank" rel="noreferrer">
                 <Button size="large" variant="outlined">
                   <VscGithubAlt fontSize="24px" />
-                </Button>
+                </Button></a>
               </Box>
               <Box data-aos="anim1" data-aos-delay="400">
+              <a href="https://api.whatsapp.com/send?phone=+918301044114&text=Hi,%20there!" target="_blank" rel="noreferrer">
                 <Button size="large" variant="outlined">
                   <AiOutlineWhatsApp fontSize="24px" />
-                </Button>
+                </Button></a>
               </Box>
             </Stack>
             <Box data-aos="anim1" data-aos-delay="250">
@@ -296,3 +285,4 @@ const Heading = styled(Typography)({
   paddingInline:50,
   marginBottom:30
 })
+
