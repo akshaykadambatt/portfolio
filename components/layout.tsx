@@ -95,6 +95,10 @@ class Layout extends Component<props,MyState> {
           <meta property="og:url" content="https://akshaykn.vercel.app/" />
           <meta property="og:image" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
           <meta property="og:image:secure_url" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WX9F6G7GB"></script>
+          <script dangerouslySetInnerHTML={{__html: `window.dataLayer = window.dataLayer || [];function gtag(){
+                dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-3WX9F6G7GB');`,}}
+          />
         </Head>
         <Navigation maxWidth={false}>
           <NavigationInner>
