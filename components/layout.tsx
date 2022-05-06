@@ -90,7 +90,6 @@ class Layout extends Component<props,MyState> {
             content="Portfolio of Akshay K Nair, Software Engineer"
           />
           <link rel="icon" href="/favicon.ico" />
-          <meta name="google-site-verification" content="PwTyVPExhrSdYSytR6_b_mZ03zihrIGeDgYFfxcB69I" />
           <meta property="og:site_name" content="AKSHY"/>
           <meta property="og:url" content="https://akshaykn.vercel.app/" />
           <meta property="og:image" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
