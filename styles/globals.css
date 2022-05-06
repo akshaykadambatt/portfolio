@@ -382,7 +382,10 @@ Menu styles
   transition-delay: .5s;
   transition-property:opacity, transform;
 }
-
+.menu-wrapper[data-state="1"] .menu-links:nth-child(6){
+  transition-delay: .55s;
+  transition-property:opacity, transform;
+}
 .menu-wrapper[data-state="1"] .menu-links{
   opacity: 1;
   transform: translateY(0px);

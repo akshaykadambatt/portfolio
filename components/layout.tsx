@@ -125,13 +125,14 @@ class Layout extends Component<props,MyState> {
                 <Link href="/"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Home</Typography></a></Link>
                 <Link href="/about"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>About</Typography></a></Link>
                 <Link href="/work"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Works</Typography></a></Link>
+                <Link href="/blog"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Blog</Typography></a></Link>
                 <Link href="/contact"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Contact</Typography></a></Link>
                 <Typography className="menu-links">
                   <MaterialUISwitch onClick={toggleColorScheme}/>
                 </Typography>
               </Stack>
           </Grid>
-          <Grid item xs={12} md={6} sx={{'@media (max-width: 900px)':{display:'none'}}}>
+          <Grid item xs={12} md={6} sx={{display:"flex", alignItems:"center", '@media (max-width: 900px)':{display:'none'}}}>
             <AboutText classText="menu-links"/>
           </Grid>
         </Grid>
