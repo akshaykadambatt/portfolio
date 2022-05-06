@@ -303,14 +303,22 @@ Menu styles
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all .2s;
 }
+.hamburger-round:hover{
+  border: 1px solid rgb(var(--background) / 100%);
+  background-color: rgb(var(--foreground) / 100%);
+}
+.hamburger-round:hover > .hamburger::after,.hamburger-round:hover > .hamburger::before{
+  background-color: rgb(var(--background) / 100%);
 
+}
 .hamburger,.hamburger::after,.hamburger::before{
   height: 2px;
   width: 29px;
   content: '';
   display: block;
-  transition: all cubic-bezier(1, -0.07, 0.32, 0.88) .47s;
+  transition: all cubic-bezier(1, -0.07, 0.32, 0.88) .47s, background-color .2s 0s;
 }
 
 .hamburger::after,.hamburger::before{

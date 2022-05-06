@@ -36,7 +36,7 @@ const Home: NextPage = () => {
       <Head>
         <title>AKSHAY K NAIR, Software Engineer</title>
         <meta property="og:site_name" content="AKSHY"/>
-        <meta property="og:title" content="AKSHAY K NAIR, Software Engineer"/>
+        <meta property="og:title" content="AKSHAY K NAIR, Software Engineer | Home"/>
         <meta property="og:url" content="https://akshaykn.vercel.app/" />
         <meta property="og:image" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
         <meta property="og:image:secure_url" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
