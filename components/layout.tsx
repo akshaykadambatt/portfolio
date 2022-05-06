@@ -12,6 +12,7 @@ import { Button } from "../components/elements";
 import { VscArrowRight, VscGithubAlt } from "react-icons/vsc";
 import { RiStackOverflowFill, RiLinkedinLine } from "react-icons/ri";
 import { AiOutlineWhatsApp } from "react-icons/ai";
+import { BsSun, BsMoonStars } from "react-icons/bs";
 import { AboutText } from "./AboutBlock";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
@@ -137,36 +138,50 @@ class Layout extends Component<props,MyState> {
               
         </Box>
         {children}
-        <Grid container spacing={2} sx={{backgroundColor:'#eee'}}>
-          <Grid item xs={6}>
-            <FooterWrapper >
+        <Grid container spacing={5} justifyContent="center" sx={{background:"linear-gradient(45deg, rgb(var(--one)/81%) -47%, rgb(var(--two)/30%) 93%)"}}>
+          <Grid item xs={10} md={5} >
+            <FooterWrapper>
               <Typography  data-aos="anim1"
-                sx={{ fontSize: "10vw !important", opacity: ".3", fontWeight: "100" }}
+                sx={{ fontSize: "10vw !important", opacity: ".3", fontWeight: "100", textAlign:{
+                  xs: "center",
+                  md: "left"
+                } }}
               >
                 AKSHY
               </Typography>
             </FooterWrapper>
           </Grid>
-          <Grid item xs={6}>
-            <FooterWrapper maxWidth={false}>
-              <Stack>
-                <Typography data-aos="anim1" data-aos-delay="50">Home</Typography>
-                <Typography data-aos="anim1" data-aos-delay="100">Work</Typography>
-                <Typography data-aos="anim1" data-aos-delay="150">About</Typography>
-                <Typography data-aos="anim1" data-aos-delay="200">LinkedIn</Typography>
-                <Typography data-aos="anim1" data-aos-delay="250">Github</Typography>
-                <Typography data-aos="anim1" data-aos-delay="300">StackOverflow</Typography>
-                <Typography data-aos="anim1" data-aos-delay="350">WhatsApp</Typography>
+          <Grid item xs={10} md={5}>
+            <FooterWrapper>
+              <Stack direction="row" spacing={2}>
+              <Stack sx={{width:"30%", justifyContent:"space-between"}}>
+                <a><Typography align="left" onClick={toggleColorSchemeLight} data-aos="anim1" data-aos-delay="350"><BsSun /></Typography></a>
+                <a><Typography align="left" onClick={toggleColorSchemeDark} data-aos="anim1" data-aos-delay="350"><BsMoonStars /></Typography></a>
               </Stack>  
+              <Stack sx={{width:"70%", justifyContent:"space-between"}}>
+                <Typography align="right" data-aos="anim1" data-aos-delay="50">Home</Typography>
+                <Typography align="right" data-aos="anim1" data-aos-delay="100">Work</Typography>
+                <Typography align="right" data-aos="anim1" data-aos-delay="150">About</Typography>
+                <Typography align="right" data-aos="anim1" data-aos-delay="200">Contact Me</Typography>
+                <Typography align="right" data-aos="anim1" data-aos-delay="200">LinkedIn</Typography>
+                <Typography align="right" data-aos="anim1" data-aos-delay="250">Github</Typography>
+                <Typography align="right" data-aos="anim1" data-aos-delay="300">StackOverflow</Typography>
+                <Typography align="right" data-aos="anim1" data-aos-delay="350">WhatsApp</Typography>
+                
+              </Stack>  
+              </Stack>
+             
             </FooterWrapper>
           </Grid>
-        </Grid>
-        <Typography align="center" data-aos="anim1" data-aos-delay="400">
+          <Grid item xs={11}><hr></hr></Grid>
+          
+          <Grid item xs={10}>
+            <Typography align="center" mb={4}>
           &copy;&nbsp; Not at all copyrighted by Akshay K Nair.
         </Typography>
-        <hr></hr>
-        <hr></hr>
-        <hr></hr>
+          </Grid>
+        </Grid>
+        
       </>
     );
   }
@@ -184,7 +199,7 @@ const Navigation = styled(Container)({
   zIndex: 20,
   backdropFilter: 'blur(7px)',
   boxShadow: '0 0 20px 0 #0000001a',
-  background: 'linear-gradient(0deg, transparent, rgb(var(--background) / 85%))'
+  background: 'linear-gradient(0deg, transparent, rgb(var(--background) / 85%))',
 });
 
 const NavigationInner = styled(Container)({
@@ -196,7 +211,7 @@ const NavigationInner = styled(Container)({
 });
 
 const FooterWrapper = styled(Container)({
-  paddingBlock: '50px',
+  paddingBlock: '20px',
   overflow:'hidden'
 });
 
@@ -210,5 +225,19 @@ const Footer = styled("footer")({});
 
 
 const toggleColorScheme = () => {
-  document.documentElement.setAttribute("color-mode", "dark");
+  switch (document.documentElement.getAttribute('color-mode')) {
+    case "dark":
+      document.documentElement.setAttribute("color-mode", "light");
+      break;
+    case "light":
+      document.documentElement.setAttribute("color-mode", "dark");
+      break;
+    default:
+      document.documentElement.setAttribute("color-mode", "dark");
+      break;
+  }
+  
 }
+
+const toggleColorSchemeLight = () => document.documentElement.setAttribute("color-mode", "light");
+const toggleColorSchemeDark = () => document.documentElement.setAttribute("color-mode", "dark");

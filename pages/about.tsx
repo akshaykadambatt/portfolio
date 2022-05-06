@@ -12,10 +12,6 @@ const About: NextPage = () => {
         About page
         <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
       </Container>
-      <Box sx={{ bgcolor: '#cfe8fc', height: 100 }}
-        data-aos="anim1"
-      >sdafsdf
-      </Box>
     </>
   )
 }
