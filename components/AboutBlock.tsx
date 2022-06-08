@@ -6,6 +6,7 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import { RiStackOverflowFill, RiLinkedinLine } from "react-icons/ri";
 import { VscGithubAlt, VscArrowRight } from "react-icons/vsc";
 import { Button } from "../components/elements";
+import Link from "next/link";
 
 type AppProps = {
   classText?: string;
@@ -85,13 +86,11 @@ const AboutText : NextPage<AppProps> = ({ classText }): JSX.Element => {
           </Stack>
           <Box className={ classText }>
             <Box data-aos="anim1" data-aos-delay="250"  >
-              <Button
-                endIcon={<VscArrowRight />}
-                size="large"
-                variant="outlined"
-              >
-                Works
-              </Button>
+              <Link href="/work">
+                <Button endIcon={<VscArrowRight />} size="large" variant="outlined">
+                  Works
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Box>

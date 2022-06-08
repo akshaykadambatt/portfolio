@@ -282,9 +282,9 @@ Menu styles
 */
 .hamburger-round{
   border: 1px solid rgb(var(--foreground) / 100%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,7 +301,7 @@ Menu styles
 }
 .hamburger,.hamburger::after,.hamburger::before{
   height: 2px;
-  width: 29px;
+  width: 25px;
   content: '';
   display: block;
   transition: all cubic-bezier(1, -0.07, 0.32, 0.88) .47s, background-color .2s 0s;

@@ -164,6 +164,7 @@ class Layout extends Component<props,MyState> {
                 <Typography align="right" data-aos="anim1" data-aos-delay="100">Work</Typography>
                 <Typography align="right" data-aos="anim1" data-aos-delay="150">About</Typography>
                 <Typography align="right" data-aos="anim1" data-aos-delay="200">Contact Me</Typography>
+                <Typography align="right" data-aos="anim1" data-aos-delay="200">Download Résumé</Typography>
                 <Typography align="right" data-aos="anim1" data-aos-delay="200">LinkedIn</Typography>
                 <Typography align="right" data-aos="anim1" data-aos-delay="250">Github</Typography>
                 <Typography align="right" data-aos="anim1" data-aos-delay="300">StackOverflow</Typography>
@@ -191,7 +192,8 @@ class Layout extends Component<props,MyState> {
 export default Layout;
 
 const Navigation = styled(Container)({
-  height: "10vh",
+  height: "auto",
+  paddingBlock: "13px",
   display: "flex",
   alignItems: "center",
   flexDirection: "column",
@@ -200,15 +202,14 @@ const Navigation = styled(Container)({
   zIndex: 20,
   backdropFilter: 'blur(7px)',
   boxShadow: '0 0 20px 0 #0000001a',
-  background: 'linear-gradient(0deg, transparent, rgb(var(--background) / 85%))',
+  background: 'linear-gradient(0deg, transparent, rgb(var(--background) / 85%))'
 });
 
 const NavigationInner = styled(Container)({
   width: "90%",
-  height: "10vh",
   display: "flex",
   alignItems: "center",
-  justifyContent: "space-between",
+  justifyContent: "space-between"
 });
 
 const FooterWrapper = styled(Container)({

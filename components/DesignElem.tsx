@@ -21,54 +21,42 @@ const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
           flexDirection: "column",
         }}
       >
-        <Typography
-          sx={{ fontSize: "max(6vw, 25px) !important", fontWeight: 100 }}
-          textAlign={"center"}
+        <Text
           data-aos="anim1"
           data-aos-delay="100"
         >
           {text}
-        </Typography>
-        <Typography
-          sx={{ fontSize: "max(6vw, 25px) !important", fontWeight: 100 }}
-          textAlign={"center"}
+        </Text>
+        <Text
           data-aos="anim1"
           data-aos-delay="200"
         >
           {text}
-        </Typography>
-        <Typography
-          sx={{ fontSize: "max(6vw, 25px) !important", fontWeight: 100 }}
-          textAlign={"center"}
+        </Text>
+        <Text
           data-aos="anim1"
           data-aos-delay="300"
         >
           {text}
-        </Typography>
-        <Typography
-          sx={{ fontSize: "max(6vw, 25px) !important", fontWeight: 100 }}
-          textAlign={"center"}
+        </Text>
+        <Text
           data-aos="anim1"
           data-aos-delay="400"
         >
           {text}
-        </Typography>
-        <Typography
-          sx={{ fontSize: "max(6vw, 25px) !important", fontWeight: 100 }}
-          textAlign={"center"}
+        </Text>
+        <Text
           data-aos="anim1"
           data-aos-delay="500"
         >
           {text}
-        </Typography>
-        <Typography
-          sx={{ fontSize: "max(6vw, 25px) !important", fontWeight: 100 }}
-          textAlign={"center"}
+        </Text>
+        <Text
           data-aos="anim1"
           data-aos-delay="600"
         >
           {text}
-        </Typography>
+        </Text>
       </Box>
     </Container>
   );
@@ -96,3 +84,9 @@ const BackDesignBlock = styled(Box)(`
   user-select: none;
   font-weight: 300;
 `);
+
+const Text = styled(Typography)({
+  fontSize: "clamp(1rem, -0.875rem + 8.333vw, 3.5rem) !important", 
+  fontWeight: 100,
+  textAlign: "center"
+});

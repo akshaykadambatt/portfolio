@@ -2,6 +2,7 @@ import { createUseStyles } from "react-jss";
 import * as React from 'react';
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Link from "next/link";
 
 export default function RecentBlock() {
   const useStyles = createUseStyles({
@@ -98,18 +99,20 @@ export default function RecentBlock() {
     <>
     <div className={classes.center}>
         <div className={`reveal ${classes.wrap}`}>
-          <Box data-aos="anim1" data-aos-delay="250"
-            className={`reveal shadow-box ${classes.box1} ${classes.box} ${classes.boxWithTag}`}
-          >
-            <Box className={classes.tag}><Typography>#work</Typography></Box>
-            <div className={classes.boxInsideWrap}>
-              <Typography variant='h4'>Works</Typography>
-              <Typography>
-                The timeline of all the projects I&apos;ve done and the personal
-                projects I&apos;ve created
-              </Typography>
-            </div>
-          </Box>
+          <Link href="/work">
+            <Box data-aos="anim1" data-aos-delay="250"
+              className={`reveal shadow-box ${classes.box1} ${classes.box} ${classes.boxWithTag}`}
+            >
+              <Box className={classes.tag}><Typography>#work</Typography></Box>
+              <div className={classes.boxInsideWrap}>
+                <Typography variant='h4'>Works</Typography>
+                <Typography>
+                  The timeline of all the projects I&apos;ve done and the personal
+                  projects I&apos;ve created
+                </Typography>
+              </div>
+            </Box>
+          </Link>
           <Box data-aos="anim1" data-aos-delay="250"
             className={`reveal shadow-box ${classes.box2} ${classes.box} ${classes.boxWithTag}`}
           >

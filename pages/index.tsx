@@ -18,6 +18,7 @@ import RecentBlock from "../components/RecentBlock";
 import DesignElem, {BackDesign} from "../components/DesignElem"
 import Head from 'next/head'
 import AboutBlock from "../components/AboutBlock";
+import Link from "next/link";
 
 const HeadBox = styled(Box)({
   display: "flex",
@@ -60,9 +61,18 @@ const Home: NextPage = () => {
             This is my personal portfolio and an archive of a few of my works.
           </Typography>
           <Box data-aos="anim1" data-aos-delay="250">
-            <Button endIcon={<VscArrowRight />} size="large" variant="outlined">
-              Works
-            </Button>
+            <Stack direction="row" spacing={2}>
+              <a href="/Akshay-K-Nair-Resume.pdf" download>
+                <Button endIcon={<VscArrowRight />} size="large" variant="outlined">
+                  Download Résumé
+                </Button>
+              </a>
+              <Link href="/work">
+                <Button endIcon={<VscArrowRight />} size="large" variant="outlined">
+                  Works
+                </Button>
+              </Link>
+            </Stack>
           </Box>
         </Box>
         <div id="backWrap">
@@ -85,93 +95,47 @@ const Home: NextPage = () => {
             <Box
               sx={{
                 background: "linear-gradient(45deg, #ab91ff0d 45%, #02a1e91c)",
-                height: "100%",
-                p: 3,
-                borderRadius: 2,
+                height: "100%",p: 3,borderRadius: 2,
               }}
             >
-              <Typography variant="h4" gutterBottom>
-                Languages
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                JavaScript, TypeScript, NodeJS
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                PHP
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                HTML5, CSS3
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                SQL
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Python
-              </Typography>
+              <Typography variant="h4" gutterBottom>Languages</Typography>
+              <Typography>JavaScript, TypeScript, NodeJS</Typography>
+              <Typography>PHP</Typography>
+              <Typography>HTML5, CSS3</Typography>
+              <Typography>SQL</Typography>
+              <Typography>Python</Typography>
             </Box>
           </Grid>
           <Grid item xs={12} md={4} data-aos="anim1" data-aos-delay="300">
             <Box
               sx={{
                 background: "linear-gradient(45deg, #ab91ff0d 45%, #02a1e91c)",
-                height: "100%",
-                p: 3,
-                borderRadius: 2,
+                height: "100%",p: 3,borderRadius: 2,
               }}
             >
-              <Typography variant="h4" gutterBottom>
-                Frameworks
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                React, Next JS
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Laravel
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                WordPress
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                ElectronJS
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Bootstrap
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Redux
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Styled Components, Tailwind CSS
-              </Typography>
+              <Typography variant="h4" gutterBottom>Frameworks</Typography>
+              <Typography>React, Next JS</Typography>
+              <Typography>Laravel</Typography>
+              <Typography>WordPress</Typography>
+              <Typography>ElectronJS</Typography>
+              <Typography>Redux</Typography>
+              <Typography>Styled Components, Tailwind CSS, Bootstrap</Typography>
             </Box>
           </Grid>
           <Grid item xs={12} md={4} data-aos="anim1" data-aos-delay="600">
             <Box
               sx={{
                 background: "linear-gradient(45deg, #ab91ff0d 45%, #02a1e91c)",
-                height: "100%",
-                p: 3,
-                borderRadius: 2,
+                height: "100%",p: 3,borderRadius: 2,
               }}
             >
-              <Typography variant="h4" gutterBottom>
-                Tools
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Git, GitHub, BitBucket, GitLab
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                MySQL, Eloquent ORM
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Firebase, Vercel, Heroku
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                Apache
-              </Typography>
-              <Typography sx={{ fontSize: 20, fontWeight: 300 }}>
-                NPM, Composer, Yarn
-              </Typography>
+              <Typography variant="h4" gutterBottom>Tools</Typography>
+              <Typography>Git, GitHub, BitBucket, GitLab</Typography>
+              <Typography>Trello</Typography>
+              <Typography>MySQL, Eloquent ORM</Typography>
+              <Typography>Firebase, Vercel, Heroku</Typography>
+              <Typography>Apache</Typography>
+              <Typography>NPM, Composer, Yarn</Typography>
             </Box>
           </Grid>
         </Grid>
@@ -219,4 +183,3 @@ const Heading = styled(Typography)({
   paddingInline:50,
   marginBottom:30
 })
-
