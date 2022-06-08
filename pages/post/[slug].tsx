@@ -5,7 +5,7 @@ import { MDXRemote } from 'next-mdx-remote';
 import { Container, Typography } from '@mui/material';
 import Head from 'next/head'
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { nightOwl, xcode } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { useTheme } from '@mui/system';
 const components = { Typography, Container, SyntaxHighlighter, code };
 
@@ -39,7 +39,7 @@ function code({className, ...props}:any) {
   return match
     ? <SyntaxHighlighter 
       className={className+" code-snip-kn"} 
-      customStyle={{fontSize:theme.typography.htmlFontSize, padding:'30px 5vw'}}
+      customStyle={{fontSize:theme.typography?.htmlFontSize, padding:'30px 5vw'}}
       wrapLines={false} 
       lineProps={{style: {wordBreak: 'break-all', whiteSpace: 'pre-wrap'}}}
       language={match[1]} 
