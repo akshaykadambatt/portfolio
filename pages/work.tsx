@@ -8,10 +8,35 @@ import ItemBlock from "../components/ItemBlock";
 import { styled } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import React from 'react';
+import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemote } from 'next-mdx-remote';
+import fs from 'fs';
+import matter from 'gray-matter';
+import Link from 'next/link';
 
 const heights = ['Short', 'Tall', 'Taller', 'Tallest']
+export async function getStaticProps() {
+  const files = fs.readdirSync('posts');
 
-const Work: NextPage = () => {
+  const source = files.filter((fileName) => {
+    const slug = fileName.replace('.md', '');
+    const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
+    const { data: frontmatter } = matter(readFile);
+    if(frontmatter.tags.includes('work')) return true;
+  }).map((fileName) => {
+    const slug = fileName.replace('.md', '');
+    const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
+    const { data: frontmatter } = matter(readFile);
+    return {slug, frontmatter};
+  });
+
+  return {
+    props: {
+      source,
+    },
+  };
+}
+const Work: NextPage = ({ source }:any) => {
   return (
     <>
     <BlockFullWidth>
@@ -21,7 +46,28 @@ const Work: NextPage = () => {
       <ItemBlock />
     </BlockFullWidth>
     <Container maxWidth="lg">
-    
+     {JSON.stringify(source)}
+    {source.map(({ slug, frontmatter }:any) => (
+        <div
+          key={slug}
+          className='border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col'
+        >
+          <Link href={`/post/${slug}`}>
+            <a>
+              <Image
+                width={650}
+                height={340}
+                alt={frontmatter.title}
+                src={`/${frontmatter.socialImage}`}
+              />
+              <h1 className='p-4'>{frontmatter.title}</h1>
+            </a>
+          </Link>
+        </div>
+      ))}
+
+
+
     <GridContainer>
     {[...Array(2)].map((elem, index)=>{
         const Height = heights[~~(Math.random()*heights.length)] as keyof JSX.IntrinsicElements
@@ -103,6 +149,16 @@ const Work: NextPage = () => {
 }
 
 export default Work
+
+// export async function getStaticProps() {
+//   // MDX text - can be from a local file, database, anywhere
+//   const source = '<Typography>Some **mdx** text, with a component</Typography> <Typography variant="h1">Hello</Typography>';
+//   const mdxSource = await serialize(source);
+//   return { props: { source: mdxSource } };
+// }
+
+
+
 
 const GridContainer = styled(Box)(`
   display: grid;

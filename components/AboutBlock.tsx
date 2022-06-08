@@ -85,13 +85,18 @@ const AboutText : NextPage<AppProps> = ({ classText }): JSX.Element => {
             </Box>
           </Stack>
           <Box className={ classText }>
-            <Box data-aos="anim1" data-aos-delay="250"  >
+            <Stack direction="row" spacing={2} data-aos="anim1" data-aos-delay="250"  >
               <Link href="/work">
                 <Button endIcon={<VscArrowRight />} size="large" variant="outlined">
                   Works
                 </Button>
               </Link>
-            </Box>
+              <Link href="/about">
+                <Button endIcon={<VscArrowRight />} size="large" variant="outlined">
+                  About
+                </Button>
+              </Link>
+            </Stack>
           </Box>
         </Box>
   );

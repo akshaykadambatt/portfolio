@@ -64,7 +64,7 @@ const Home: NextPage = () => {
             <Stack direction="row" spacing={2}>
               <a href="/Akshay-K-Nair-Resume.pdf" download>
                 <Button endIcon={<VscArrowRight />} size="large" variant="outlined">
-                  Download Résumé
+                  Résumé
                 </Button>
               </a>
               <Link href="/work">

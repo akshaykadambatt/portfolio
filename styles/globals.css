@@ -397,3 +397,6 @@ Menu styles
 a{
   cursor: pointer;
 }
+.code-snip-kn{
+  border-radius: 15px;
+}

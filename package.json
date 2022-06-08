@@ -15,16 +15,22 @@
     "@mui/material": "^5.4.4",
     "@types/aos": "^3.0.4",
     "aos": "^2.3.4",
+    "gray-matter": "^4.0.3",
     "keen-slider": "^6.6.3",
+    "markdown-it": "^13.0.1",
     "next": "12.1.0",
+    "next-mdx-remote": "^4.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
-    "react-jss": "^10.9.0"
+    "react-jss": "^10.9.0",
+    "react-simple-code-editor": "^0.11.2",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
+    "@types/react-syntax-highlighter": "^15.5.1",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
     "typescript": "4.6.2"
