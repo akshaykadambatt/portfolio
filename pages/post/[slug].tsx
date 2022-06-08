@@ -7,7 +7,7 @@ import Head from 'next/head'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { useTheme } from '@mui/system';
-const components = { Typography, Container, SyntaxHighlighter, code };
+const components = { Typography, Container, SyntaxHighlighter, Code };
 
 export default function PostPage({ frontmatter, source }:any) {
   return (
@@ -33,7 +33,7 @@ export async function getStaticPaths() {
   };
 }
 
-function code({className, ...props}:any) {
+function Code({className, ...props}:any) {
   const theme = useTheme();
   const match = /language-(\w+)/.exec(className || '')
   return match
