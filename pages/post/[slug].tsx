@@ -39,7 +39,7 @@ function code({className, ...props}:any) {
   return match
     ? <SyntaxHighlighter 
       className={className+" code-snip-kn"} 
-      customStyle={{fontSize:theme.typography?.htmlFontSize, padding:'30px 5vw'}}
+      customStyle={{fontSize:(theme as any).typography.htmlFontSize, padding:'30px 5vw'}}
       wrapLines={false} 
       lineProps={{style: {wordBreak: 'break-all', whiteSpace: 'pre-wrap'}}}
       language={match[1]} 
