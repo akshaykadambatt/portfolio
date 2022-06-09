@@ -2,24 +2,35 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import Head from 'next/head'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { useTheme } from '@mui/system';
 import Image from 'next/image'
+import Link from 'next/link';
 export default function PostPage({ frontmatter, source }:any) {
   return (
     <div className="blog-content">
         <Head>
             <title>{frontmatter.title}</title>
         </Head>
+        
+        <Box sx={{height:"50px"}}></Box>
+        <Container>
+          <Link href="/work">
+            <Button variant="outlined">
+              Go back
+            </Button>
+          </Link>
+        </Container>
+        
         <MDXRemote {...source} components={{
           Typography, 
           wrapper: Container, 
           Image,
           code, 
-          h1:(props:any) => <Typography gutterBottom variant="h1">{props.children}</Typography>,
+          h1:(props:any) => <Typography mb={1} variant="h1">{props.children}</Typography>,
           h2:(props:any) => <Typography gutterBottom variant="h2">{props.children}</Typography>,
           h3:(props:any) => <Typography gutterBottom variant="h3">{props.children}</Typography>,
           h4:(props:any) => <Typography gutterBottom variant="h4">{props.children}</Typography>,

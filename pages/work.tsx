@@ -46,7 +46,6 @@ const Work: NextPage = ({ source }:any) => {
       <ItemBlock />
     </BlockFullWidth>
     <Container maxWidth="lg">
-     {JSON.stringify(source)}
     {source.map(({ slug, frontmatter }:any) => (
         <div
           key={slug}
@@ -54,13 +53,8 @@ const Work: NextPage = ({ source }:any) => {
         >
           <Link href={`/post/${slug}`}>
             <a>
-              <Image
-                width={650}
-                height={340}
-                alt={frontmatter.title}
-                src={`/${frontmatter.socialImage}`}
-              />
-              <h1 className='p-4'>{frontmatter.title}</h1>
+              <Typography variant="h4">{frontmatter.title}</Typography>
+              <Typography variant="h6">{frontmatter.metaDesc}</Typography>
             </a>
           </Link>
         </div>
