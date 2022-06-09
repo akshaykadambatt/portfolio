@@ -400,3 +400,13 @@ a{
 .code-snip-kn{
   border-radius: 15px;
 }
+.MuiTypography-root code {
+  font-size: calc(100% - 4px);
+  background: #00000013;
+  padding: 3px 7px;
+  border-radius: 8px;
+  opacity: .9;
+}
+.blog-content figure{
+  margin-block:50px;
+}
