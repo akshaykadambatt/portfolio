@@ -46,6 +46,7 @@ const Work: NextPage = ({ source }:any) => {
       <ItemBlock />
     </BlockFullWidth>
     <Container maxWidth="lg">
+      <Typography variant="h1">Work Experience</Typography>
     {source.map(({ slug, frontmatter }:any) => (
         <div
           key={slug}
