@@ -41,21 +41,21 @@ const Work: NextPage = ({ source }:any) => {
     <>
     <BlockFullWidth>
       <Container >
-        <Heading variant="h3" data-aos="anim1">My Recent Works</Heading>
+        <Heading variant="h1" data-aos="anim1">My Recent Works</Heading>
       </Container>
       <ItemBlock />
     </BlockFullWidth>
-    <Container maxWidth="lg">
-      <Typography variant="h1">Work Experience</Typography>
+    <Container>
+      <Typography data-aos="anim1" variant="h1" gutterBottom>Work Experience</Typography>
     {source.map(({ slug, frontmatter }:any) => (
         <div
           key={slug}
-          className='border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col'
+          data-aos="anim1"
         >
           <Link href={`/post/${slug}`}>
             <a>
               <Typography variant="h4">{frontmatter.title}</Typography>
-              <Typography variant="h6">{frontmatter.metaDesc}</Typography>
+              <Typography variant="h6" gutterBottom>{frontmatter.metaDesc}</Typography>
             </a>
           </Link>
         </div>

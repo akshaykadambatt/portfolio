@@ -1,5 +1,5 @@
 ---
-title: 'Akshay K Nair Software Engineering Experience at Spawoz Technologies'
+title: 'Spawoz Technologies (October 2020 - June 2022)'
 metaTitle: 'Akshay K Nair Software Engineering Experience at Spawoz Technologies'
 metaDesc: 'Worked extensively in Laravel, React Typescript, WordPress, PHP, HTML5, CSS3'
 socialImage: images/22-09-2021.jpg
