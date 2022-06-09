@@ -9,7 +9,10 @@ import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { useTheme } from '@mui/system';
 import Image from 'next/image'
 import Link from 'next/link';
+import { useRouter } from 'next/router'
+
 export default function PostPage({ frontmatter, source }:any) {
+  const router = useRouter()
   return (
     <div className="blog-content">
         <Head>
@@ -17,28 +20,27 @@ export default function PostPage({ frontmatter, source }:any) {
         </Head>
         
         <Box sx={{height:"50px"}}></Box>
-        <Container>
-          <Link href="/work">
-            <Button variant="outlined">
+        <Container data-aos="anim1">
+            <Button variant="outlined" onClick={() => router.back()}>
               Go back
             </Button>
-          </Link>
         </Container>
-        
-        <MDXRemote {...source} components={{
-          Typography, 
-          wrapper: Container, 
-          Image,
-          code, 
-          h1:(props:any) => <Typography mb={1} variant="h1">{props.children}</Typography>,
-          h2:(props:any) => <Typography gutterBottom variant="h2">{props.children}</Typography>,
-          h3:(props:any) => <Typography gutterBottom variant="h3">{props.children}</Typography>,
-          h4:(props:any) => <Typography gutterBottom variant="h4">{props.children}</Typography>,
-          h5:(props:any) => <Typography gutterBottom variant="h5">{props.children}</Typography>,
-          h6:(props:any) => <Typography gutterBottom variant="h6">{props.children}</Typography>,
-          p:(props:any) => <Typography gutterBottom variant="body1">{props.children}</Typography>,
-          ol: (props:any) => <Typography gutterBottom component="ol">{props.children}</Typography>,
-        }} />
+        <Box data-aos="anim1" data-aos-delay="200">
+          <MDXRemote {...source} components={{
+            Typography, 
+            wrapper: Container, 
+            Image,
+            code, 
+            h1:(props:any) => <Typography mb={1} variant="h1">{props.children}</Typography>,
+            h2:(props:any) => <Typography gutterBottom variant="h2">{props.children}</Typography>,
+            h3:(props:any) => <Typography gutterBottom variant="h3">{props.children}</Typography>,
+            h4:(props:any) => <Typography gutterBottom variant="h4">{props.children}</Typography>,
+            h5:(props:any) => <Typography gutterBottom variant="h5">{props.children}</Typography>,
+            h6:(props:any) => <Typography gutterBottom variant="h6">{props.children}</Typography>,
+            p:(props:any) => <Typography gutterBottom variant="body1">{props.children}</Typography>,
+            ol: (props:any) => <Typography gutterBottom component="ol">{props.children}</Typography>,
+          }} />
+        </Box>
         <Box sx={{height:"200px"}}></Box>
     </div>
   );

@@ -1,17 +1,17 @@
 ---
-title: 'Spawoz Technologies (October 2020 - June 2022)'
-metaTitle: 'Akshay K Nair Software Engineering Experience at Spawoz Technologies'
-metaDesc: 'Worked extensively in Laravel, React Typescript, WordPress, PHP, HTML5, CSS3'
+title: 'Livewire Thrissur (July 2017 - August 2017)'
+metaTitle: 'Akshay K Nair Software Engineering Experience at Livewire Thrissur'
+metaDesc: 'Development and hands-on training in web technologies'
 socialImage: images/22-09-2021.jpg
-date: '2022-09-03'
+date: '2022-09-01'
 tags:
   - work
 ---
-# Associate Software Engineer 
-### Spawoz Technologies
-#### October 2020 - June 2022
+# Intern 
+### Livewire Thrissur
+#### July 2017 - August 2017
 
-Started out as an Intern in Spawoz Technologies which lasted for one month after which I took the role of an Associate Software Engineer in Web and Application Development section. I had the privilage to work with some great minds and tutors. 
+Development and hands-on training in web technologies. Started out as an Intern in Livewire Thrissur which lasted for one month after which I took the role of an Associate Software Engineer in Web and Application Development section. I had the privilage to work with some great minds and tutors. 
 
 1. Worked extensively in Laravel, React Typescript, WordPress, PHP, HTML5, CSS3. 
 2. Using git, Composer, NPM, Linux, Apache environments. 

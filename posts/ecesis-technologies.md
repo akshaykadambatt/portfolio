@@ -3,7 +3,7 @@ title: 'Ecesis Technologies (June 2022 -)'
 metaTitle: 'Akshay K Nair Software Engineering Experience at Ecesis Technologies'
 metaDesc: 'Focused on WordPress Headless x ReactJS'
 socialImage: images/22-09-2021.jpg
-date: '2022-09-09'
+date: '2022-09-04'
 tags:
   - work
 ---

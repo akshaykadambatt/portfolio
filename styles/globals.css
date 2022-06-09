@@ -410,3 +410,6 @@ a{
 .blog-content figure{
   margin-block:50px;
 }
+.d-none{
+  display: none;
+}

@@ -1,15 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import ItemBlock from "../components/ItemBlock";
 import { styled } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import React from 'react';
-import { serialize } from 'next-mdx-remote/serialize';
-import { MDXRemote } from 'next-mdx-remote';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
@@ -29,7 +25,8 @@ export async function getStaticProps() {
     const { data: frontmatter } = matter(readFile);
     return {slug, frontmatter};
   });
-
+  source.sort((a, b) => a.frontmatter.date < b.frontmatter.date ? 1 : -1);
+  
   return {
     props: {
       source,
@@ -47,7 +44,7 @@ const Work: NextPage = ({ source }:any) => {
     </BlockFullWidth>
     <Container>
       <Typography data-aos="anim1" variant="h1" gutterBottom>Work Experience</Typography>
-    {source.map(({ slug, frontmatter }:any) => (
+      {source.map(({ slug, frontmatter }:any) => (
         <div
           key={slug}
           data-aos="anim1"
@@ -63,7 +60,7 @@ const Work: NextPage = ({ source }:any) => {
 
 
 
-    <GridContainer>
+    <GridContainer className="d-none">
     {[...Array(2)].map((elem, index)=>{
         const Height = heights[~~(Math.random()*heights.length)] as keyof JSX.IntrinsicElements
         console.log(Height);
