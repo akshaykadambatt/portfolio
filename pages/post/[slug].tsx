@@ -34,12 +34,11 @@ export async function getStaticPaths() {
 }
 
 export function code({className, ...props}:any) {
-  const theme = useTheme();
   const match = /language-(\w+)/.exec(className || '')
   return match
     ? <SyntaxHighlighter 
       className={className+" code-snip-kn"} 
-      customStyle={{fontSize:(theme as any).typography.htmlFontSize, padding:'30px 5vw'}}
+      customStyle={{fontSize:"20px", padding:'30px 5vw'}}
       wrapLines={false} 
       lineProps={{style: {wordBreak: 'break-all', whiteSpace: 'pre-wrap'}}}
       language={match[1]} 
