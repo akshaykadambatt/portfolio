@@ -4,14 +4,16 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import AboutBlock from "../components/AboutBlock";
+import { styled } from "@mui/system";
 
 const About: NextPage = () => {
   return (
     <>
-      <Container maxWidth="sm">
-        About page
-        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} />
+      <Container sx={{paddingTop:"100px"}}>
+        <AboutBlock />
       </Container>
+      <Box sx={{height:"200px"}}></Box>
     </>
   )
 }

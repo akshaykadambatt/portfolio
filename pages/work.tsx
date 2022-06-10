@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
+import styles from '../styles/Home.module.css'
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import ItemBlock from "../components/ItemBlock";

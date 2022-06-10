@@ -162,19 +162,35 @@ class Layout extends Component<props,MyState> {
                 <a><Typography align="left" onClick={toggleColorSchemeDark} data-aos="anim1" data-aos-delay="350"><BsMoonStars /></Typography></a>
               </Stack>  
               <Stack sx={{width:"70%", justifyContent:"space-between"}}>
-                <Typography align="right" data-aos="anim1" data-aos-delay="50">Home</Typography>
-                <Typography align="right" data-aos="anim1" data-aos-delay="100">Work</Typography>
-                <Typography align="right" data-aos="anim1" data-aos-delay="150">About</Typography>
-                <Typography align="right" data-aos="anim1" data-aos-delay="200">Contact Me</Typography>
-                <Typography align="right" data-aos="anim1" data-aos-delay="200">Download Résumé</Typography>
-                <Typography align="right" data-aos="anim1" data-aos-delay="200">LinkedIn</Typography>
-                <Typography align="right" data-aos="anim1" data-aos-delay="250">Github</Typography>
-                <Typography align="right" data-aos="anim1" data-aos-delay="300">StackOverflow</Typography>
-                <Typography align="right" data-aos="anim1" data-aos-delay="350">WhatsApp</Typography>
-                
+                <Link href="/">
+                  <Typography align="right" data-aos="anim1" data-aos-delay="50">Home</Typography>
+                </Link>
+                <Link href="/work">
+                  <Typography align="right" data-aos="anim1" data-aos-delay="100">Work</Typography>
+                </Link>
+                <Link href="/about">
+                  <Typography align="right" data-aos="anim1" data-aos-delay="150">About</Typography>
+                </Link>
+                <Link href="/contact">
+                  <Typography align="right" data-aos="anim1" data-aos-delay="200">Contact Me</Typography>
+                </Link>
+                <a href="/Akshay-K-Nair-Resume.pdf" download>
+                  <Typography align="right" data-aos="anim1" data-aos-delay="200">Download Résumé</Typography>
+                </a>
+                <a href="https://www.linkedin.com/in/akshay-k-nair/" target="_blank" rel="noreferrer">
+                  <Typography align="right" data-aos="anim1" data-aos-delay="200">LinkedIn</Typography>
+                </a>
+                <a href="https://github.com/akshayknz" target="_blank" rel="noreferrer">
+                  <Typography align="right" data-aos="anim1" data-aos-delay="250">Github</Typography>
+                </a>
+                <a href="https://stackoverflow.com/users/7481663/akshay-k-nair" target="_blank" rel="noreferrer">
+                  <Typography align="right" data-aos="anim1" data-aos-delay="300">StackOverflow</Typography>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+918301044114&text=Hi%20Akshay!" target="_blank" rel="noreferrer">
+                  <Typography align="right" data-aos="anim1" data-aos-delay="350">WhatsApp</Typography>
+                </a>
               </Stack>  
               </Stack>
-             
             </FooterWrapper>
           </Grid>
           <Grid item xs={11}><hr></hr></Grid>
