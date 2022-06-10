@@ -22,7 +22,7 @@ export default function ItemsBlock() {
         slides: {perView: 1.5, origin: "center",spacing: 35 }
       },
       "(min-width: 768px)": {
-        slides: {perView: 1.5, origin: "center",spacing: 35 }
+        slides: {perView: 2.5, origin: "center",spacing: 35 }
       },
       "(min-width: 1200px)": {
         slides: {perView: 3, origin: "center",spacing: 35 }

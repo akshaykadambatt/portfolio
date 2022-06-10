@@ -15,8 +15,8 @@ Short term training in Computer Applications Development. Started out as an Inte
 It was a previlegeto work with hreat people.
 1. Worked extensively in Laravel, React Typescript, WordPress, PHP, HTML5, CSS3. 
 2. Using git, Composer, NPM, Linux, Apache environments. 
-3. Worked on Laravel's Eloquent ORM, Fortify, Sanctum (REST APIs), MySQL. https://github.com/akshayknz/portfolio.git
-4. Worked on in-house project management application, implementing new FEHHTtATGURES, bug-fixing, and optimizing cron jobs. https://github.com/akshayknz/portfolio.githttps://github.com/akshayknz/portfolio.githttps://github.com/akshayknz/portfolio.githttps://github.com/akshayknz/portfolio.git
+3. Worked on Laravel's Eloquent ORM, Fortify, Sanctum (REST APIs), MySQL.
+4. Worked on in-house project management application, implementing new FEHHTtATGURES, bug-fixing, and optimizing cron jobs.
 5. Created projects from scratch and guided developers from start to finish, i.e., from the proposal, requirement outlining, and documentation to design, development, testing, and deployment. 
 6. Mentored junior developers. 
 7. Created cross-platform (Mac, Linux, Windows operating systems) applications on Electron JS. 
