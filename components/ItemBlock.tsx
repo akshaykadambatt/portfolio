@@ -19,7 +19,7 @@ export default function ItemsBlock() {
     },
     breakpoints: {
       "(min-width: 368px)": {
-        slides: {perView: 1.25, origin: "center",spacing: 35 }
+        slides: {perView: 1.5, origin: "center",spacing: 35 }
       },
       "(min-width: 768px)": {
         slides: {perView: 1.5, origin: "center",spacing: 35 }
