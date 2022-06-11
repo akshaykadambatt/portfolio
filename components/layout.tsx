@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Head from "next/head";
@@ -15,6 +15,7 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import { BsSun, BsMoonStars } from "react-icons/bs";
 import { AboutText } from "./AboutBlock";
 import Script from "next/script";
+import { useRouter } from "next/router";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -106,7 +107,7 @@ class Layout extends Component<props,MyState> {
           <NavigationInner>
             <Box>
               
-            <Link href="/"><a><Logo>AKSHAY K NAIR</Logo></a></Link>
+            <Link href="/"><a><Logo>AKSHAY K NAIR</Logo><Loading/>aaaa</a></Link>
             </Box>
             <Box>
               <Box className="hamburger-round" onClick={openMenu} ref={this.menuRef} data-state={this.state.menu} >
@@ -116,7 +117,9 @@ class Layout extends Component<props,MyState> {
           </NavigationInner>
         </Navigation>
         <Box className="menu-wrapper" data-state={this.state.menu}>
+
         <Grid container maxWidth="lg">
+        
           <Grid
             item data-aos="anim1" data-aos-delay="100"
             xs={12}
@@ -201,7 +204,6 @@ class Layout extends Component<props,MyState> {
         </Typography>
           </Grid>
         </Grid>
-        
       </>
     );
   }
@@ -261,3 +263,36 @@ const toggleColorScheme = () => {
 
 const toggleColorSchemeLight = () => document.documentElement.setAttribute("color-mode", "light");
 const toggleColorSchemeDark = () => document.documentElement.setAttribute("color-mode", "dark");
+
+function Loading() {
+  const router = useRouter();
+
+  const [loading, setLoading] = useState(false);
+
+  console.log(loading, router.pathname);
+  useEffect(() => {
+      const handleStart = (url:any) => {
+        console.log("handleStart", url);
+        console.log("handleStart", router.pathname);
+        
+        (url !== router.asPath) && setLoading(true)
+      };
+      const handleComplete = (url:any) => {
+        console.log("handleComplete", url);
+        console.log("handleComplete", router.pathname);
+        (url === router.asPath) && setLoading(false)
+      };
+      
+      router.events.on('routeChangeStart', handleStart)
+      router.events.on('routeChangeComplete', handleComplete)
+      router.events.on('routeChangeError', handleComplete)
+
+      return () => {
+          router.events.off('routeChangeStart', handleStart)
+          router.events.off('routeChangeComplete', handleComplete)
+          router.events.off('routeChangeError', handleComplete)
+      }
+  })
+  
+  return loading? <div>Loading....</div>:<div>Loaded</div>;
+}
