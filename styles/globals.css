@@ -413,3 +413,12 @@ a{
 .d-none{
   display: none !important;
 }
+.loading-screen{
+  z-index:10;
+  opacity: 1;
+}
+
+.loading-screen{
+  z-index:10;
+  opacity: 1;
+}

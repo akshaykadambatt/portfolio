@@ -16,6 +16,7 @@ import { BsSun, BsMoonStars } from "react-icons/bs";
 import { AboutText } from "./AboutBlock";
 import Script from "next/script";
 import { useRouter } from "next/router";
+import { CSSTransition } from 'react-transition-group';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -107,7 +108,7 @@ class Layout extends Component<props,MyState> {
           <NavigationInner>
             <Box>
               
-            <Link href="/"><a><Logo>AKSHAY K NAIR</Logo><Loading/>aaaa</a></Link>
+            <Link href="/"><a><Logo>AKSHAY K NAIR</Logo></a></Link>
             </Box>
             <Box>
               <Box className="hamburger-round" onClick={openMenu} ref={this.menuRef} data-state={this.state.menu} >
@@ -143,6 +144,8 @@ class Layout extends Component<props,MyState> {
         </Grid>
               
         </Box>
+        <Loading/>
+
         {children}
         <Grid container spacing={5} justifyContent="center" sx={{background:"linear-gradient(45deg, rgb(var(--one)/81%) -47%, rgb(var(--two)/30%) 93%)"}}>
           <Grid item xs={10} md={5} >
@@ -266,33 +269,60 @@ const toggleColorSchemeDark = () => document.documentElement.setAttribute("color
 
 function Loading() {
   const router = useRouter();
-
   const [loading, setLoading] = useState(false);
-
-  console.log(loading, router.pathname);
   useEffect(() => {
-      const handleStart = (url:any) => {
-        console.log("handleStart", url);
-        console.log("handleStart", router.pathname);
-        
-        (url !== router.asPath) && setLoading(true)
-      };
-      const handleComplete = (url:any) => {
-        console.log("handleComplete", url);
-        console.log("handleComplete", router.pathname);
-        (url === router.asPath) && setLoading(false)
-      };
-      
-      router.events.on('routeChangeStart', handleStart)
-      router.events.on('routeChangeComplete', handleComplete)
-      router.events.on('routeChangeError', handleComplete)
-
-      return () => {
-          router.events.off('routeChangeStart', handleStart)
-          router.events.off('routeChangeComplete', handleComplete)
-          router.events.off('routeChangeError', handleComplete)
-      }
+    router.events.on('routeChangeStart', (url) => {
+      setLoading(true);
+    });
+    router.events.on('routeChangeComplete', (url) => {
+        setLoading(false);
+    });
+    router.events.on('routeChangeError', (url) => {
+      setLoading(false);
+    });
   })
   
-  return loading? <div>Loading....</div>:<div>Loaded</div>;
+  // return loading? <div>Loading....</div>:<div>Loaded</div>;
+  return(
+    <>
+    <CSSTransition
+        in={loading}
+        timeout={500}
+        classNames={{
+          appear: 'loading-screen',
+          appearActive: 'loading-screen',
+          appearDone: 'loading-screen',
+          enter: 'loading-screen',
+          enterActive: 'loading-screen',
+          enterDone: 'loading-screen',
+          exit: 'loading-screen',
+          exitActive: 'loading-screen',
+          // exitDone: 'loading-screen',
+        }}
+      >
+        <LoadingScreeen>
+          <Typography variant="h1">
+            AKSHY
+          </Typography>
+        </LoadingScreeen>
+      </CSSTransition>
+      
+    </>
+  );
 }
+
+const LoadingScreeen = styled(Box)(({ theme }) => (`
+  background:${theme.palette.mode == "dark"? "#000":"#fff"};
+  position:fixed;
+  height: 100vh;
+  top:0;
+  opacity:0;
+  left:0;
+  width:100vw;
+  z-index:-10;
+  transition: all .3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`))
