@@ -15,7 +15,7 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import { BsSun, BsMoonStars } from "react-icons/bs";
 import { AboutText } from "./AboutBlock";
 import Script from "next/script";
-import { useRouter, withRouter } from "next/router";
+import { useRouter, withRouter, NextRouter  } from "next/router";
 import { CSSTransition } from 'react-transition-group';
 import { DefaultSeo } from "next-seo";
 
