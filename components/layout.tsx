@@ -95,7 +95,6 @@ class Layout extends Component<propsType,MyState> {
             name="description"
             content="Portfolio of Akshay K Nair, Software Engineer"
           />
-          <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0" />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="canonical" href={(`https://akshaykn.vercel.app/` + (this.props.router.asPath === "/" ? "": this.props.router.asPath)).split("?")[0]} />
           <meta property="og:site_name" content="AKSHY"/>
