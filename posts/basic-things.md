@@ -11,6 +11,12 @@ tags:
 
 # Basic things needed for SEO
 From SO;
+<table>
+<td>
+<tr>hello</tr>
+<tr>hellos</tr>
+</td>
+</table>
 ```html
 <title>youtube - Rich text editor iframe insertion problem - Stack Overflow</title>
 
