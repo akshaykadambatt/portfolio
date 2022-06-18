@@ -70,7 +70,7 @@ type propsType = {
   // message: string;
 };
 type MyState = { menu: number };
-class Layout extends Component<propsType,MyState,> {
+class Layout extends Component<propsType,MyState> {
   menuRef: React.RefObject<HTMLInputElement>;
   constructor(props: propsType) {
     super(props);
