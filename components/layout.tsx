@@ -141,7 +141,7 @@ class Layout extends Component<propsType,MyState> {
                 <Link href="/blog"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Blog</Typography></a></Link>
                 <Link href="/contact"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Contact</Typography></a></Link>
                 <Typography className="menu-links">
-                  <MaterialUISwitch onClick={toggleColorScheme}/>
+                  <MaterialUISwitch onClick={toggleColorScheme} aria-labelledby="Toggle dark theme"/>
                 </Typography>
               </Stack>
           </Grid>
