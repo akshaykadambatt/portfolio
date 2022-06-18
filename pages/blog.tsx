@@ -33,10 +33,11 @@ const Blog: NextPage = ({ source }:any) => {
     <>
     <Container>
       <Typography data-aos="anim1" variant="h1" gutterBottom>Blog</Typography>
-      {source.map(({ slug, frontmatter }:any) => (
+      {source.map(({ slug, frontmatter }:any, index:any) => (
         <div
           key={slug}
           data-aos="anim1"
+          data-aos-delay={index*40}
           style={{paddingBottom:"20px"}}
         >
           <Link href={`/post/${slug}`}>
