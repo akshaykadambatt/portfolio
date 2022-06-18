@@ -89,6 +89,7 @@ class Layout extends Component<propsType,MyState> {
     return (
       <>
         <Head>
+          <html lang="en" />
           <title>AKSHAY K NAIR, Software Engineer</title>
           <meta
             name="description"
@@ -141,7 +142,10 @@ class Layout extends Component<propsType,MyState> {
                 <Link href="/blog"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Blog</Typography></a></Link>
                 <Link href="/contact"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Contact</Typography></a></Link>
                 <Typography className="menu-links">
-                  <MaterialUISwitch onClick={toggleColorScheme} aria-labelledby="Toggle dark theme"/>
+                  <MaterialUISwitch 
+                    onClick={toggleColorScheme} 
+                    inputProps={{ 'aria-label': 'Toggle dark theme' }}
+                  />
                 </Typography>
               </Stack>
           </Grid>
