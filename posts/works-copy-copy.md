@@ -180,28 +180,23 @@ Check if the item is first or last in the collection.
 ```
 #### Other $loop stuff
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-| asdf  | asdf  | sadf  | asdf  | asfd  |
-|---|---|---|---|---|
-| asdf  | adsf  |  asdf |  asdf |  sadf |
-
-| Property      | Description |
-| ------------- | ----- |
-| $loop->index      | The index of the current loop iteration (starts at 0).       |
-| $loop->iteration   | The current loop iteration (starts at 1).        |
-| $loop->remaining   | The iterations remaining in the loop.        |
-| $loop->count   | The total number of items in the array being iterated.        |
-| $loop->first   | Whether this is the first iteration through the loop.        |
-| $loop->last   | Whether this is the last iteration through the loop.        |
-| $loop->even   | Whether this is an even iteration through the loop.        |
-| $loop->odd   | Whether this is an odd iteration through the loop.        |
-| $loop->depth   | The nesting level of the current loop.        |
-| $loop->parent   | When in a nested loop, the parent's loop variable.        |
+<table>
+  <thead>
+    <tr><th>Property</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>$loop->index</td><td>The index of the current loop iteration (starts at 0).</td></tr>
+    <tr><td>$loop->iteration</td><td>The current loop iteration (starts at 1).</td></tr>
+    <tr><td>$loop->remaining</td><td>The iterations remaining in the loop.</td></tr>
+    <tr><td>$loop->count</td><td>The total number of items in the array being iterated.</td></tr>
+    <tr><td>$loop->first</td><td>Whether this is the first iteration through the loop.</td></tr>
+    <tr><td>$loop->last</td><td>Whether this is the last iteration through the loop.</td></tr>
+    <tr><td>$loop->even</td><td>Whether this is an even iteration through the loop.</td></tr>
+    <tr><td>$loop->odd</td><td>Whether this is an odd iteration through the loop.</td></tr>
+    <tr><td>$loop->depth</td><td>The nesting level of the current loop.</td></tr>
+    <tr><td>$loop->parent</td><td>When in a nested loop, the parent's loop variable.</td></tr>
+  </tbody>
+</table>
 
 ### Comments
 ```php
