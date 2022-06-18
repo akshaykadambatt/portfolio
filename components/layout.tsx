@@ -95,7 +95,7 @@ class Layout extends Component<props,MyState> {
             content="Portfolio of Akshay K Nair, Software Engineer"
           />
           <link rel="icon" href="/favicon.ico" />
-          <DefaultSeo canonical={(`https://akshaykn.vercel.app/` + (router.asPath === "/" ? "": router.asPath)).split("?")[0]} />
+          <DefaultSeo canonical={(`https://akshaykn.vercel.app/` + (this.props.router.asPath === "/" ? "": this.props.router.asPath)).split("?")[0]} />
           <meta property="og:site_name" content="AKSHY"/>
           <meta property="og:url" content="https://akshaykn.vercel.app/" />
           <meta property="og:image" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
