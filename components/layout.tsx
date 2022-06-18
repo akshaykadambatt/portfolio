@@ -64,16 +64,13 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     borderRadius: 20 / 2,
   },
 }));
-type props = {
-  // using `interface` is also ok
-  // message: string;
-};
+
 type MyState = { menu: number };
 interface WithRouterProps {
   router: NextRouter
 }
 interface MyComponentProps extends WithRouterProps {}
-class Layout extends Component<props,MyState,MyComponentProps> {
+class Layout extends Component<MyState,MyComponentProps> {
   menuRef: React.RefObject<HTMLInputElement>;
   constructor(props: props) {
     super(props);
