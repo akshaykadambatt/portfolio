@@ -70,7 +70,11 @@ type props = {
   // message: string;
 };
 type MyState = { menu: number };
-class Layout extends Component<props,MyState> {
+interface WithRouterProps {
+  router: NextRouter
+}
+interface MyComponentProps extends WithRouterProps {}
+class Layout extends Component<props,MyState,MyComponentProps> {
   menuRef: React.RefObject<HTMLInputElement>;
   constructor(props: props) {
     super(props);
