@@ -15,7 +15,7 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import { BsSun, BsMoonStars } from "react-icons/bs";
 import { AboutText } from "./AboutBlock";
 import Script from "next/script";
-import { useRouter } from "next/router";
+import { useRouter, withRouter } from "next/router";
 import { CSSTransition } from 'react-transition-group';
 import { DefaultSeo } from "next-seo";
 
@@ -95,6 +95,7 @@ class Layout extends Component<props,MyState> {
             content="Portfolio of Akshay K Nair, Software Engineer"
           />
           <link rel="icon" href="/favicon.ico" />
+          <DefaultSeo canonical={(`https://akshaykn.vercel.app/` + (router.asPath === "/" ? "": router.asPath)).split("?")[0]} />
           <meta property="og:site_name" content="AKSHY"/>
           <meta property="og:url" content="https://akshaykn.vercel.app/" />
           <meta property="og:image" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
@@ -213,7 +214,7 @@ class Layout extends Component<props,MyState> {
   }
 }
 
-export default Layout;
+export default withRouter(Layout);
 
 const Navigation = styled(Container)({
   height: "auto",
