@@ -17,6 +17,7 @@ import { AboutText } from "./AboutBlock";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import { CSSTransition } from 'react-transition-group';
+import { DefaultSeo } from "next-seo";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,

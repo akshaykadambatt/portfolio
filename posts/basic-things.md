@@ -49,3 +49,5 @@ From SO;
 <meta name="twitter:app:url:googleplay" content="https://stackoverflow.com/questions/71492689/rich-text-editor-iframe-insertion-problem">
 <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
 ```
+
+Canonical URL: [Canonical URL](https://rishimohan.me/blog/nextjs-canonical-tag)
