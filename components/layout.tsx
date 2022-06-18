@@ -94,12 +94,17 @@ class Layout extends Component<propsType,MyState> {
             name="description"
             content="Portfolio of Akshay K Nair, Software Engineer"
           />
-          <link rel="icon" href="/favicon.ico" />
+          <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0" />
+          <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="canonical" href={(`https://akshaykn.vercel.app/` + (this.props.router.asPath === "/" ? "": this.props.router.asPath)).split("?")[0]} />
           <meta property="og:site_name" content="AKSHY"/>
-          <meta property="og:url" content="https://akshaykn.vercel.app/" />
+          <meta property="og:type" content= "website" />
+          <meta property="og:url" content={(`https://akshaykn.vercel.app/` + (this.props.router.asPath === "/" ? "": this.props.router.asPath)).split("?")[0]} />
           <meta property="og:image" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
           <meta property="og:image:secure_url" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
+          <meta name="twitter:card" content="summary"/>
+          <meta name="twitter:domain" content="akshaykn.vercel.app/"/>
+          <link rel="alternate" href="https://akshaykn.vercel.app/" hreflang="en" />
         </Head>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-3WX9F6G7GB"></Script>
           <Script id="gtag-script"
