@@ -27,8 +27,8 @@ const Contact: NextPage = () => {
             </Grid>
             <Grid item xs={6} data-aos="anim1" data-aos-delay="200">
               <Stack direction="row" spacing={2}>
-                <Button variant="contained" size="large" endIcon={<VscArrowRight />}>Send</Button>
-                <Button variant="outlined" size="large">Reset</Button>
+                <Button variant="contained" size="large" endIcon={<VscArrowRight />} aria-label="Send">Send</Button>
+                <Button variant="outlined" size="large" aria-label="Reset the form">Reset</Button>
 
               </Stack>
             </Grid>

@@ -21,7 +21,7 @@ export default function PostPage({ frontmatter, source }:any) {
         
         <Box sx={{height:"50px"}}></Box>
         <Container data-aos="anim1">
-            <Button variant="outlined" onClick={() => router.back()}>
+            <Button variant="outlined" onClick={() => router.back()} aria-label="Go back">
               Go back
             </Button>
         </Container>

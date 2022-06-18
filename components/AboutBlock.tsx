@@ -61,25 +61,25 @@ const AboutText : NextPage<AppProps> = ({ classText }): JSX.Element => {
           <Stack direction="row" spacing={2} my={3} className={ classText } >
             <Box data-aos="anim1" data-aos-delay="100">
               <a href="https://stackoverflow.com/users/7481663/akshay-k-nair" target="_blank" rel="noreferrer">
-              <Button size="large" variant="outlined" >
+              <Button size="large" variant="outlined" aria-label="StackOverflow" >
                 <RiStackOverflowFill fontSize="24px" />
               </Button></a>
             </Box>
             <Box data-aos="anim1" data-aos-delay="200">
             <a href="https://www.linkedin.com/in/akshay-k-nair/" target="_blank" rel="noreferrer">
-              <Button size="large" variant="outlined">
+              <Button size="large" variant="outlined" aria-label="LinkedIn">
                 <RiLinkedinLine fontSize="24px" />
               </Button></a>
             </Box>
             <Box data-aos="anim1" data-aos-delay="300">
             <a href="https://github.com/akshayknz" target="_blank" rel="noreferrer">
-              <Button size="large" variant="outlined">
+              <Button size="large" variant="outlined" aria-label="GitHub">
                 <VscGithubAlt fontSize="24px" />
               </Button></a>
             </Box>
             <Box data-aos="anim1" data-aos-delay="400">
             <a href="https://api.whatsapp.com/send?phone=+918301044114&text=Hi%20Akshay!" target="_blank" rel="noreferrer">
-              <Button size="large" variant="outlined">
+              <Button size="large" variant="outlined" aria-label="WhatsApp">
                 <AiOutlineWhatsApp fontSize="24px" />
               </Button></a>
             </Box>
@@ -87,12 +87,12 @@ const AboutText : NextPage<AppProps> = ({ classText }): JSX.Element => {
           <Box className={ classText }>
             <Stack direction="row" spacing={2} data-aos="anim1" data-aos-delay="250"  >
               <Link href="/work">
-                <Button endIcon={<VscArrowRight />} size="large" variant="outlined">
+                <Button endIcon={<VscArrowRight />} size="large" variant="outlined" aria-label="See Works">
                   Works
                 </Button>
               </Link>
               <Link href="/about">
-                <Button endIcon={<VscArrowRight />} size="large" variant="outlined">
+                <Button endIcon={<VscArrowRight />} size="large" variant="outlined" aria-label="Goto About page">
                   About
                 </Button>
               </Link>

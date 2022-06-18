@@ -155,10 +155,10 @@ const Home: NextPage = ({ works, posts }:any) => {
       <Box data-aos="anim1" data-aos-delay="250">
         <Stack direction="row" spacing={2}>
           <a href="/Akshay-K-Nair-Resume.pdf" download>
-            <Button endIcon={<VscArrowRight />} size="large" variant="outlined"> Resume </Button>
+            <Button endIcon={<VscArrowRight />} size="large" variant="outlined" aria-label="Download my resume"> Resume </Button>
           </a>
           <Link href="/work">
-            <Button endIcon={<VscArrowRight />} size="large" variant="outlined"> Works </Button>
+            <Button endIcon={<VscArrowRight />} size="large" variant="outlined" aria-label="Goto works page"> Works </Button>
           </Link>
         </Stack>
       </Box>
