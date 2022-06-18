@@ -37,7 +37,7 @@ const Blog: NextPage = ({ source }:any) => {
         <div
           key={slug}
           data-aos="anim1"
-          data-aos-delay={index*40}
+          data-aos-delay={index*4000}
           style={{paddingBottom:"20px"}}
         >
           <Link href={`/post/${slug}`}>
