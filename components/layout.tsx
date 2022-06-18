@@ -104,7 +104,7 @@ class Layout extends Component<propsType,MyState> {
           <meta property="og:image:secure_url" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
           <meta name="twitter:card" content="summary"/>
           <meta name="twitter:domain" content="akshaykn.vercel.app/"/>
-          <link rel="alternate" href="https://akshaykn.vercel.app/" hreflang="en" />
+          <link rel="alternate" href="https://akshaykn.vercel.app/" />
         </Head>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-3WX9F6G7GB"></Script>
           <Script id="gtag-script"
