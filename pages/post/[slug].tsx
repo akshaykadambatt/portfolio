@@ -39,6 +39,9 @@ export default function PostPage({ frontmatter, source }:any) {
             h6:(props:any) => <Typography gutterBottom variant="h6">{props.children}</Typography>,
             p:(props:any) => <Typography gutterBottom variant="body1">{props.children}</Typography>,
             ol: (props:any) => <Typography gutterBottom component="ol">{props.children}</Typography>,
+            li: (props:any) => <Typography gutterBottom component="li">{props.children}</Typography>,
+            td: (props:any) => <Typography gutterBottom component="td">{props.children}</Typography>,
+            th: (props:any) => <Typography gutterBottom component="th" sx={{fontWeight:"600"}}>{props.children}</Typography>,
           }} />
         </Box>
         <Box sx={{height:"200px"}}></Box>
