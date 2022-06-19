@@ -46,6 +46,7 @@ Check if the item is first or last in the collection.
 </table>
 
 ### Comments
+Comments within blades have the following syntax.
 ```php
 {{-- This comment will not be present in the rendered HTML --}}
 ```
@@ -92,6 +93,7 @@ if(Storage::exists($path)){
 ```
 
 ### Eloquent
+Database manipulation 
 ```php
 //Set the entry, i.e. update existing entry OR create then update that entry
 public function setDashboardConfigs($vars)
@@ -155,6 +157,7 @@ $output = Trekuser::select('trek_user_dob as dob')
 ```
 
 ### Carbon
+Date manipulation 
 ```php
 $date1 = Carbon::parse($trek_start_date);
 $date2 = Carbon::parse($trek_end_date);

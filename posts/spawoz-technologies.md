@@ -1,9 +1,9 @@
 ---
 title: 'Spawoz Technologies (October 2020 - June 2022)'
-metaTitle: 'Akshay K Nair Software Engineering Experience at Spawoz Technologies'
+metaTitle: 'Akshay K Nair's Software Engineering Experience at Spawoz Technologies'
 metaDesc: 'Worked extensively in Laravel, React Typescript, WordPress, PHP, HTML5, CSS3'
 socialImage: images/22-09-2021.jpg
-date: '2022-09-03'
+date: '2020-10-01'
 tags:
   - work
 ---
@@ -11,7 +11,7 @@ tags:
 ### Spawoz Technologies
 #### October 2020 - June 2022
 
-Started out as an Intern in Spawoz Technologies which lasted for one month after which I took the role of an Associate Software Engineer in Web and Application Development section. I had the privilage to work with some great minds and tutors. 
+Started out as an Intern in Spawoz Technologies which lasted for one month after which I took the role of an Associate Software Engineer in Web and Application Development section. I had the privilage to work with some great developers and tutors. 
 
 1. Worked extensively in Laravel, React Typescript, WordPress, PHP, HTML5, CSS3. 
 2. Using git, Composer, NPM, Linux, Apache environments. 
