@@ -1,6 +1,6 @@
 ---
 title: 'ATEES Industrial Training (September 2017 - October 2017)'
-metaTitle: 'Akshay K Nair's Software Engineering Experience at ATEES Industrial Training'
+metaTitle: 'Akshay K Nair Software Engineering Experience at ATEES Industrial Training'
 metaDesc: 'Short term training in Computer Applications Development'
 socialImage: images/22-09-2021.jpg
 date: '2017-09-02'
