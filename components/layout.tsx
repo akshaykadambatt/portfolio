@@ -105,6 +105,10 @@ class Layout extends Component<propsType,MyState> {
           <meta name="twitter:card" content="summary"/>
           <meta name="twitter:domain" content="akshaykn.vercel.app/"/>
           <link rel="alternate" href="https://akshaykn.vercel.app/" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-3WX9F6G7GB"></Script>
           <Script id="gtag-script"
