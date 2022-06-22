@@ -7,6 +7,7 @@ import { RiStackOverflowFill, RiLinkedinLine } from "react-icons/ri";
 import { VscGithubAlt, VscArrowRight } from "react-icons/vsc";
 import { Button } from "../components/elements";
 import Link from "next/link";
+import Image from 'next/image'
 
 type AppProps = {
   classText?: string;
@@ -21,12 +22,19 @@ const AboutBlock : NextPage<AppProps> = ({ classText }): JSX.Element => {
         md={4}
         sx={{ display: "flex", justifyContent: "center", py:3 }}
       >
-        <Avatar
+        <Image
+          src="/akshay_k_nair.webp"
+          alt="Picture of the author"
+          width={300}
+          height={300}
+          className = { classText + "avatar" }
+        />
+        {/*<Avatar
           alt="Remy Sharp" 
           src="/akshay_k_nair.webp"
           className = { classText + "avatar" }
           sx={{ width: "300px", height: "300px" }}
-        />
+        />*/}
       </Grid>
       <Grid item xs={12} md={8}>
         <AboutText classText = { classText } />

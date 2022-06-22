@@ -126,6 +126,7 @@ const Home: NextPage = ({ works, posts }:any) => {
     <>
   <Head>
     <title>AKSHAY K NAIR, Software Engineer</title>
+    <meta property="description" content="Portfolio of AKSHAY K NAIR, Software Engineer" />
     <meta property="og:site_name" content="AKSHY" />
     <meta
       property="og:title"
