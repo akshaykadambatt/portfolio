@@ -64,28 +64,15 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     borderRadius: 20 / 2,
   },
 }));
-type propsType = {
-  // using `interface` is also ok
-  router: NextRouter
-  // message: string;
-};
-type MyState = { menu: number };
-class Layout extends Component<propsType,MyState> {
-  menuRef: React.RefObject<HTMLInputElement>;
-  constructor(props: propsType) {
-    super(props);
-    this.menuRef = React.createRef();
-    this.state = {
-      menu: 0
-    };
-  }
-  render() {
+
+const Layout: NextPage = (props:any) => {
+  const router = useRouter()
+  const [menu, setMenu] = useState(0);
+  const menuRef = useRef(null<HTMLInputElement>);
     const openMenu = () => {
-      this.setState({menu: 1-this.state.menu});
-      console.log(this.state.menu);
-      
+      setMenu(1-menu)
+      console.log(menu);
     }
-    const { children } = this.props;
     return (
       <>
         <Head>
@@ -96,10 +83,10 @@ class Layout extends Component<propsType,MyState> {
             content="Portfolio of Akshay K Nair, Software Engineer"
           />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="canonical" href={(`https://akshaykn.vercel.app/` + (this.props.router.asPath === "/" ? "": this.props.router.asPath)).split("?")[0]} />
+          <link rel="canonical" href={(`https://akshaykn.vercel.app/` + (router.asPath === "/" ? "": router.asPath)).split("?")[0]} />
           <meta property="og:site_name" content="AKSHY"/>
           <meta property="og:type" content= "website" />
-          <meta property="og:url" content={(`https://akshaykn.vercel.app/` + (this.props.router.asPath === "/" ? "": this.props.router.asPath)).split("?")[0]} />
+          <meta property="og:url" content={(`https://akshaykn.vercel.app/` + (router.asPath === "/" ? "": router.asPath)).split("?")[0]} />
           <meta property="og:image" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
           <meta property="og:image:secure_url" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
           <meta name="twitter:card" content="summary"/>
@@ -122,13 +109,13 @@ class Layout extends Component<propsType,MyState> {
             <Link href="/"><a><Logo>AKSHAY K NAIR</Logo></a></Link>
             </Box>
             <Box>
-              <Box className="hamburger-round" onClick={openMenu} ref={this.menuRef} data-state={this.state.menu} >
+              <Box className="hamburger-round" onClick={openMenu} ref={menuRef} data-state={menu} >
                 <Box className="hamburger"></Box>
               </Box>
             </Box>
           </NavigationInner>
         </Navigation>
-        <Box className="menu-wrapper" data-state={this.state.menu}>
+        <Box className="menu-wrapper" data-state={menu}>
 
         <Grid container maxWidth="lg">
         
@@ -146,7 +133,7 @@ class Layout extends Component<propsType,MyState> {
                 <Link href="/contact"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Contact</Typography></a></Link>
                 <Typography className="menu-links">
                   <MaterialUISwitch 
-                    onClick={this.props.toggleColorScheme} 
+                    onClick={props.toggleColorScheme} 
                     inputProps={{ 'aria-label': 'Toggle dark theme' }}
                   />
                 </Typography>
@@ -160,7 +147,7 @@ class Layout extends Component<propsType,MyState> {
         </Box>
         <Loading/>
 
-        {children}
+        {props.children}
         <Grid container spacing={5} justifyContent="center" sx={{background:"linear-gradient(45deg, rgb(var(--one)/81%) -47%, rgb(var(--two)/30%) 93%)"}}>
           <Grid item xs={10} md={5} >
             <FooterWrapper>
@@ -178,8 +165,8 @@ class Layout extends Component<propsType,MyState> {
             <FooterWrapper>
               <Stack direction="row" spacing={2}>
               <Stack sx={{width:"30%", justifyContent:"space-between"}}>
-                <span><Typography align="left" onClick={this.props.toggleColorSchemeLight} data-aos="anim1" data-aos-delay="350"><BsSun /></Typography></span>
-                <span><Typography align="left" onClick={this.props.toggleColorSchemeDark} data-aos="anim1" data-aos-delay="350"><BsMoonStars /></Typography></span>
+                <span><Typography align="left" onClick={toggleColorSchemeLight} data-aos="anim1" data-aos-delay="350"><BsSun /></Typography></span>
+                <span><Typography align="left" onClick={toggleColorSchemeDark} data-aos="anim1" data-aos-delay="350"><BsMoonStars /></Typography></span>
               </Stack>  
               <Stack sx={{width:"70%", justifyContent:"space-between"}}>
                 <Link href="/">
@@ -223,7 +210,6 @@ class Layout extends Component<propsType,MyState> {
         </Grid>
       </>
     );
-  }
 }
 
 export default withRouter(Layout);
@@ -267,15 +253,15 @@ const toggleColorScheme = () => {
   switch (document.documentElement.getAttribute('color-mode')) {
     case "dark":
       document.documentElement.setAttribute("color-mode", "light");
-      this.props.setIsDarkTheme(false);
+      setIsDarkTheme(false);
       break;
     case "light":
       document.documentElement.setAttribute("color-mode", "dark");
-      this.props.setIsDarkTheme(true);
+      setIsDarkTheme(true);
       break;
     default:
       document.documentElement.setAttribute("color-mode", "dark");
-      this.props.setIsDarkTheme(true);
+      setIsDarkTheme(true);
       break;
   }
   
@@ -283,11 +269,11 @@ const toggleColorScheme = () => {
 
 const toggleColorSchemeLight = () => {
   document.documentElement.setAttribute("color-mode", "light");
-  this.props.setIsDarkTheme(false);
+  setIsDarkTheme(false);
 }
 const toggleColorSchemeDark = () => {
   document.documentElement.setAttribute("color-mode", "dark");
-  this.props.setIsDarkTheme(true);
+  setIsDarkTheme(true);
 }
 
 function Loading() {
