@@ -23,7 +23,7 @@ const AboutBlock : NextPage<AppProps> = ({ classText }): JSX.Element => {
         sx={{ display: "flex", justifyContent: "center", py:3 }}
       >
         <Image
-          loader={'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'}
+          placeholder = "blur"
           src="/akshay_k_nair.webp"
           alt="Picture of the author"
           width={300}
