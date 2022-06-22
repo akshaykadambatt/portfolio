@@ -178,8 +178,8 @@ class Layout extends Component<propsType,MyState> {
             <FooterWrapper>
               <Stack direction="row" spacing={2}>
               <Stack sx={{width:"30%", justifyContent:"space-between"}}>
-                <a><Typography align="left" onClick={toggleColorSchemeLight} data-aos="anim1" data-aos-delay="350"><BsSun /></Typography></a>
-                <a><Typography align="left" onClick={toggleColorSchemeDark} data-aos="anim1" data-aos-delay="350"><BsMoonStars /></Typography></a>
+                <span><Typography align="left" onClick={toggleColorSchemeLight} data-aos="anim1" data-aos-delay="350"><BsSun /></Typography></span>
+                <span><Typography align="left" onClick={toggleColorSchemeDark} data-aos="anim1" data-aos-delay="350"><BsMoonStars /></Typography></span>
               </Stack>  
               <Stack sx={{width:"70%", justifyContent:"space-between"}}>
                 <Link href="/">
