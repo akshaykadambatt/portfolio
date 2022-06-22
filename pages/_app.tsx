@@ -5,6 +5,88 @@ import AOS from 'aos';
 import Layout from '../components/layout'
 import 'aos/dist/aos.css';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';  
+import CssBaseline from '@mui/material/CssBaseline';
+
+const lightTheme = responsiveFontSizes(createTheme({
+  palette: {
+    mode: 'light',
+  },
+  typography: {
+    fontFamily: "'Source Sans Pro', sans-serif",
+    textTransform: "none",
+    fontWeight:300,
+    h1: {
+      fontWeight: 100,
+      "@media (max-width: 400px)": { fontSize: "46px" }
+    },
+    h2: {
+      fontWeight: 100,
+      "@media (max-width: 400px)": { fontSize: "30px" }
+    },
+    h3: {
+      fontWeight: 100,
+    },
+    h4: {
+      fontWeight: 100
+    },
+    h5: {
+      fontWeight: 100
+    },
+    h6: {
+      fontWeight: 100
+    },
+    body1: {
+      fontWeight: 300,
+      fontSize: 18
+    },
+    body2: {
+      fontWeight: 600
+    },
+    button: {
+      fontWeight: 600,
+    }
+    }
+}));
+const darkTheme = responsiveFontSizes(createTheme({
+  palette: {
+    mode: 'dark'
+  },
+  typography: {
+    fontFamily: "'Source Sans Pro', sans-serif",
+    textTransform: "none",
+    fontWeight:300,
+    h1: {
+      fontWeight: 100,
+      "@media (max-width: 400px)": { fontSize: "46px" }
+    },
+    h2: {
+      fontWeight: 100,
+      "@media (max-width: 400px)": { fontSize: "30px" }
+    },
+    h3: {
+      fontWeight: 100,
+    },
+    h4: {
+      fontWeight: 100
+    },
+    h5: {
+      fontWeight: 100
+    },
+    h6: {
+      fontWeight: 100
+    },
+    body1: {
+      fontWeight: 300,
+      fontSize: 18
+    },
+    body2: {
+      fontWeight: 600
+    },
+    button: {
+      fontWeight: 600,
+    }
+    }
+}));
 
 const themeOptions = {
   typography: {
@@ -46,6 +128,8 @@ const themeOptions = {
 let theme = createTheme(themeOptions);
 theme = responsiveFontSizes(theme);
 function MyApp({ Component, pageProps }: AppProps) {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const changeTheme = () => setIsDarkTheme(!isDarkTheme);
   useEffect(() => {
     AOS.init({
       offset: 0,
@@ -54,8 +138,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     })
   }, [])
   return (
-    <ThemeProvider theme={theme}>
-    <Layout>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <CssBaseline />
+    <Layout setIsDarkTheme={setIsDarkTheme}>
       <Component {...pageProps} />
     </Layout>
     </ThemeProvider>

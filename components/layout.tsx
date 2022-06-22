@@ -267,19 +267,28 @@ const toggleColorScheme = () => {
   switch (document.documentElement.getAttribute('color-mode')) {
     case "dark":
       document.documentElement.setAttribute("color-mode", "light");
+      this.props.setIsDarkTheme(false);
       break;
     case "light":
       document.documentElement.setAttribute("color-mode", "dark");
+      this.props.setIsDarkTheme(true);
       break;
     default:
       document.documentElement.setAttribute("color-mode", "dark");
+      this.props.setIsDarkTheme(true);
       break;
   }
   
 }
 
-const toggleColorSchemeLight = () => document.documentElement.setAttribute("color-mode", "light");
-const toggleColorSchemeDark = () => document.documentElement.setAttribute("color-mode", "dark");
+const toggleColorSchemeLight = () => {
+  document.documentElement.setAttribute("color-mode", "light");
+  this.props.setIsDarkTheme(false);
+}
+const toggleColorSchemeDark = () => {
+  document.documentElement.setAttribute("color-mode", "dark");
+  this.props.setIsDarkTheme(true);
+}
 
 function Loading() {
   const router = useRouter();
