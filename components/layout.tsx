@@ -146,7 +146,7 @@ class Layout extends Component<propsType,MyState> {
                 <Link href="/contact"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Contact</Typography></a></Link>
                 <Typography className="menu-links">
                   <MaterialUISwitch 
-                    onClick={toggleColorScheme} 
+                    onClick={this.props.toggleColorScheme} 
                     inputProps={{ 'aria-label': 'Toggle dark theme' }}
                   />
                 </Typography>
@@ -178,8 +178,8 @@ class Layout extends Component<propsType,MyState> {
             <FooterWrapper>
               <Stack direction="row" spacing={2}>
               <Stack sx={{width:"30%", justifyContent:"space-between"}}>
-                <span><Typography align="left" onClick={toggleColorSchemeLight} data-aos="anim1" data-aos-delay="350"><BsSun /></Typography></span>
-                <span><Typography align="left" onClick={toggleColorSchemeDark} data-aos="anim1" data-aos-delay="350"><BsMoonStars /></Typography></span>
+                <span><Typography align="left" onClick={this.props.toggleColorSchemeLight} data-aos="anim1" data-aos-delay="350"><BsSun /></Typography></span>
+                <span><Typography align="left" onClick={this.props.toggleColorSchemeDark} data-aos="anim1" data-aos-delay="350"><BsMoonStars /></Typography></span>
               </Stack>  
               <Stack sx={{width:"70%", justifyContent:"space-between"}}>
                 <Link href="/">

@@ -137,10 +137,37 @@ function MyApp({ Component, pageProps }: AppProps) {
       delay:80
     })
   }, [])
+  
+  const toggleColorScheme = () => {
+    switch (document.documentElement.getAttribute('color-mode')) {
+      case "dark":
+        document.documentElement.setAttribute("color-mode", "light");
+        setIsDarkTheme(false);
+        break;
+      case "light":
+        document.documentElement.setAttribute("color-mode", "dark");
+        setIsDarkTheme(true);
+        break;
+      default:
+        document.documentElement.setAttribute("color-mode", "dark");
+        setIsDarkTheme(true);
+        break;
+    }
+    
+  }
+
+  const toggleColorSchemeLight = () => {
+    document.documentElement.setAttribute("color-mode", "light");
+    setIsDarkTheme(false);
+  }
+  const toggleColorSchemeDark = () => {
+    document.documentElement.setAttribute("color-mode", "dark");
+    setIsDarkTheme(true);
+  }
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <CssBaseline />
-    <Layout setIsDarkTheme={setIsDarkTheme}>
+    <Layout toggleColorScheme={toggleColorScheme} toggleColorSchemeLight={toggleColorSchemeLight} toggleColorSchemeDark={toggleColorSchemeDark}>
       <Component {...pageProps} />
     </Layout>
     </ThemeProvider>
