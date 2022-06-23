@@ -4,8 +4,9 @@ import type { AppProps } from 'next/app'
 import AOS from 'aos';
 import Layout from '../components/layout'
 import 'aos/dist/aos.css';
-import { ThemeProvider, createTheme, responsiveFontSizes, PaletteMode } from '@mui/material/styles';  
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';  
 import CssBaseline from '@mui/material/CssBaseline';
+import { PaletteMode } from "@mui/core";
 
 const lightTheme = responsiveFontSizes(createTheme({
   palette: {
