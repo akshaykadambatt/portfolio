@@ -419,3 +419,25 @@ a{
 .aboutme-avatar{
   border-radius: 100%;
 }
+.bottom-loading-thing{
+  display: none;
+}
+.loading-bar-thing{
+  height: 10px;
+  width: 100%;
+
+}
+.inside-loading-bar-thing{
+  height: 10px;
+  background-color: #000;
+  animation: looood 3s cubic-bezier(1, 0, 0.35, 1.08) 0.41s 1
+  alternate-reverse;;
+}
+@keyframes looood {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}

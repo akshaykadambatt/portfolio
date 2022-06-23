@@ -176,13 +176,13 @@ const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLigh
               </Stack>  
               <Stack sx={{width:"70%", justifyContent:"space-between"}}>
                 <Link href="/">
-                  <Typography align="right" data-aos="anim1" data-aos-delay="50">Home</Typography>
+                  <Typography style={{cursor:"pointer"}} align="right" data-aos="anim1" data-aos-delay="50">Home</Typography>
                 </Link>
                 <Link href="/work">
-                  <Typography align="right" data-aos="anim1" data-aos-delay="100">Work</Typography>
+                  <Typography style={{cursor:"pointer"}} align="right" data-aos="anim1" data-aos-delay="100">Work</Typography>
                 </Link>
                 <Link href="/about">
-                  <Typography align="right" data-aos="anim1" data-aos-delay="150">About</Typography>
+                  <Typography style={{cursor:"pointer"}} align="right" data-aos="anim1" data-aos-delay="150">About</Typography>
                 </Link>
                 <Link href="/contact">
                   <Typography align="right" data-aos="anim1" data-aos-delay="200">Contact Me</Typography>

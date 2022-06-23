@@ -291,7 +291,10 @@ const Home: NextPage = ({ works, posts }:any) => {
   <BlockFullWidth>
     <DesignElem text={"Simplicity from Complexity"} />
   </BlockFullWidth>
-  <BottomLoadingThing> {/* To-do */}
+  <BottomLoadingThing className="bottom-loading-thing"> {/* To-do */}
+    <Box className="loading-bar-thing">
+      <Box className="inside-loading-bar-thing"></Box>
+    </Box>
     <Typography>
       Loading complete.
     </Typography>
@@ -425,5 +428,4 @@ const BottomLoadingThing = styled(Box)(({ theme }) => (`
   border-radius: 12px;
   min-width: 212px;
   transition: all .3s;
-  display: none;
 `))
