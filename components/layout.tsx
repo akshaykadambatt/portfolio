@@ -65,8 +65,13 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     borderRadius: 20 / 2,
   },
 }));
-
-const Layout: NextPage = ({toggleColorScheme, toggleColorSchemeLight, toggleColorSchemeDark, children}:any) => {
+interface LayoutProps {
+  toggleColorScheme?: (message?: string) => void;
+  toggleColorSchemeLight?: (message?: string) => void;
+  toggleColorSchemeDark?: (message?: string) => void;
+  children?: ReactNode;
+}
+const Layout: NextPage = ({toggleColorScheme, toggleColorSchemeLight, toggleColorSchemeDark, children}:LayoutProps) => {
   const router = useRouter()
   const [menu, setMenu] = useState(0);
   const menuRef = useRef<HTMLInputElement>(null);
