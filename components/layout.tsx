@@ -89,10 +89,10 @@ const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLigh
             content="Portfolio of Akshay K Nair, Software Engineer"
           />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="canonical" href={(`https://akshaykn.vercel.app/` + (router.asPath === "/" ? "": router.asPath)).split("?")[0]} />
+          <link rel="canonical" href={(`https://akshaykn.vercel.app` + (router.asPath === "/" ? "": router.asPath)).split("?")[0]} />
           <meta property="og:site_name" content="AKSHY"/>
           <meta property="og:type" content= "website" />
-          <meta property="og:url" content={(`https://akshaykn.vercel.app/` + (router.asPath === "/" ? "": router.asPath)).split("?")[0]} />
+          <meta property="og:url" content={(`https://akshaykn.vercel.app` + (router.asPath === "/" ? "": router.asPath)).split("?")[0]} />
           <meta property="og:image" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
           <meta property="og:image:secure_url" content="https://akshaykn.vercel.app/akshay_k_nair.webp" />
           <meta name="twitter:card" content="summary"/>
