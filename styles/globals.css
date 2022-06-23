@@ -420,6 +420,7 @@ a{
   border-radius: 100%;
 }
 .bottom-loading-thing{
+  display: none;
   visibility: hidden;
   padding: 20px 20px;
   animation: loooodParent 4s cubic-bezier(1, 0, 0.35, 1.08) 0.41s 1
