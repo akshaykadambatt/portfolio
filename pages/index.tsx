@@ -295,7 +295,7 @@ const Home: NextPage = ({ works, posts }:any) => {
     <Box className="loading-bar-thing">
       <Box className="inside-loading-bar-thing"></Box>
     </Box>
-    <Typography>
+    <Typography style={{fontSize:"12px"}}>
       Loading complete.
     </Typography>
   </BottomLoadingThing>

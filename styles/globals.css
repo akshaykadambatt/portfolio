@@ -421,23 +421,43 @@ a{
 }
 .bottom-loading-thing{
   display: none;
+  padding: 20px 20px;
+  animation: loooodParent 3s cubic-bezier(1, 0, 0.35, 1.08) 0.41s 1
+  alternate;
 }
 .loading-bar-thing{
-  height: 10px;
+  height: 4px;
   width: 100%;
-
+  border-radius: 7px;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 .inside-loading-bar-thing{
-  height: 10px;
-  background-color: #000;
+  height: 4px;
+  width: 0%;
+  background-color: #5c5c5c;
   animation: looood 3s cubic-bezier(1, 0, 0.35, 1.08) 0.41s 1
-  alternate-reverse;;
+  alternate;
 }
 @keyframes looood {
   0%{
     width: 0%;
   }
+  50%{
+    width: 75%;
+  }
   100%{
     width: 100%;
+  }
+}
+@keyframes loooodParent {
+  0%{
+    display: block;
+  }
+  99%{
+    display: none;
+  }
+  100%{
+    display: none;
   }
 }
