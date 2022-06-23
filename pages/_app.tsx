@@ -4,15 +4,16 @@ import type { AppProps } from 'next/app'
 import AOS from 'aos';
 import Layout from '../components/layout'
 import 'aos/dist/aos.css';
-import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';  
+import { ThemeProvider, createTheme, responsiveFontSizes, PaletteMode } from '@mui/material/styles';  
 import CssBaseline from '@mui/material/CssBaseline';
 
 const lightTheme = responsiveFontSizes(createTheme({
   palette: {
-    mode: 'light',
+    mode: 'light' as PaletteMode,
   },
   typography: {
     fontFamily: "'Source Sans Pro', sans-serif",
+    textTransform: "none",
     fontWeight:300,
     h1: {
       fontWeight: 100,
@@ -48,10 +49,11 @@ const lightTheme = responsiveFontSizes(createTheme({
 }));
 const darkTheme = responsiveFontSizes(createTheme({
   palette: {
-    mode: 'dark'
+    mode: 'dark' as PaletteMode
   },
   typography: {
     fontFamily: "'Source Sans Pro', sans-serif",
+    textTransform: "none",
     fontWeight:300,
     h1: {
       fontWeight: 100,
@@ -89,7 +91,7 @@ const darkTheme = responsiveFontSizes(createTheme({
 const themeOptions = {
   typography: {
     fontFamily: "'Source Sans Pro', sans-serif",
-    // textTransform: "none",
+    textTransform: "none",
     fontWeight:300,
     h1: {
       fontWeight: 100,
