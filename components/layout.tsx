@@ -66,9 +66,9 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 interface LayoutProps {
-  toggleColorScheme?: (message?: string) => void;
-  toggleColorSchemeLight?: (message?: string) => void;
-  toggleColorSchemeDark?: (message?: string) => void;
+  toggleColorScheme?: MouseEventHandler<HTMLButtonElement> | undefined;
+  toggleColorSchemeLight?: MouseEventHandler<HTMLButtonElement> | undefined;
+  toggleColorSchemeDark?: MouseEventHandler<HTMLButtonElement> | undefined;
   children?: ReactNode;
 }
 const Layout: NextPage = ({toggleColorScheme, toggleColorSchemeLight, toggleColorSchemeDark, children}:LayoutProps) => {
