@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import 'aos/dist/aos.css';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';  
 import CssBaseline from '@mui/material/CssBaseline';
-import { PaletteMode } from "@mui/core";
+import { PaletteMode } from '@mui/material';
 
 const lightTheme = responsiveFontSizes(createTheme({
   palette: {
