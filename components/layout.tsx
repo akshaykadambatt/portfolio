@@ -1,4 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
+import type { NextPage } from "next";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Head from "next/head";
@@ -65,7 +66,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-const Layout: NextPage = (props:any) => {
+const Layout: NextPage = ({toggleColorScheme, toggleColorSchemeLight, toggleColorSchemeDark, children}:any) => {
   const router = useRouter()
   const [menu, setMenu] = useState(0);
   const menuRef = useRef(null<HTMLInputElement>);
@@ -133,7 +134,7 @@ const Layout: NextPage = (props:any) => {
                 <Link href="/contact"><a className="menu-links"><Typography variant="h4" onClick={openMenu}>Contact</Typography></a></Link>
                 <Typography className="menu-links">
                   <MaterialUISwitch 
-                    onClick={props.toggleColorScheme} 
+                    onClick={toggleColorScheme} 
                     inputProps={{ 'aria-label': 'Toggle dark theme' }}
                   />
                 </Typography>
@@ -147,7 +148,7 @@ const Layout: NextPage = (props:any) => {
         </Box>
         <Loading/>
 
-        {props.children}
+        {children}
         <Grid container spacing={5} justifyContent="center" sx={{background:"linear-gradient(45deg, rgb(var(--one)/81%) -47%, rgb(var(--two)/30%) 93%)"}}>
           <Grid item xs={10} md={5} >
             <FooterWrapper>
