@@ -28,8 +28,7 @@ const AboutBlock : NextPage<AppProps> = ({ classText }): JSX.Element => {
           alt="Picture of the author"
           width={300}
           height={300}
-          className = { classText + " avatar" }
-          style={{borderRadius: "100px"}}
+          className = { classText + " aboutme-avatar" }
         />
         {/*<Avatar
           alt="Remy Sharp" 
