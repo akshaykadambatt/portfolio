@@ -128,6 +128,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   const changeTheme = () => setIsDarkTheme(!isDarkTheme);
   useEffect(() => {
+    toggleColorScheme()
     AOS.init({
       offset: 0,
       duration: 600,
