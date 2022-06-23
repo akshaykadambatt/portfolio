@@ -248,35 +248,6 @@ const Logo = styled(Typography)({
 
 const Footer = styled("footer")({});
 
-
-
-const toggleColorScheme = () => {
-  switch (document.documentElement.getAttribute('color-mode')) {
-    case "dark":
-      document.documentElement.setAttribute("color-mode", "light");
-      setIsDarkTheme(false);
-      break;
-    case "light":
-      document.documentElement.setAttribute("color-mode", "dark");
-      setIsDarkTheme(true);
-      break;
-    default:
-      document.documentElement.setAttribute("color-mode", "dark");
-      setIsDarkTheme(true);
-      break;
-  }
-  
-}
-
-const toggleColorSchemeLight = () => {
-  document.documentElement.setAttribute("color-mode", "light");
-  setIsDarkTheme(false);
-}
-const toggleColorSchemeDark = () => {
-  document.documentElement.setAttribute("color-mode", "dark");
-  setIsDarkTheme(true);
-}
-
 function Loading() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
