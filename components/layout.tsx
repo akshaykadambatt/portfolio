@@ -218,7 +218,7 @@ const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLigh
     );
 }
 
-export default withRouter(Layout);
+export default Layout;
 
 const Navigation = styled(Container)({
   height: "auto",
