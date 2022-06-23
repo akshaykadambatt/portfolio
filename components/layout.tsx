@@ -69,7 +69,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 const Layout: NextPage = ({toggleColorScheme, toggleColorSchemeLight, toggleColorSchemeDark, children}:any) => {
   const router = useRouter()
   const [menu, setMenu] = useState(0);
-  const menuRef = useRef(null<HTMLInputElement>);
+  const menuRef = useRef<RefObject>(null);
     const openMenu = () => {
       setMenu(1-menu)
       console.log(menu);
