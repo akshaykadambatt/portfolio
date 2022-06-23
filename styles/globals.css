@@ -422,7 +422,7 @@ a{
 .bottom-loading-thing{
   visibility: hidden;
   padding: 20px 20px;
-  animation: loooodParent 3s cubic-bezier(1, 0, 0.35, 1.08) 0.41s 1
+  animation: loooodParent 4s cubic-bezier(1, 0, 0.35, 1.08) 0.41s 1
   alternate;
 }
 .loading-bar-thing{
@@ -434,7 +434,7 @@ a{
 }
 .inside-loading-bar-thing{
   height: 4px;
-  width: 0%;
+  width: 100%;
   background-color: #5c5c5c;
   animation: looood 3s cubic-bezier(1, 0, 0.35, 1.08) 0.41s 1
   alternate;
