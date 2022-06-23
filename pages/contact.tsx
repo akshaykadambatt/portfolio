@@ -13,19 +13,19 @@ const Contact: NextPage = () => {
   return (
     <>
       <Container sx={{paddingTop:"50px"}}>
-        <Container maxWidth="md">
+        <Container maxWidth="md" component="form">
         <Typography data-aos="anim1" variant="h1" gutterBottom>Contact Me</Typography>
           <Grid container spacing={2}>
-            <Grid item xs={6} data-aos="anim1" data-aos-delay="50">
+            <Grid item xs={12} md={6} data-aos="anim1" data-aos-delay="50">
               <TextField required type="text" fullWidth label="Name" variant="outlined" />
             </Grid>
-            <Grid item xs={6} data-aos="anim1" data-aos-delay="100">
+            <Grid item xs={12} md={6} data-aos="anim1" data-aos-delay="100">
               <TextField required type="email" fullWidth label="Email" variant="outlined" />
             </Grid>
             <Grid item xs={12} data-aos="anim1" data-aos-delay="150">
               <TextField multiline required type="text" rows={6} fullWidth label="Say something" variant="outlined" />
             </Grid>
-            <Grid item xs={6} data-aos="anim1" data-aos-delay="200">
+            <Grid item xs={12} md={6} data-aos="anim1" data-aos-delay="200">
               <Stack direction="row" spacing={2}>
                 <Button variant="contained" size="large" endIcon={<VscArrowRight />} aria-label="Send">Send</Button>
                 <Button variant="outlined" size="large" aria-label="Reset the form">Reset</Button>
