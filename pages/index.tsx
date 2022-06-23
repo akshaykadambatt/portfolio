@@ -291,6 +291,11 @@ const Home: NextPage = ({ works, posts }:any) => {
   <BlockFullWidth>
     <DesignElem text={"Simplicity from Complexity"} />
   </BlockFullWidth>
+  <BottomLoadingThing> {/* To-do */}
+    <Typography>
+      Loading complete.
+    </Typography>
+  </BottomLoadingThing>
 </>
   );
 };
@@ -411,3 +416,14 @@ const RecentBox = styled(Box)({
     paddingBottom: "70px"
   }
 })
+const BottomLoadingThing = styled(Box)(({ theme }) => (`
+  position: fixed;
+  bottom: 14px;
+  left: 13px;
+  background: ${theme.palette.background.default};
+  padding: 10px;
+  border-radius: 12px;
+  min-width: 212px;
+  transition: all .3s;
+  display: none;
+`))
