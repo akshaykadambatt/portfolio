@@ -71,7 +71,7 @@ interface LayoutProps {
   toggleColorSchemeDark: React.MouseEventHandler<HTMLButtonElement> | undefined;
   children: ReactNode;
 }
-const Layout: NextPage = ({toggleColorScheme, toggleColorSchemeLight, toggleColorSchemeDark, children}:LayoutProps) => {
+const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLight, toggleColorSchemeDark, children}:LayoutProps) => {
   const router = useRouter()
   const [menu, setMenu] = useState(0);
   const menuRef = useRef<HTMLInputElement>(null);
