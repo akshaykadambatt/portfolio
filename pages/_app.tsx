@@ -13,7 +13,6 @@ const lightTheme = responsiveFontSizes(createTheme({
   },
   typography: {
     fontFamily: "'Source Sans Pro', sans-serif",
-    textTransform: "none",
     fontWeight:300,
     h1: {
       fontWeight: 100,
@@ -53,7 +52,6 @@ const darkTheme = responsiveFontSizes(createTheme({
   },
   typography: {
     fontFamily: "'Source Sans Pro', sans-serif",
-    textTransform: "none",
     fontWeight:300,
     h1: {
       fontWeight: 100,
@@ -91,7 +89,7 @@ const darkTheme = responsiveFontSizes(createTheme({
 const themeOptions = {
   typography: {
     fontFamily: "'Source Sans Pro', sans-serif",
-    textTransform: "none",
+    // textTransform: "none",
     fontWeight:300,
     h1: {
       fontWeight: 100,
