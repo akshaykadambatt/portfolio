@@ -12,7 +12,9 @@ import Image from 'next/image'
 type AppProps = {
   classText?: string;
 };
-
+const myLoader = ({ src, width, quality }:any) => {
+  return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+}
 const AboutBlock : NextPage<AppProps> = ({ classText }): JSX.Element => {
   return (
     <Grid container>
@@ -23,6 +25,7 @@ const AboutBlock : NextPage<AppProps> = ({ classText }): JSX.Element => {
         sx={{ display: "flex", justifyContent: "center", py:3 }}
       >
         <Image
+          loader={myLoader}
           placeholder = "blur"
           src="/akshay_k_nair.webp"
           alt="Picture of the author"
