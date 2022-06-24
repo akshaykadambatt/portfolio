@@ -8,13 +8,12 @@ import { VscGithubAlt, VscArrowRight } from "react-icons/vsc";
 import { Button } from "../components/elements";
 import Link from "next/link";
 import Image from 'next/image'
+import me from '../public/akshay_k_nair.webp'
 
 type AppProps = {
   classText?: string;
 };
-const myLoader = ({ src, width, quality }:any) => {
-  return `https://example.com/${src}?w=${width}&q=${quality || 75}`
-}
+
 const AboutBlock : NextPage<AppProps> = ({ classText }): JSX.Element => {
   return (
     <Grid container>
@@ -25,10 +24,10 @@ const AboutBlock : NextPage<AppProps> = ({ classText }): JSX.Element => {
         sx={{ display: "flex", justifyContent: "center", py:3 }}
       >
         <Image
-          loader={myLoader}
           placeholder = "blur"
-          src="/akshay_k_nair.webp"
+          src={me}
           alt="Picture of the author"
+          placeholder="blur"
           width={300}
           height={300}
           className = { "aboutme-avatar" }
