@@ -24,7 +24,6 @@ const AboutBlock : NextPage<AppProps> = ({ classText }): JSX.Element => {
         sx={{ display: "flex", justifyContent: "center", py:3 }}
       >
         <Image
-          placeholder = "blur"
           src={me}
           alt="Picture of the author"
           placeholder="blur"
