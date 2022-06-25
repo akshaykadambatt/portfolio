@@ -21,6 +21,9 @@ const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
           flexDirection: "column",
         }}
       >
+        <video autoPlay loop style={{ width: '500px', height: '500px' }}>
+          <source src="/cubos-3d-background-1.mp4" />
+        </video>
         <Text
           data-aos="anim1"
           data-aos-delay="100"
@@ -86,7 +89,7 @@ const BackDesignBlock = styled(Box)(`
 `);
 
 const Text = styled(Typography)({
-  fontSize: "clamp(1rem, -0.875rem + 8.333vw, 3.5rem) !important", 
+  fontSize: "clamp(1rem, -0.875rem + 11vw, 3.5rem) !important", 
   fontWeight: 100,
   textAlign: "center"
 });
