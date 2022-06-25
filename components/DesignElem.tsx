@@ -19,10 +19,11 @@ const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
+          overflow:"hidden"
         }}
       >
-        <video autoPlay loop style={{ width: '500px', height: '500px' }}>
-          <source src="/cubos-3d-background-1.mp4" />
+        <video autoPlay loop muted playsinline style={{ position: "absolute" }}>
+          <source src="/cubos-3d-background-1.mp4" type="video/mp4" />
         </video>
         <Text
           data-aos="anim1"
