@@ -22,7 +22,7 @@ const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
           overflow:"hidden"
         }}
       >
-        <video autoPlay loop muted playsinline style={{ position: "absolute" }}>
+        <video autoPlay loop muted playsInline style={{ position: "absolute" }}>
           <source src="/cubos-3d-background-1.mp4" type="video/mp4" />
         </video>
         <Text
