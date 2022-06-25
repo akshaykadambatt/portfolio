@@ -12,7 +12,10 @@ type AppProps = {
 const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
   const video = useRef<HTMLVideoElement>();
   useEffect(() => {
-    video.current && video.current.play();
+    if(video.current){
+      video.current.setAttribute('src',"/cubos-3d-background-1.mp4")
+      video.current.play();
+    }
   }, []);
   return (
     <Container data-aos="anim1" sx={{ my: 10, overflow:"hidden" }}>
@@ -31,8 +34,7 @@ const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
           overflow:"hidden"
         }}
       >
-        <video autoPlay loop muted playsInline style={{ position: "absolute" }} ref={video}>
-          <source src="/cubos-3d-background-1.mp4" type="video/mp4" />
+        <video data-aos="anim1" autoPlay loop muted playsInline style={{ position: "absolute" }} ref={video}>
         </video>
         <Text
           data-aos="anim1"
