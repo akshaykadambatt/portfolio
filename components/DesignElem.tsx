@@ -10,7 +10,7 @@ type AppProps = {
 };
 
 const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
-  const video = useRef<HTMLVideoElement>();
+  const video = useRef<HTMLVideoElement | null>();
   useEffect(() => {
     if(video.current){
       video.current.setAttribute('src',"/cubos-3d-background-1.mp4")
