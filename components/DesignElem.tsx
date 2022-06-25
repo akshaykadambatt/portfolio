@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import React, { useRef, useEffect } from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -9,8 +10,16 @@ type AppProps = {
 };
 
 const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
+  const video = useRef<HTMLVideoElement>();
+  useEffect(() => {
+    video.current && video.current.play();
+  }, []);
   return (
-    <Container data-aos="anim1" sx={{ my: 10 }}>
+    <Container data-aos="anim1" sx={{ my: 10, overflow:"hidden" }}>
+      <Box
+        sx={{
+          overflow:"hidden"
+        }}>
       <Box
         sx={{
           bgcolor: "rgb(var(--two)/30%)",
@@ -22,7 +31,7 @@ const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
           overflow:"hidden"
         }}
       >
-        <video autoPlay loop muted playsInline style={{ position: "absolute" }}>
+        <video autoPlay loop muted playsInline style={{ position: "absolute" }} ref={video}>
           <source src="/cubos-3d-background-1.mp4" type="video/mp4" />
         </video>
         <Text
@@ -62,6 +71,7 @@ const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
           {text}
         </Text>
       </Box>
+      </Box>
     </Container>
   );
 };
@@ -92,5 +102,6 @@ const BackDesignBlock = styled(Box)(`
 const Text = styled(Typography)({
   fontSize: "clamp(1rem, -0.875rem + 11vw, 3.5rem) !important", 
   fontWeight: 100,
-  textAlign: "center"
+  textAlign: "center",
+  color: "#fff"
 });
