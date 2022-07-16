@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';  
 import CssBaseline from '@mui/material/CssBaseline';
 import { PaletteMode } from '@mui/material';
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 const lightTheme = responsiveFontSizes(createTheme({
   palette: {
@@ -129,11 +130,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   const changeTheme = () => setIsDarkTheme(!isDarkTheme);
   useEffect(() => {
     toggleColorScheme()
-    AOS.init({
-      offset: 0,
-      duration: 600,
-      delay:80
-    })
+    // AOS.init({
+    //   offset: 0,
+    //   duration: 600,
+    //   delay:80
+    // })
   }, [])
   
   const toggleColorScheme = () => {

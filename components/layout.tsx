@@ -18,6 +18,7 @@ import { AboutText } from "./AboutBlock";
 import Script from "next/script";
 import { useRouter, withRouter, NextRouter  } from "next/router";
 import { CSSTransition } from 'react-transition-group';
+import useLocoScroll from "./useLocoScroll";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -75,12 +76,16 @@ const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLigh
   const router = useRouter()
   const [menu, setMenu] = useState(0);
   const menuRef = useRef<HTMLInputElement>(null);
+  const ssRef = useRef<HTMLDivElement>(null);
+  useLocoScroll(ssRef);
+  useEffect(() => {
+  },[])
     const openMenu = () => {
       setMenu(1-menu)
       console.log(menu);
     }
     return (
-      <>
+      <div data-scroll-container>
         <Head>
           <html lang="en" />
           <title>AKSHAY K NAIR, Software Engineer</title>
@@ -108,8 +113,8 @@ const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLigh
   strategy="afterInteractive" dangerouslySetInnerHTML={{__html: `window.dataLayer = window.dataLayer || [];function gtag(){
                 dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-3WX9F6G7GB');`,}}
           />
-        <Navigation maxWidth={false}>
-          <NavigationInner>
+        <Navigation maxWidth={false} >
+          <NavigationInner data-scroll-sticky data-scroll-target="scroll-direction">
             <Box>
               
             <Link href="/"><a><Logo>AKSHAY K NAIR</Logo></a></Link>
@@ -152,9 +157,11 @@ const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLigh
               
         </Box>
         <Loading/>
+<div id="scroll-direction" data-scroll-section>
 
         {children}
-        <Grid container spacing={5} justifyContent="center" sx={{background:"linear-gradient(45deg, rgb(var(--one)/81%) -47%, rgb(var(--two)/30%) 93%)"}}>
+</div>
+        <Grid data-scroll-section container spacing={5} justifyContent="center" sx={{background:"linear-gradient(45deg, rgb(var(--one)/81%) -47%, rgb(var(--two)/30%) 93%)"}}>
           <Grid item xs={10} md={5} >
             <FooterWrapper>
               <Typography  data-aos="anim1"
@@ -214,7 +221,7 @@ const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLigh
         </Typography>
           </Grid>
         </Grid>
-      </>
+      </div>
     );
 }
 

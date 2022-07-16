@@ -142,7 +142,7 @@ const Home: NextPage = ({ works, posts }:any) => {
       content="https://akshaykn.vercel.app/akshay_k_nair.webp"
     />
   </Head>
-  <HeadBox>
+  <HeadBox >
     <Box sx={{ position: "relative", zIndex: "1" }}>
       <Typography variant="h1" sx={{ mb: 0 }}>Akshay K Nair</Typography>
       <Typography variant="h2" sx={{ mb: 2 }} data-aos="anim1">Software Engineer</Typography>
@@ -168,7 +168,7 @@ const Home: NextPage = ({ works, posts }:any) => {
       <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
     </div>
   </HeadBox>
-  <Box sx={{ transform: "translateZ(0)", overflow: "hidden" }}>
+  <Box sx={{ transform: "translateZ(0)", overflow: "hidden" }} >
     <Block data-aos="anim1">
       <Heading variant="h3" gutterBottom>Stuff I know</Heading>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -211,17 +211,17 @@ const Home: NextPage = ({ works, posts }:any) => {
     </Block>
   </Box>
   <BackDesign text="Stuff I Know" />
-  <Block>
+  <Block >
     <Heading variant="h3" gutterBottom data-aos="anim1">About Me</Heading>
     <AboutBlock />
   </Block>
-  <BlockFullWidth>
+  <BlockFullWidth >
     <Container>
       <Heading variant="h3" data-aos="anim1">My Recent Works</Heading>
     </Container>
     <ItemBlock />
   </BlockFullWidth>
-  <BlockFullWidth>
+  <BlockFullWidth >
     <Container>
       <Heading variant="h3" data-aos="anim1">Blog</Heading>
     </Container>
@@ -288,7 +288,7 @@ const Home: NextPage = ({ works, posts }:any) => {
       </BoxWrap>
     </AlignCenter>
   </BlockFullWidth>
-  <BlockFullWidth>
+  <BlockFullWidth >
     <DesignElem text={"Simplicity from Complexity"} />
   </BlockFullWidth>
   <BottomLoadingThing className="bottom-loading-thing"> {/* To-do */}
