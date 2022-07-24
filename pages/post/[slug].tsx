@@ -10,8 +10,10 @@ import { useTheme } from '@mui/system';
 import Image from 'next/image'
 import Link from 'next/link';
 import { useRouter } from 'next/router'
+import useLocoScroll from "../../components/useLocoScroll";
 
 export default function PostPage({ frontmatter, source }:any) {
+  useLocoScroll();
   const router = useRouter()
   return (
     <div className="blog-content">

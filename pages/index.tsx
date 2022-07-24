@@ -172,10 +172,10 @@ const Home: NextPage = ({ works, posts }:any) => {
     </div>
   </HeadBox>
   <Box sx={{ transform: "translateZ(0)", overflow: "visible" }} >
-    <Block data-aos="anim1" sx={{ overflow: "visible" }} >
-      <Heading variant="h3" gutterBottom data-scroll data-scroll-speed={3} className="loco-hidden" data-scroll-class="loco-reveal">Stuff I know</Heading>
+    <Container data-aos="anim1" sx={{ overflow: "visible", marginBottom:20, marginTop:10 }} >
+      <Heading variant="h3" gutterBottom data-scroll data-scroll-speed={2} className="loco-hidden" data-scroll-class="loco-reveal">Stuff I know</Heading>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}  >
-        <Grid item xs={12} md={4} className="loco-hidden" data-scroll data-scroll-speed="6"  data-scroll-class="loco-reveal" data-scroll-delay="0.1">
+        <Grid item xs={12} md={4} className="loco-hidden" data-scroll data-scroll-speed="4"  data-scroll-class="loco-reveal" data-scroll-delay="0.1">
           <Box sx={{background: "linear-gradient(45deg, #ab91ff0d 45%, #02a1e91c)",
               height: "100%",p: 3}}>
             <Typography variant="h4" gutterBottom>Languages</Typography>
@@ -186,7 +186,7 @@ const Home: NextPage = ({ works, posts }:any) => {
             <Typography>Python</Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={4} className="loco-hidden" data-scroll-delay="0.072" data-scroll data-scroll-repeat data-scroll-class="loco-reveal" data-scroll-speed="6"  >
+        <Grid item xs={12} md={4} className="loco-hidden" data-scroll-delay="0.072" data-scroll data-scroll-repeat data-scroll-class="loco-reveal" data-scroll-speed="4"  >
           <Box sx={{background: "linear-gradient(45deg, #ab91ff0d 45%, #02a1e91c)",
               height: "100%",p: 3}}>
             <Typography variant="h4" gutterBottom>Frameworks</Typography>
@@ -198,7 +198,7 @@ const Home: NextPage = ({ works, posts }:any) => {
             <Typography>Styled Components, Tailwind CSS, Bootstrap</Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={4} className="loco-hidden" data-scroll data-scroll-delay="0.06" data-scroll-repeat data-scroll-class="loco-reveal" data-scroll-speed="6" >
+        <Grid item xs={12} md={4} className="loco-hidden" data-scroll data-scroll-delay="0.06" data-scroll-repeat data-scroll-class="loco-reveal" data-scroll-speed="4" >
           <Box sx={{background: "linear-gradient(45deg, #ab91ff0d 45%, #02a1e91c)",
               height: "100%",p: 3}}>
             <Typography variant="h4" gutterBottom>Tools</Typography>
@@ -211,13 +211,13 @@ const Home: NextPage = ({ works, posts }:any) => {
           </Box>
         </Grid>
       </Grid>
-    </Block>
+    </Container>
   </Box>
   <BackDesign text="Stuff I Know" />
-  <Block >
-    <Heading variant="h3" gutterBottom data-aos="anim1">About Me</Heading>
+  <Container sx={{ overflow: "visible", marginBottom:20, marginTop:10 }}  >
+    <Heading variant="h3" gutterBottom data-aos="anim1" data-scroll data-scroll-speed={2}>About Me</Heading>
     <AboutBlock />
-  </Block>
+  </Container>
   <BlockFullWidth >
     <Container>
       <Heading variant="h3" data-aos="anim1">My Recent Works</Heading>
