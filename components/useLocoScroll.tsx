@@ -9,11 +9,15 @@ export default function useLocoScroll(start:any) {
                 el: document.querySelector("[data-scroll-container]"),
                 smooth: true,
                 smoothMobile: true,
-                resetNativeScroll: true
+                resetNativeScroll: true,
+                lerp: 0.12
             });
         });
         return () => {
-            if (scroll) scroll.destroy();
+            if (scroll) {
+                console.log('scroll destroy');
+                scroll.destroy();
+            }
         }
-    });
+    },[]);
 }

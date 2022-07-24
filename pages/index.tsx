@@ -22,6 +22,7 @@ import Link from "next/link";
 import { createUseStyles } from "react-jss";
 import fs from 'fs';
 import matter from 'gray-matter';
+import useLocoScroll from "../components/useLocoScroll";
 
 export async function getStaticProps() {
   const files = fs.readdirSync('posts');
@@ -69,6 +70,8 @@ const HeadBox = styled(Box)({
 });
 
 const Home: NextPage = ({ works, posts }:any) => {
+  useLocoScroll('ssRef');
+
   const useStyles = createUseStyles({
     box: {
       borderRadius: "10px",
@@ -168,13 +171,13 @@ const Home: NextPage = ({ works, posts }:any) => {
       <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
     </div>
   </HeadBox>
-  <Box sx={{ transform: "translateZ(0)", overflow: "hidden" }} >
-    <Block data-aos="anim1">
-      <Heading variant="h3" gutterBottom>Stuff I know</Heading>
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item xs={12} md={4} data-aos="anim1" data-aos-delay="100">
+  <Box sx={{ transform: "translateZ(0)", overflow: "visible" }} >
+    <Block data-aos="anim1" sx={{ overflow: "visible" }} >
+      <Heading variant="h3" gutterBottom data-scroll data-scroll-speed={3} className="loco-hidden" data-scroll-class="loco-reveal">Stuff I know</Heading>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}  >
+        <Grid item xs={12} md={4} className="loco-hidden" data-scroll data-scroll-speed="6"  data-scroll-class="loco-reveal" data-scroll-delay="0.1">
           <Box sx={{background: "linear-gradient(45deg, #ab91ff0d 45%, #02a1e91c)",
-              height: "100%",p: 3,borderRadius: 2,}}>
+              height: "100%",p: 3}}>
             <Typography variant="h4" gutterBottom>Languages</Typography>
             <Typography>JavaScript, TypeScript, NodeJS</Typography>
             <Typography>PHP</Typography>
@@ -183,9 +186,9 @@ const Home: NextPage = ({ works, posts }:any) => {
             <Typography>Python</Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={4} data-aos="anim1" data-aos-delay="300">
+        <Grid item xs={12} md={4} className="loco-hidden" data-scroll-delay="0.072" data-scroll data-scroll-repeat data-scroll-class="loco-reveal" data-scroll-speed="6"  >
           <Box sx={{background: "linear-gradient(45deg, #ab91ff0d 45%, #02a1e91c)",
-              height: "100%",p: 3,borderRadius: 2,}}>
+              height: "100%",p: 3}}>
             <Typography variant="h4" gutterBottom>Frameworks</Typography>
             <Typography>React, Next JS</Typography>
             <Typography>Laravel</Typography>
@@ -195,9 +198,9 @@ const Home: NextPage = ({ works, posts }:any) => {
             <Typography>Styled Components, Tailwind CSS, Bootstrap</Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={4} data-aos="anim1" data-aos-delay="600">
+        <Grid item xs={12} md={4} className="loco-hidden" data-scroll data-scroll-delay="0.06" data-scroll-repeat data-scroll-class="loco-reveal" data-scroll-speed="6" >
           <Box sx={{background: "linear-gradient(45deg, #ab91ff0d 45%, #02a1e91c)",
-              height: "100%",p: 3,borderRadius: 2,}}>
+              height: "100%",p: 3}}>
             <Typography variant="h4" gutterBottom>Tools</Typography>
             <Typography>Git, GitHub, BitBucket, GitLab</Typography>
             <Typography>Trello</Typography>

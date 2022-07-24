@@ -18,7 +18,6 @@ import { AboutText } from "./AboutBlock";
 import Script from "next/script";
 import { useRouter, withRouter, NextRouter  } from "next/router";
 import { CSSTransition } from 'react-transition-group';
-import useLocoScroll from "./useLocoScroll";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -77,7 +76,6 @@ const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLigh
   const [menu, setMenu] = useState(0);
   const menuRef = useRef<HTMLInputElement>(null);
   const ssRef = useRef<HTMLDivElement>(null);
-  useLocoScroll(ssRef);
   useEffect(() => {
   },[])
     const openMenu = () => {

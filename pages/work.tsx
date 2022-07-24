@@ -11,6 +11,7 @@ import React from 'react';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import useLocoScroll from "../components/useLocoScroll";
 
 const heights = ['Short', 'Tall', 'Taller', 'Tallest']
 export async function getStaticProps() {
@@ -36,6 +37,7 @@ export async function getStaticProps() {
   };
 }
 const Work: NextPage = ({ source }:any) => {
+  useLocoScroll('ssRef');
   return (
     <>
     <BlockFullWidth>

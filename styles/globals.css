@@ -49,7 +49,28 @@ a {
   box-sizing: border-box;
   /* border: 1px solid rgb(var(--foreground)) !important; */
 }
+/* 
+[data-aos=anim1] {
+  transform: translateY(40px) scale(1.031) rotate(3deg);
+  opacity: 0;
+  transform-origin: top left;
+  transition-property: transform, opacity;
+}
+[data-aos=anim1].aos-animate {
+  transform: translateY(0px) rotate(0deg);
+  opacity: 1;
+} */
 
+/* .loco-hidden {
+  transform: translateY(40px) rotate(4deg);
+  opacity: 0;
+  transform-origin: top left;
+  transition-property: transform, opacity;
+}
+.loco-hidden.loco-reveal {
+  transform: translateY(0px) rotate(0deg);
+  opacity: 1;
+} */
 
 
 /* Background begin */
