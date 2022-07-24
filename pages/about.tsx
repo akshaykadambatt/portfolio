@@ -6,8 +6,10 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import AboutBlock from "../components/AboutBlock";
 import { styled } from "@mui/system";
+import useLocoScroll from "../components/useLocoScroll";
 
 const About: NextPage = () => {
+  useLocoScroll();
   return (
     <>
       <Container sx={{paddingTop:"100px"}}>

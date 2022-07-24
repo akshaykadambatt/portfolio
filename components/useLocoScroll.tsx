@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export default function useLocoScroll(start:any) {
+export default function useLocoScroll() {
     useEffect(() => {
         let scroll:any;
         // @ts-ignore
@@ -15,7 +15,6 @@ export default function useLocoScroll(start:any) {
         });
         return () => {
             if (scroll) {
-                console.log('scroll destroy');
                 scroll.destroy();
             }
         }

@@ -8,8 +8,10 @@ import Container from '@mui/material/Container';
 import { Grid, Stack, TextField } from '@mui/material';
 import { Button } from "../components/elements";
 import { VscArrowRight, VscGithubAlt } from "react-icons/vsc";
+import useLocoScroll from "../components/useLocoScroll";
 
 const Contact: NextPage = () => {
+  useLocoScroll();
   return (
     <>
       <Container sx={{paddingTop:"50px"}}>

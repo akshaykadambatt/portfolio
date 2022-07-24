@@ -70,7 +70,7 @@ const HeadBox = styled(Box)({
 });
 
 const Home: NextPage = ({ works, posts }:any) => {
-  useLocoScroll('ssRef');
+  useLocoScroll();
 
   const useStyles = createUseStyles({
     box: {

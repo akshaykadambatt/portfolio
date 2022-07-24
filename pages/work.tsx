@@ -37,7 +37,7 @@ export async function getStaticProps() {
   };
 }
 const Work: NextPage = ({ source }:any) => {
-  useLocoScroll('ssRef');
+  useLocoScroll();
   return (
     <>
     <BlockFullWidth>
