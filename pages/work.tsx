@@ -17,7 +17,20 @@ const heights = ['Short', 'Tall', 'Taller', 'Tallest']
 export async function getStaticProps() {
   const files = fs.readdirSync('posts');
 
-  const source = files.filter((fileName) => {
+  const projectSource = files.filter((fileName) => {
+    const slug = fileName.replace('.md', '');
+    const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
+    const { data: frontmatter } = matter(readFile);
+    if(frontmatter.tags.includes('project')) return true;
+  }).map((fileName) => {
+    const slug = fileName.replace('.md', '');
+    const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
+    const { data: frontmatter } = matter(readFile);
+    return {slug, frontmatter};
+  });
+  projectSource.sort((a, b) => a.frontmatter.date < b.frontmatter.date ? 1 : -1);
+
+  const workSource = files.filter((fileName) => {
     const slug = fileName.replace('.md', '');
     const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
     const { data: frontmatter } = matter(readFile);
@@ -28,15 +41,13 @@ export async function getStaticProps() {
     const { data: frontmatter } = matter(readFile);
     return {slug, frontmatter};
   });
-  source.sort((a, b) => a.frontmatter.date < b.frontmatter.date ? 1 : -1);
-  
+  workSource.sort((a, b) => a.frontmatter.date < b.frontmatter.date ? 1 : -1);
+
   return {
-    props: {
-      source,
-    },
+    props: { projectSource, workSource }
   };
 }
-const Work: NextPage = ({ source }:any) => {
+const Work: NextPage = ({ projectSource, workSource }:any) => {
   useLocoScroll();
   return (
     <>
@@ -47,8 +58,23 @@ const Work: NextPage = ({ source }:any) => {
       <ItemBlock />
     </BlockFullWidth>
     <Container>
+      <Typography data-aos="anim1" variant="h1" gutterBottom>Projects</Typography>
+      {projectSource.map(({ slug, frontmatter }:any) => (
+        <div
+          key={slug}
+          data-aos="anim1"
+          style={{paddingBottom:"20px"}}
+        >
+          <Link href={`/post/${slug}`}>
+            <a>
+              <Typography variant="h4">{frontmatter.title}</Typography>
+              <Typography variant="h6" gutterBottom>{frontmatter.metaDesc}</Typography>
+            </a>
+          </Link>
+        </div>
+      ))}
       <Typography data-aos="anim1" variant="h1" gutterBottom>Work Experience</Typography>
-      {source.map(({ slug, frontmatter }:any) => (
+      {workSource.map(({ slug, frontmatter }:any) => (
         <div
           key={slug}
           data-aos="anim1"
