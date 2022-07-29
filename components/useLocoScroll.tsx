@@ -9,6 +9,12 @@ export default function useLocoScroll() {
                 el: document.querySelector("[data-scroll-container]"),
                 smooth: true,
                 smoothMobile: true,
+                tablet: {
+                    smooth: true
+                },
+                smartphone: {
+                    smooth: true
+                },
                 resetNativeScroll: true,
                 lerp: 0.12
             });

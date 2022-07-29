@@ -27,7 +27,7 @@ export default function PostPage({ frontmatter, source }:any) {
               Go back
             </Button>
         </Container>
-        <Box data-aos="anim1" data-aos-delay="200">
+        <Box sx={{mt:4}} data-aos="anim1" data-aos-delay="200">
           <MDXRemote {...source} components={{
             Typography, 
             wrapper: Container, 

@@ -30,7 +30,7 @@ export async function getStaticProps() {
     const slug = fileName.replace('.md', '');
     const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
     const { data: frontmatter } = matter(readFile);
-    if(frontmatter.tags.includes('work')) return true;
+    if(frontmatter.tags.includes('project') || frontmatter.tags.includes('work')) return true;
   }).map((fileName) => {
     const slug = fileName.replace('.md', '');
     const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
@@ -61,7 +61,7 @@ export async function getStaticProps() {
 const HeadBox = styled(Box)({
   display: "flex",
   alignItems: "flex-end",
-  padding: "45vh 8vw 0vh 8vw",
+  padding: "44vh 8vw 0vh 8vw",
   "@media (max-width: 400px)": { padding: "39vh 8vw 0vh 8vw" },
   boxSizing: "border-box",
   position: "relative",
@@ -145,23 +145,23 @@ const Home: NextPage = ({ works, posts }:any) => {
       content="https://akshaykn.vercel.app/akshay_k_nair.webp"
     />
   </Head>
-  <HeadBox >
-    <Box sx={{ position: "relative", zIndex: "1" }}>
-      <Typography variant="h1" sx={{ mb: 0 }}>Akshay K Nair</Typography>
-      <Typography variant="h2" sx={{ mb: 2 }} data-aos="anim1">Software Engineer</Typography>
-      <Typography gutterBottom data-aos="anim1"
-        sx={{ fontWeight: 300, maxWidth: "800px", pb: 2 }} data-aos-delay="150" >
+  <HeadBox>
+    <Box sx={{ position: "relative", zIndex: "1"}}>
+      <Typography variant="h1" sx={{ mb: -1 }} data-scroll data-scroll-speed={2}>Akshay K Nair</Typography>
+      <Typography variant="h2" sx={{ mb: 1 }} data-aos="anim1" data-scroll data-scroll-speed={1.7}>Software Engineer</Typography>
+      <Typography gutterBottom data-aos="anim1" data-scroll data-scroll-speed={1}
+        sx={{ fontWeight: 300, maxWidth: "800px", pb: 3 }} data-aos-delay="150" >
         Hi there! I&apos;m Akshay. I&apos;m a software engineer with a strong CS
         background and a great interest in JavaScript, and the web. I&apos;m
         learning new things everyday and creating stuff I like along the way.
         This is my personal portfolio and an archive of a few of my works.
       </Typography>
-      <Box data-aos="anim1" data-aos-delay="250">
-        <Stack direction="row" spacing={2}>
-          <a href="/Akshay-K-Nair-Resume.pdf" download>
+      <Box data-aos="anim1" data-aos-delay="250" data-scroll data-scroll-speed={0.1}>
+        <Stack direction="row" spacing={2} sx={{pb:3}}>
+          <a href="/Akshay-K-Nair-Resume.pdf" download >
             <Button endIcon={<VscArrowRight />} size="large" variant="outlined" aria-label="Download my resume"> Resume </Button>
           </a>
-          <Link href="/work">
+          <Link href="/work" >
             <Button endIcon={<VscArrowRight />} size="large" variant="outlined" aria-label="Goto works page"> Works </Button>
           </Link>
         </Stack>
@@ -174,7 +174,19 @@ const Home: NextPage = ({ works, posts }:any) => {
   <Box sx={{ transform: "translateZ(0)", overflow: "visible" }} >
     <Container data-aos="anim1" sx={{ overflow: "visible", marginBottom:20, marginTop:10 }} >
       <Heading variant="h3" gutterBottom data-scroll data-scroll-speed={2} className="loco-hidden" data-scroll-class="loco-reveal">Stuff I know</Heading>
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}  >
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} >
+        <Grid item xs={12} md={8} >
+          <Heading variant="h4" mb={0} data-scroll data-scroll-speed={2} data-scroll-delay="0.1">
+            I learn and work everyday to better myself as a developer and a fellow contributer of the digital world. 
+          </Heading>
+        </Grid>
+        <Grid item xs={12} md={4} >
+          <Heading variant="h6" mt={0} data-scroll data-scroll-speed={3} data-scroll-delay="0.07" >
+            Started off with HTML and CSS. Now I focus on JavaScript, Laravel and design. 
+          </Heading>
+        </Grid>
+      </Grid>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} >
         <Grid item xs={12} md={4} className="loco-hidden" data-scroll data-scroll-speed="4"  data-scroll-class="loco-reveal" data-scroll-delay="0.1">
           <Box sx={{background: "linear-gradient(45deg, #ab91ff0d 45%, #02a1e91c)",
               height: "100%",p: 3}}>
