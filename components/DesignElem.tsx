@@ -34,7 +34,7 @@ const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
           overflow:"hidden"
         }}
       >
-        <video data-aos="anim1" autoPlay loop muted playsInline style={{ position: "absolute" }} ref={video}>
+        <video data-aos="anim1" autoPlay loop muted playsInline style={{ position: "absolute",zIndex: -1 }} ref={video}>
         </video>
         <Text
           data-aos="anim1"
