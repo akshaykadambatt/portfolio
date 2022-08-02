@@ -25,7 +25,6 @@ const DesignElem: NextPage<AppProps> = ({ text }): JSX.Element => {
         }}>
       <Box
         sx={{
-          bgcolor: "rgb(var(--two)/30%)",
           my: 10,
           display: "flex",
           alignItems: "center",

@@ -45,6 +45,11 @@ a {
   text-decoration: none;
 }
 
+.blog-content a{
+  text-decoration: underline;
+
+}
+
 * {
   box-sizing: border-box;
   /* border: 1px solid rgb(var(--foreground)) !important; */
