@@ -12,6 +12,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import useLocoScroll from "../components/useLocoScroll";
+import AnimatedBackground from '../components/AnimatedBackground';
 
 const heights = ['Short', 'Tall', 'Taller', 'Tallest']
 export async function getStaticProps() {
@@ -51,6 +52,7 @@ const Work: NextPage = ({ projectSource, workSource }:any) => {
   useLocoScroll();
   return (
     <>
+    <AnimatedBackground filter={"hue-rotate(267deg)"} top={"-190px"}/>
     <BlockFullWidth>
       <Container >
         <Heading variant="h1" data-aos="anim1">My Recent Works</Heading>

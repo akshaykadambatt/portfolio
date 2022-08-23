@@ -13,7 +13,7 @@ export default function useLocoScroll() {
                     smooth: true
                 },
                 smartphone: {
-                    smooth: true
+                    smooth: false
                 },
                 resetNativeScroll: true,
                 lerp: 0.12

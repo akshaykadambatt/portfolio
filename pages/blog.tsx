@@ -10,6 +10,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import useLocoScroll from "../components/useLocoScroll";
+import AnimatedBackground from "../components/AnimatedBackground";
 
 const heights = ['Short', 'Tall', 'Taller', 'Tallest']
 export async function getStaticProps() {
@@ -34,6 +35,7 @@ const Blog: NextPage = ({ source }:any) => {
   return (
     <>
     <Container>
+    <AnimatedBackground filter={"hue-rotate(267deg)"} top={"-76px"}/>
       <Typography data-aos="anim1" variant="h1" gutterBottom>Blog</Typography>
       {source.map(({ slug, frontmatter }:any, index:any) => (
         <div

@@ -23,6 +23,7 @@ import { createUseStyles } from "react-jss";
 import fs from 'fs';
 import matter from 'gray-matter';
 import useLocoScroll from "../components/useLocoScroll";
+import AnimatedBackground from "../components/AnimatedBackground";
 
 export async function getStaticProps() {
   const files = fs.readdirSync('posts');
@@ -243,10 +244,11 @@ const Home: NextPage = ({ works, posts }:any) => {
     <AlignCenter>
       <BoxWrap>
         <Link href="/work">
-          <RecentBox data-aos="anim1" data-aos-delay="250" className={`reveal shadow-box box1 boxWithTag`}>
+          <RecentBox style={{overflow:"hidden"}} data-aos="anim1" data-aos-delay="250" className={`reveal shadow-box box1 boxWithTag`}>
             <TagBox className="left"><Typography>#work</Typography></TagBox>
             <TagBox className="right"><BsArrowUpRight /></TagBox>
             <BoxInsideWrap>
+            <AnimatedBackground filter={"hue-rotate(209deg)"} top={"0px"} opacity={"0.65"}/>
               <Typography variant="h4">Works</Typography>
               <Typography>
                 The timeline of all the projects I&apos;ve done and the personal
@@ -432,6 +434,9 @@ const RecentBox = styled(Box)({
   },
   "&.boxWithTag": {
     paddingBottom: "70px"
+  },
+  "video":{
+    display:"block"
   }
 })
 const BottomLoadingThing = styled(Box)(({ theme }) => (`

@@ -275,12 +275,16 @@ div:hover > .controls{
   rgb(var(--above-shadow) / 91%) -3px -3px 4px 2px;
 
 }
-.shadow-box:hover{
+.shadow-box:hover:not(:first-child){
       box-shadow: inset rgb(var(--above-shadow) / 83%) -3px -3px 4px 2px,
   inset rgb(var(--below-shadow) / 80%) 3px 4px 4px 2px,
   transparent 0 0 0 0, transparent 0 0 0 0;
 }
-
+.shadow-box:hover:first-child{
+  box-shadow: inset rgb(var(--above-shadow) / 83%) 0px 0px 0px 0px,
+inset rgb(var(--below-shadow) / 80%) 0px 0px 0px 0px,
+transparent 0 0 0 0, transparent 0 0 0 0;
+}
 /*
 Menu styles
 */

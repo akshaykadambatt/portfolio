@@ -7,11 +7,13 @@ import Container from '@mui/material/Container';
 import AboutBlock from "../components/AboutBlock";
 import { styled } from "@mui/system";
 import useLocoScroll from "../components/useLocoScroll";
+import AnimatedBackground from "../components/AnimatedBackground";
 
 const About: NextPage = () => {
   useLocoScroll();
   return (
     <>
+      <AnimatedBackground filter={"hue-rotate(267deg)"} top={"-76px"}/>
       <Container sx={{paddingTop:"100px"}}>
         <AboutBlock />
       </Container>
