@@ -35,7 +35,7 @@ const Blog: NextPage = ({ source }:any) => {
   return (
     <>
     <Container>
-    <AnimatedBackground filter={"hue-rotate(267deg)"} top={"-76px"}/>
+    <AnimatedBackground filter={"hue-rotate(0)"} top={"-76px"}/>
       <Typography data-aos="anim1" variant="h1" gutterBottom>Blog</Typography>
       {source.map(({ slug, frontmatter }:any, index:any) => (
         <div

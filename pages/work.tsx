@@ -52,7 +52,7 @@ const Work: NextPage = ({ projectSource, workSource }:any) => {
   useLocoScroll();
   return (
     <>
-    <AnimatedBackground filter={"hue-rotate(267deg)"} top={"-190px"}/>
+    <AnimatedBackground filter={"hue-rotate(110deg)"} top={"-140px"}/>
     <BlockFullWidth>
       <Container >
         <Heading variant="h1" data-aos="anim1">My Recent Works</Heading>
