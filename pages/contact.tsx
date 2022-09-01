@@ -17,7 +17,7 @@ const Contact: NextPage = () => {
   const [name, setName] = useState("")
   const [contact, setContact] = useState("")
   const [content, setContent] = useState("")
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
   useLocoScroll();
 
@@ -30,6 +30,9 @@ const Contact: NextPage = () => {
         content: content
       })
       setOpen(true)
+      setTimeout(() => {
+        setOpen(false)
+      }, 4000);
       setName("")
       setContact("")
       setContent("")
@@ -69,12 +72,15 @@ const Contact: NextPage = () => {
         <Snackbar
         open={open}
         autoHideDuration={6000}
-        message="Note archived" className='yoo'
-        data-scroll data-scroll-sticky data-scroll-target="#__next"
+        message="I'll be back." className='yoo'
+        data-scroll data-scroll-sticky data-scroll-target="#__next" data-scroll-offset="-10%"
+        style={{zIndex:1}}
       />
       </Container>
       
-      <Box sx={{ height: '100px' }} />
+      
+      <Box sx={{ height: '300px' }} >
+      </Box>
     </>
   )
 }

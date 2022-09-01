@@ -102,9 +102,9 @@ const AboutText : NextPage<AppProps> = ({ classText }): JSX.Element => {
                   Works
                 </Button>
               </Link>
-              <Link href="/about">
-                <Button endIcon={<VscArrowRight />} size="large" variant="outlined" aria-label="Goto About page">
-                  About
+              <Link href="/contact">
+                <Button endIcon={<VscArrowRight />} size="large" variant="outlined" aria-label="Goto contact page">
+                  Contact me
                 </Button>
               </Link>
             </Stack>

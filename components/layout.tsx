@@ -112,7 +112,7 @@ const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLigh
                 dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-3WX9F6G7GB');`,}}
           />
         <Navigation maxWidth={false} >
-          <NavigationInner data-scroll-sticky data-scroll-target="scroll-direction">
+          <NavigationInner data-scroll-sticky data-scroll-target="scroll-direction" id="fixed-navbar">
             <Box>
               
             <Link href="/"><a><Logo>AKSHAY K NAIR</Logo></a></Link>
@@ -155,7 +155,7 @@ const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLigh
               
         </Box>
         <Loading/>
-<div id="scroll-direction" data-scroll-section>
+<div id="scroll-direction" data-scroll-section style={{zIndex:1, position:'relative'}}>
 
         {children}
 </div>
