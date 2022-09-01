@@ -17,7 +17,7 @@ type AppProps = {
 const AboutBlock : NextPage<AppProps> = ({ classText }): JSX.Element => {
   return (
     <Grid container>
-      <Grid data-scroll data-scroll-speed={3}  data-scroll-delay="0.1"
+      <Grid data-scroll data-scroll-speed={2}  data-scroll-delay="0.1"
         item data-aos="anim1" data-aos-delay="100"
         xs={12}
         md={4}
@@ -39,7 +39,7 @@ const AboutBlock : NextPage<AppProps> = ({ classText }): JSX.Element => {
           sx={{ width: "300px", height: "300px" }}
         />*/}
       </Grid>
-      <Grid item xs={12} md={8} data-scroll data-scroll-speed={4} data-scroll-delay="0.06">
+      <Grid item xs={12} md={8} data-scroll data-scroll-speed={3} data-scroll-delay="0.06">
         <AboutText classText = { classText } />
       </Grid>
     </Grid>

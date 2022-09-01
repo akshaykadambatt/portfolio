@@ -189,6 +189,9 @@ const Layout: NextPage<LayoutProps> = ({toggleColorScheme, toggleColorSchemeLigh
                 <Link href="/about">
                   <Typography style={{cursor:"pointer"}} align="right" data-aos="anim1" data-aos-delay="150">About</Typography>
                 </Link>
+                <Link href="/blog">
+                  <Typography style={{cursor:"pointer"}} align="right" data-aos="anim1" data-aos-delay="150">Blog</Typography>
+                </Link>
                 <Link href="/contact">
                   <Typography align="right" data-aos="anim1" data-aos-delay="200">Contact Me</Typography>
                 </Link>
