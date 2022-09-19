@@ -10,7 +10,7 @@ tags:
 # akshaykn
 ### Creating my portfolio
 
-Project URL: [KMO](https://akshaykn.vercel.app/)
+Project URL: [Akshy](https://akshaykn.vercel.app/)
 
 This is my portfolio, available at [akshaykn.vercel.app](https://akshaykn.vercel.app), built using [Next.js](https://nextjs.org/), bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), deployed on [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) by the Vercel bot. 
 
