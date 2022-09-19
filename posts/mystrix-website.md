@@ -12,7 +12,7 @@ tags:
 
 Project URL: [Mystrix](https://csehgae.github.io/mystrix-2020-website/)
 
-This is a basic HTML5 website that was used by Holy Grace Academy of Engineering, Mala for the marketing and registration of the tech fest, Mystrix 2020. Available at the [Chrome Web Store](https://csehgae.github.io/mystrix-2020-website). 
+This is a basic HTML5 website that was used by Holy Grace Academy of Engineering, Mala for the marketing and registration of the tech fest, Mystrix 2020. Available at the [csehgae.github.io/mystrix-2020-website](https://csehgae.github.io/mystrix-2020-website). 
 
 Following are the technologies used in this website;
 - HTML5
