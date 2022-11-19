@@ -35,9 +35,7 @@ const useViewport = () => {
 
 export default useViewport
 ```
-
 Place this code in a typescript or javascript file anywhere in the src folder and use the hook in the following manner.
-
 ```js
 //in the imports;
 import useViewport from "../data/useViewport";
@@ -50,5 +48,4 @@ const viewport = useViewport();
     (viewport.width < viewport.mob) ? <MobileComponent /> : <DesktopComponent />
 }
 ```
-
 The hook can be further extended for more complicated functions, like getting viewport height, maybe color schemes, or even as a base theme source. 
