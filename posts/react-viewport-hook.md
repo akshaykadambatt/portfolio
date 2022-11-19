@@ -49,3 +49,6 @@ const viewport = useViewport();
 }
 ```
 The hook can be further extended for more complicated functions, like getting viewport height, maybe color schemes, or even as a base theme source. 
+
+A reference for viewport breakpoints;
+![A reference for viewport breakpoints.](https://www.seobility.net/en/wiki/images/6/6f/Media-Queries.png)
