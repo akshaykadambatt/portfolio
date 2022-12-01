@@ -28,7 +28,7 @@ Other packages and technologies used in KTab manager are;
 <caption>The home view of ktab manager</caption>
 ![An open item within a collection.](https://i.imgur.com/m0KMEo3.png)
 <caption>An open item within a collection</caption>
-{<video src='https://i.imgur.com/rSCd2E1.mp4' autoplay="true" loop></video>}
+{<video src='https://i.imgur.com/rSCd2E1.mp4' autoplay="true" loop muted></video>}
 <caption>Ordering a set of collections</caption>
 ![An open link within a collection with its settings expanded.](https://i.imgur.com/KfaYamV.png)
 <caption>An open link within a collection with its settings expanded</caption>
