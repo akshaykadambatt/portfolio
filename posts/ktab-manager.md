@@ -1,6 +1,6 @@
 ---
 title: 'KTab Manager'
-metaTitle: 'KTab Manager: Organize your ideas in web'
+metaTitle: 'KTab Manager: Organize your ideas in web (A tab management system for chrome)'
 metaDesc: 'Organize your ideas in web right in your web browser'
 socialImage: images/22-09-2021.jpg
 date: '2022-11-03'
@@ -9,7 +9,7 @@ tags:
 ---
 # ktab
 ### KTab Manager
-#### Organize your ideas in web
+#### Organize your ideas in web (A tab management system for chrome)
 
 Project URL: [ktab manager](https://ktab-manager.web.app/)
 
@@ -40,3 +40,98 @@ Other packages and technologies used in KTab manager are;
 <caption>Changing the view of the dashboard</caption>
 
 </div>
+
+### Application structure
+User A (User based access)
+- Organization A
+- - Collection AA
+- - Collection AB
+- - --- Item 1 : link
+- - --- Item 2 : note
+- - --- Item 3 : reminder
+- Organization B
+- - Collection BA
+- - Collection BB
+
+### Database structure
+User A (ID)
+- Organizations
+- - Organization A (parent: user)
+- - Organization B
+- Collections
+- - Collection AA (parent: organization)
+- - Collection AB
+- - Collection BA
+- - Collection BB
+- Items
+- - Item 1 (parent: collection)
+- - Item 2
+- - Item 3
+
+### TODO
+- Create a context and keep states in the context ✔
+- CURD from organization tabs
+- CURD form collections box
+- Other types of items
+- Refresh
+- Sync with server
+- Set background
+- Edit profile
+- Add functional entries to the spotlight
+- Maybe cache orgs, collections, items to localStorage for faster init 
+
+Organization Firestore collection
+  Each entry is a new organization
+  Each organization has:
+  ```
+  "Container": [
+    "A1", //array  of objects
+    "A3"
+  ],
+  "Container": [
+    "B3"
+  ]
+  ```
+  Each item within the container is an object:
+  ```
+  {
+    id: UniqueIdentifier,
+    name: "Name of the item",
+    type: link|todo|note|reminder|countdown|calender
+    link: "http://link.com",
+    content: "String content/RTE content",
+    color: Color Code,
+    tags: important|password|etc
+    created_on: timestamp,
+    is_deleted: boolean //Shows up in trash
+  }
+  ```
+  name, content, link is used in Search.
+  Hierarchy is like:
+  ```
+  {
+    Organization: {
+      "Container": [
+          "A1",
+          "A3"
+      ],
+      "Container": [
+          "B3"
+      ]
+    },
+    Organization: {
+      "Container": [
+          "A3"
+      ]
+    }
+  }
+  ```
+  TODO:
+  * Notifications in header
+  * Firestore sync
+  * Trash drag
+  * Login using socials
+  * Settings
+  * Search
+  * Theme color swachtes
+  * Checklists
