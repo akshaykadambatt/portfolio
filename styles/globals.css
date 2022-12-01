@@ -472,3 +472,7 @@ a{
     visibility: hidden;
   }
 }
+.blog-content img, .blog-content video{
+  max-width: 100%;
+  width: auto;
+}
