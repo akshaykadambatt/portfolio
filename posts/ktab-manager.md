@@ -36,6 +36,8 @@ Other packages and technologies used in KTab manager are;
 <caption>Changing the background color of the organization</caption>
 {<video src='https://i.imgur.com/ms6RWP3.mp4' autoplay="true" loop muted></video>}
 <caption>Deleting an organization</caption>
+{<video src='https://i.imgur.com/Sz7j0Nw.mp4' autoplay="true" loop muted></video>}
+<caption>Filtering organization data items</caption>
 ![An open link within a collection with its settings expanded.](https://i.imgur.com/KfaYamV.png)
 <caption>An open link within a collection with its settings expanded</caption>
 ![Modal for adding organizations, collections, and items.](https://i.imgur.com/D0TvVy8.png)
