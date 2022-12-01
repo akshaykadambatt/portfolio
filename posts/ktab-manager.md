@@ -28,8 +28,14 @@ Other packages and technologies used in KTab manager are;
 <caption>The home view of ktab manager</caption>
 ![An open item within a collection.](https://i.imgur.com/m0KMEo3.png)
 <caption>An open item within a collection</caption>
-{<video src='https://i.imgur.com/rSCd2E1.mp4' autoplay="true" loop muted></video>}
+{<video src='https://i.imgur.com/S2EsqB8.mp4' autoplay="true" loop muted></video>}
 <caption>Ordering a set of collections</caption>
+{<video src='https://i.imgur.com/eeViQwh.mp4' autoplay="true" loop muted></video>}
+<caption>Changing the view of the dashboard</caption>
+{<video src='https://i.imgur.com/G3hmFIw.mp4' autoplay="true" loop muted></video>}
+<caption>Changing the background color of the organization</caption>
+{<video src='https://i.imgur.com/ms6RWP3.mp4' autoplay="true" loop muted></video>}
+<caption>Deleting an organization</caption>
 ![An open link within a collection with its settings expanded.](https://i.imgur.com/KfaYamV.png)
 <caption>An open link within a collection with its settings expanded</caption>
 ![Modal for adding organizations, collections, and items.](https://i.imgur.com/D0TvVy8.png)
