@@ -11,6 +11,13 @@ tags:
 ### KTab Manager
 #### Organize your ideas in web (A tab management system for chrome)
 
+<div class="center images" markdown="1">
+
+![The home view of ktab manager.](https://i.imgur.com/Pr5DTFx.png)
+<caption>The home view of ktab manager</caption>
+
+</div>
+
 Project URL: [ktab manager](https://ktab-manager.web.app/)
 
 Organize notes, todos, reminders, tabs, links, videos, images and more using the KTab manager webapp. Its fast, responsive, snappy and is beautiful. Use the public Guest dashboard to keep items in a publically available board or create your own account or login with your Google account to use your private boards. Boards are called Organizations. Each Organization has multiple Collections and Collections contain several Items that is the basic unit of data. 
