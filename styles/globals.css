@@ -476,7 +476,7 @@ a{
   max-width: 100%;
   width: auto;
 }
-.blog-content .center{
+.blog-content .center, .blog-content .center p{
   display: flex;
   flex-direction: column;
   align-items: center;
