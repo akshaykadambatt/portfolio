@@ -21,7 +21,8 @@ Other packages and technologies used in KTab manager are;
 - Firestore
 - DnD kit
 - CRA React
-<div class="center" markdown="1">
+
+<div class="center images" markdown="1">
 
 ![The home view of ktab manager.](https://i.imgur.com/Pr5DTFx.png)
 The home view of ktab manager
@@ -31,11 +32,11 @@ An open item within a collection
 Ordering a set of collections
 ![An open link within a collection with its settings expanded.](https://i.imgur.com/KfaYamV.png)
 An open link within a collection with its settings expanded
-
 ![Modal for adding organizations, collections, and items.](https://i.imgur.com/D0TvVy8.png)
 Modal for adding organizations, collections, and items
-
 ![Trash modal where items, collections, organizatoins can be restored to the dashboard.](https://i.imgur.com/xao9hYJ.png)
+Trash modal where items, collections, organizatoins can be restored to the dashboard
 ![Changing the view of the dashboard.](https://i.imgur.com/Ubi7LKu.png)
+Changing the view of the dashboard
 
 </div>

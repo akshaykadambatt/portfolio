@@ -482,3 +482,8 @@ a{
   align-items: center;
   row-gap: 16px;
 }
+.blog-content .images p {
+  font-size: 14px;
+  font-style: italic;
+  row-gap: 5px;
+}
