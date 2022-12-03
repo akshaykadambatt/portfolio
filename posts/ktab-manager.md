@@ -13,7 +13,7 @@ tags:
 
 <div class="center images" markdown="1">
 
-![The home view of ktab manager.](https://i.imgur.com/Pr5DTFx.png)
+![The home view of ktab manager.](https://i.imgur.com/7nj7Qdj.png)
 <caption>The home view of ktab manager</caption>
 
 </div>
